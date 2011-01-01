@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101230220424) do
+ActiveRecord::Schema.define(:version => 20110101184932) do
 
   create_table "entries", :force => true do |t|
     t.integer  "wadoku_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20101230220424) do
     t.text     "definition"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "entry_relation"
   end
 
 end
