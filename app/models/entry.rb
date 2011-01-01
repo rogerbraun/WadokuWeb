@@ -12,7 +12,7 @@ class Entry < ActiveRecord::Base
   end
 
   def defs_array
-    p = pos_and_def[1]
+    p = self.definition
     t = p.scan(/\[(\d+)\]([^[]+)/).map{|x| x[1].strip}
     t.empty? || t == nil ? [p] : t
   end
@@ -20,7 +20,7 @@ class Entry < ActiveRecord::Base
   private
 
   def pos_and_def
-    self.definition.match(/^(\(.+?\))(.*)/)[1..-1]
+    self.definition.match(/^(\(.+?\))(.*)/)[1..-1] 
   end
 
 end
