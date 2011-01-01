@@ -11,10 +11,12 @@
       <table class="table">
         <tr>             
           <th class="first">ID</th>
-                    <th>
-            <%= t("activerecord.attributes.entry.wadoku_id", :default => t("activerecord.labels.wadoku_id", :default => "Wadoku_id")) %>
+          <th>
+            Romaji
           </th>
-                    <th><%= t("web-app-theme.created_at", :default => "Created at")  %></th>
+          <th>
+            Definition
+          </th> 
           <th class="last">&nbsp;</th>
         </tr>
         <% @entries.each do |entry| -%>
@@ -22,11 +24,11 @@
           <td>
             <%= entry.id %>
           </td>
-                    <td>
-            <%= link_to entry.wadoku_id, entry_path(entry) %>
+          <td>
+            <%= entry.romaji %>
           </td>
                     <td>
-            <%= entry.created_at %>
+            <%= entry.definition %>
           </td>
           <td class="last">
             <%= link_to "#{t("web-app-theme.show", :default => "Show")}", entry_path(entry) %> |
