@@ -31,7 +31,9 @@
 
         <p>
           <b><%= t("activerecord.attributes.entry.definition", :default => t("activerecord.labels.definition", :default => "Definition")) %>:</b>
-          <%= @entry.definition %>
+          <ul class="list">
+            <%= raw @entry.defs_array.map{|x| "<li><p>#{h x}</p></li>"}.join("\n") %>
+          </ul>
         </p>
 
         <p>
