@@ -13,5 +13,7 @@ puts "Reading source file... This may take a while..."
 source.each_line do |line|
   entry_txt = line.split("\t") 
 
-  puts "Something went wrong with:\n #{line}" unless Entry.create(:wadoku_id => entry_txt[0], :romaji => entry_txt[1], :writing => entry_txt[2], :kana => entry_txt[3] , :definition => entry_txt[4])
+  puts "Something went wrong with:\n #{line}" unless x = Entry.create(:wadoku_id => entry_txt[0], :romaji => entry_txt[1], :writing => entry_txt[2], :kana => entry_txt[3] , :definition => entry_txt[4])
+
+  puts "Wrote #{x.id}..." if x.id % 100 == 0
 end
