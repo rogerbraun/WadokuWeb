@@ -1,30 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", entries_path  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_entry_path %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", entry_path %></li>
+    </ul>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+        <p>
+          <b><%= t("activerecord.attributes.entry.wadoku_id", :default => t("activerecord.labels.wadoku_id", :default => "Wadoku")) %>:</b>
+          <%= @entry.wadoku_id %>
+        </p>
 
-<p>
-  <b>Wadoku:</b>
-  <%= @entry.wadoku_id %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.entry.romaji", :default => t("activerecord.labels.romaji", :default => "Romaji")) %>:</b>
+          <%= @entry.romaji %>
+        </p>
 
-<p>
-  <b>Romaji:</b>
-  <%= @entry.romaji %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.entry.writing", :default => t("activerecord.labels.writing", :default => "Writing")) %>:</b>
+          <%= @entry.writing %>
+        </p>
 
-<p>
-  <b>Writing:</b>
-  <%= @entry.writing %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.entry.kana", :default => t("activerecord.labels.kana", :default => "Kana")) %>:</b>
+          <%= @entry.kana %>
+        </p>
 
-<p>
-  <b>Kana:</b>
-  <%= @entry.kana %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.entry.definition", :default => t("activerecord.labels.definition", :default => "Definition")) %>:</b>
+          <%= @entry.definition %>
+        </p>
 
-<p>
-  <b>Definition:</b>
-  <%= @entry.definition %>
-</p>
+        <p>
+          <b><%= t("activerecord.attributes.entry.entry_relation", :default => t("activerecord.labels.entry_relation", :default => "Entry relation")) %>:</b>
+          <%= @entry.entry_relation %>
+        </p>
+      <div class="wat-cf">
+        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_entry_path(@entry), :class => "button" %> 
+        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), entry_path(@entry), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>      
+    </div>
+  </div>
+</div>
 
-
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

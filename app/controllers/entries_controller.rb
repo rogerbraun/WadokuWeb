@@ -2,7 +2,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.xml
   def index
-    @entries = Entry.all
+    @entries = Entry.paginate :page => params[:page], :order => "id"
 
     respond_to do |format|
       format.html # index.html.erb
