@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  wadoku_id: 1
+  romaji: MyString
+  writing: MyString
+  kana: MyString
+  definition: MyText
+
+two:
+  wadoku_id: 1
+  romaji: MyString
+  writing: MyString
+  kana: MyString
+  definition: MyText

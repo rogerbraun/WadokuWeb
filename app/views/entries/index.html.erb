@@ -1,0 +1,31 @@
+<h1>Listing entries</h1>
+
+<table>
+  <tr>
+    <th>Wadoku</th>
+    <th>Romaji</th>
+    <th>Writing</th>
+    <th>Kana</th>
+    <th>Definition</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @entries.each do |entry| %>
+  <tr>
+    <td><%= entry.wadoku_id %></td>
+    <td><%= entry.romaji %></td>
+    <td><%= entry.writing %></td>
+    <td><%= entry.kana %></td>
+    <td><%= entry.definition %></td>
+    <td><%= link_to 'Show', entry %></td>
+    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+    <td><%= link_to 'Destroy', entry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Entry', new_entry_path %>

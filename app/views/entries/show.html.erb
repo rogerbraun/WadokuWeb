@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Wadoku:</b>
+  <%= @entry.wadoku_id %>
+</p>
+
+<p>
+  <b>Romaji:</b>
+  <%= @entry.romaji %>
+</p>
+
+<p>
+  <b>Writing:</b>
+  <%= @entry.writing %>
+</p>
+
+<p>
+  <b>Kana:</b>
+  <%= @entry.kana %>
+</p>
+
+<p>
+  <b>Definition:</b>
+  <%= @entry.definition %>
+</p>
+
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
