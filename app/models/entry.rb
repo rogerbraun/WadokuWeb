@@ -7,7 +7,7 @@ class Entry < ActiveRecord::Base
   end
 
   def short_html
-    pos_html(genus_html(short_definition))
+    pos_html(genus_html(clean_markup(short_definition)))
   end
 
   def pos
@@ -18,6 +18,11 @@ class Entry < ActiveRecord::Base
     p = self.definition
     t = p.scan(/\[(\d+)\]([^[]+)/).map{|x| x[1].strip}
     t.empty? || t == nil ? [p] : t
+  end
+
+  def defs_array_html
+    p = defs_array
+    p.map{|x| pos_html(genus_html(clean_markup(x)))}
   end
 
   def related
@@ -31,7 +36,7 @@ class Entry < ActiveRecord::Base
 
   private
 
-  CLEAN_REGEXPS = [/\{<.+?>\}/]
+  CLEAN_REGEXPS = [/\{<.+?>\}/,/\(<.+?>\)/,/^\S/]
 
   def pos_and_def
     self.definition.match(/^(\(.+?\))(.*)/)[1..-1] 
@@ -47,6 +52,14 @@ class Entry < ActiveRecord::Base
     defi.gsub(/\(<POS: (\w+).>\)/) do |mat|
       " <strong>#{$1}</strong>"
     end
+  end
+
+  def clean_markup(defi)
+    t = defi.dup
+    CLEAN_REGEXPS.each do |reg|
+      t.gsub!(reg,"")
+    end
+    t
   end
 
 end
