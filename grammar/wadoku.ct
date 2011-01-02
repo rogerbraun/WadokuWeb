@@ -1,4 +1,4 @@
-grammar Wadoku
+grammar WadokuGrammar
 
   rule entry
     (pos? space* sub_entry space* entry?) {
