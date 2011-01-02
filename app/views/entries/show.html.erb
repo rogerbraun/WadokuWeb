@@ -37,8 +37,20 @@
         </p>
 
         <p>
-          <b><%= t("activerecord.attributes.entry.entry_relation", :default => t("activerecord.labels.entry_relation", :default => "Entry relation")) %>:</b>
-          <%= @entry.entry_relation %>
+          <b><%= t("activerecord.attributes.entry.entry_relation", :default => t("activerecord.labels.entry_relation", :default => "Verwandte Einträge")) %>:</b>
+          <ul class="list">
+            <% @entry.related.each do |cur_entry| %>
+              <li>
+                <h4>
+                  <%=link_to "#{cur_entry.writing} - #{cur_entry.romaji}", cur_entry %>
+                </h4>
+                <p>
+                  <%= cur_entry.short_definition %>
+                </p>
+              </li>
+  
+            <% end %>
+          </ul>
         </p>
       <div class="wat-cf">
         <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_entry_path(@entry), :class => "button" %> 
