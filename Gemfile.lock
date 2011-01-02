@@ -31,6 +31,7 @@ GEM
     arel (1.0.1)
       activesupport (~> 3.0.0)
     builder (2.1.2)
+    citrus (2.3.1)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     i18n (0.4.1)
@@ -77,6 +78,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  citrus
   meta_search
   rails (= 3.0.1)
   sqlite3-ruby

@@ -1,3 +1,5 @@
+Citrus.load("grammar/wadoku.ct")
+
 class Entry < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 10
@@ -7,7 +9,11 @@ class Entry < ActiveRecord::Base
   end
 
   def short_html
-    pos_html(genus_html(clean_markup(short_definition)))
+      begin
+        Wadoku.parse(short_definition).html
+      rescue => e
+        "FFF " + pos_html(genus_html(clean_markup(short_definition)))
+      end
   end
 
   def pos
@@ -22,7 +28,10 @@ class Entry < ActiveRecord::Base
 
   def defs_array_html
     p = defs_array
-    p.map{|x| pos_html(genus_html(clean_markup(x)))}
+    p.map{|x| 
+        pos_html(genus_html(clean_markup(x)))
+    }
+
   end
 
   def related

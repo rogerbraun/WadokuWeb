@@ -1,0 +1,135 @@
+grammar Wadoku
+
+  rule entry
+    (pos? space* sub_entry space* entry?) {
+      def html
+        sub_entry.html + (entry ? entry.html : "")
+      end
+    }
+  end
+
+  rule pos
+    "(<POS: " (word | transcr | space | "." | ",")+ ">)"
+  end
+  
+  rule transcr
+    ("<Transcr.: " word ">")
+  end
+
+  rule sub_entry
+    (entry_number? parts) {
+      def html
+         (entry_number ? entry_number.html : "") + parts.html 
+      end
+    }
+  end
+  
+  rule parts
+    (part parts?) {
+      def html
+          part.html + (parts ? parts.html : "")
+      end
+    }
+  end
+
+  rule space
+    (" " | " " | " ") {
+      def html
+        " "
+      end
+    }
+  end
+
+  rule constituent
+    (expl | marker | noun | markup | word | space)  
+  end
+
+  rule expl
+    ("(<Expl.: " constituent ">)") {
+      def html
+        "<span class='expl'>#{constituent.html}</span>"
+      end
+    } 
+  end
+
+
+  rule part_f
+    (constituent part_f?) {
+      def html
+          constituent.html + (part_f ? part_f.html : "")
+      end
+    }
+  end
+
+  rule part
+    (part_f splitter:(";" | ".")) {
+      def html
+        part_f.html + splitter
+      end
+    }  
+  end
+
+  rule markup
+    ("<" word "."? ":" (word | space | markup)+ ">") {
+      def html
+        "markup"
+      end
+    }
+  end
+
+  rule marker_name
+    ((letter | "_" | number)+) {
+      def html
+        self.to_s.downcase
+      end
+    } 
+  end
+
+  rule marker
+    ("<" marker_name ">" constituent) {
+      def html
+        "<span class='#{marker_name.html}'>#{constituent.html}</span>" 
+      end
+    }
+  end
+
+  rule entry_number
+    ("[" number "]") {
+      def html
+        "<span class='number'>#{number.to_s}</span>"
+      end
+    }
+  end
+
+  rule number
+    [0-9]+ 
+  end
+
+  rule noun
+    (word genus) {
+      def html
+        "<span class='gen_#{genus.html}'>#{word.html}</span>"
+      end
+    }
+  end
+
+  rule genus
+    ("<Gen.: " word ">") {
+      def html
+        word.to_s
+      end
+    }
+  end
+
+  rule letter
+    [a-zA-ZäüöÄÜÖß]
+  end
+
+  rule word
+    (letter+) {
+      def html
+        self.to_s
+      end 
+    }
+  end
+end
