@@ -4,3 +4,6 @@ de:
     results: "Suchergebnisse"   
     by_beginning: "Wortanfang..."
     search: "Suchen!"
+    title: "Suche"
+    info: "Die Suche funktioniert mit Japanisch in Romaji, Kanji und Kana."
+

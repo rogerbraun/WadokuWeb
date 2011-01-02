@@ -1,9 +1,13 @@
-<div class="block notice">
-  <h3>Suche</h3>
-  <div class="content">
-    <p><%= t "search.info" %></p>
+<div class="block">
+  <div class="content">          
+    <h2 class="title"><%= t("search.title", :default => "Search")  %> </h2>
+    <div class="inner">
+      <div class="actions-bar wat-cf">
+        <div class="actions">
+          
+        <p><%= t "search.info" %></p>
     <p>
-      <%=form_for search, :url => search_index_path, :html => {:class => :form} do |f| %>
+      <%=form_for @search, :url => search_index_path, :html => {:class => :form} do |f| %>
           <div class="group">
           <%= f.label :romaji_or_writing_or_kana_starts_with, t("search.by_beginning"),:class => :label %> 
           <%= f.text_field :romaji_or_writing_or_kana_starts_with, :class=> "text_field"%> <br />
@@ -16,6 +20,10 @@
           </div>
       <% end %>
     </p>
+        </div>
+        
+      </div>
+    </div>
   </div>
 </div>
 

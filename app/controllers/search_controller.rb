@@ -7,4 +7,11 @@ class SearchController < ApplicationController
     end 
   end
 
+  def start
+    @search = Entry.search(params[:search])
+    respond_to do |format|
+      format.html
+    end
+  end
+
 end
