@@ -8,3 +8,7 @@ span.gen_n {
 span.gen_f {
   color:purple;
 }
+
+span.dom {
+  font-weight: bold;
+}

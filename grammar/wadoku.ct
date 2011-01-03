@@ -33,7 +33,7 @@ grammar WadokuGrammar
   end
 
   rule space
-    (" " | " " | " ") {
+    (" " | " " | " " | "//") {
       def html
         " "
       end
@@ -41,13 +41,21 @@ grammar WadokuGrammar
   end
 
   rule constituent
-    (expl | marker | noun | markup | word | space)  
+    (dom | expl | marker | noun | markup | abbrv | word | space )  
+  end
+
+  rule dom
+    ("{<Dom.: " part_f ">}") {
+      def html
+        "<span class='dom'>#{part_f.html}</span>"
+      end
+    }
   end
 
   rule expl
-    ("(<Expl.: " constituent ">)") {
+    ("(<" word  "."? ": " part_f ">)") {
       def html
-        "<span class='expl'>#{constituent.html}</span>"
+        "<span class='#{word.html.downcase}'>#{part_f.html}</span>"
       end
     } 
   end
@@ -62,7 +70,7 @@ grammar WadokuGrammar
   end
 
   rule part
-    (part_f splitter:(";" | ".")) {
+    (part_f splitter:("." | ";" | "")) {
       def html
         part_f.html + splitter
       end
@@ -73,6 +81,14 @@ grammar WadokuGrammar
     ("<" word "."? ":" (word | space | markup)+ ">") {
       def html
         "markup"
+      end
+    }
+  end
+
+  rule abbrv
+    (word ".") {
+      def html
+        self.to_s
       end
     }
   end
@@ -122,7 +138,7 @@ grammar WadokuGrammar
   end
 
   rule letter
-    [a-zA-ZäüöÄÜÖß]
+    [‑\-a-zA-ZäüöÄÜÖßō\w]
   end
 
   rule word

@@ -3,15 +3,16 @@ class Entry < ActiveRecord::Base
   @@per_page = 10
 
   def short_definition
-    self.defs_array.first + (self.defs_array.size > 1 ? "...": "")
+    self.defs_array.first 
   end
 
   def short_html
-      begin
-        WadokuGrammar.parse(short_definition).html
-      rescue => e
-        "FFF " + pos_html(genus_html(clean_markup(short_definition)))
-      end
+    begin
+      WadokuGrammar.parse(short_definition).html
+    rescue => e
+      #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
+      "parsing failed... #{short_definition}"
+    end
   end
 
   def pos
@@ -27,7 +28,12 @@ class Entry < ActiveRecord::Base
   def defs_array_html
     p = defs_array
     p.map{|x| 
-        pos_html(genus_html(clean_markup(x)))
+      begin
+        WadokuGrammar.parse(x).html
+      rescue => e
+        #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
+        "parsing failed... #{x}"
+      end
     }
 
   end
