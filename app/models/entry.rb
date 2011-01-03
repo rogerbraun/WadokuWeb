@@ -8,7 +8,7 @@ class Entry < ActiveRecord::Base
 
   def short_html
     begin
-      WadokuGrammar.parse(short_definition).html
+      WadokuGrammar.parse(short_definition).html.html_safe
     rescue => e
       #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
       "parsing failed... #{short_definition}"
@@ -29,7 +29,7 @@ class Entry < ActiveRecord::Base
     p = defs_array
     p.map{|x| 
       begin
-        WadokuGrammar.parse(x).html
+        WadokuGrammar.parse(x).html.html_safe
       rescue => e
         #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
         "parsing failed... #{x}"
