@@ -3,6 +3,7 @@ Wadoku::Application.routes.draw do
   match "search" => "search#start"
 
   resources :entries
+  get "entries/by-daid/:wadoku_id" => "entries#by_id"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

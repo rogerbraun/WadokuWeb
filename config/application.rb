@@ -6,7 +6,7 @@ require 'rails/all'
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
-Citrus.load("grammar/wadoku.ct")
+Citrus.load("grammar/wadoku_new.ct")
 
 module Wadoku
   class Application < Rails::Application

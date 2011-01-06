@@ -6,14 +6,6 @@ class Entry < ActiveRecord::Base
     self.defs_array.first 
   end
 
-  def short_html
-    begin
-      WadokuGrammar.parse(short_definition).html.html_safe
-    rescue => e
-      #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
-      "parsing failed... #{short_definition}"
-    end
-  end
 
   def pos
     self.definition.match(/POS: (.)/)[1]
@@ -24,6 +16,17 @@ class Entry < ActiveRecord::Base
     t = p.scan(/\[(\d+)\]([^[]+)/).map{|x| x[1].strip}
     t.empty? || t == nil ? [p] : t
   end
+
+  def to_html(root_url = "")
+      begin
+        WadokuGrammar.parse(self.definition).to_html.gsub("<<<ROOT_URL>>>",root_url).html_safe
+      rescue => e
+        #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
+        "parsing failed... #{self.definition}"
+      end
+  end
+
+  alias :short_html :to_html
 
   def defs_array_html
     p = defs_array

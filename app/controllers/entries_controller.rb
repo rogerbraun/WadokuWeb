@@ -13,13 +13,19 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.xml
   def show
-    @entry = Entry.find(params[:id])
+    @entry = Entry.find(params[:id]) 
 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @entry }
     end
   end
+
+  def by_id
+    @entry = Entry.find_by_wadoku_id(params[:wadoku_id]) if params[:wadoku_id]
+    redirect_to @entry
+  end
+
 
   # GET /entries/new
   # GET /entries/new.xml

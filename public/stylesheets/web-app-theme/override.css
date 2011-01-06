@@ -12,3 +12,7 @@ span.gen_f {
 span.dom {
   font-weight: bold;
 }
+
+span.usage {
+  font-style: italic;
+}

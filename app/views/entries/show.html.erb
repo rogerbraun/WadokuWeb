@@ -31,9 +31,7 @@
 
         <p>
           <b><%= t("activerecord.attributes.entry.definition", :default => t("activerecord.labels.definition", :default => "Definition")) %>:</b>
-          <ul class="list">
-            <%= @entry.defs_array_html.map{|x| "<li><p>#{h x}</p></li>"}.join("\n").html_safe %>
-          </ul>
+            <%= @entry.to_html(root_url) %>
         </p>
 
         <p>
@@ -45,7 +43,7 @@
                   <%=link_to "#{cur_entry.writing} - #{cur_entry.romaji}", cur_entry %>
                 </h4>
                 <p>
-                  <%= cur_entry.short_html%>
+                  <%= cur_entry.short_html(root_url)%>
                 </p>
               </li>
   

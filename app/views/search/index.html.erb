@@ -22,7 +22,7 @@
             <%= entry.romaji %>
           </td>
           <td>
-            <%= entry.short_html%>
+            <%= entry.short_html(root_url)%>
           </td>
           <td class="last">
             <%= link_to "#{t("web-app-theme.show", :default => "Detailansicht")}", entry_path(entry) %> 
