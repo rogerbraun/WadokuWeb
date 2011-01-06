@@ -1,5 +1,5 @@
 /* Override here any style defined by web-app-theme */
-span.gen_m {
+ span.gen_m {
   color:red;
 }
 span.gen_n {
@@ -7,6 +7,21 @@ span.gen_n {
 }
 span.gen_f {
   color:purple;
+}
+
+span.gen_f:after {
+  font-weight: bold;
+  content: " ♀";
+}
+
+span.gen_m:after {
+  font-weight: bold;
+  content: " ♂";
+}
+
+span.gen_n:after {
+  font-weight: bold;
+  content: " ⚲"
 }
 
 span.dom {
