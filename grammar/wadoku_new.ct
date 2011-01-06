@@ -179,7 +179,7 @@ grammar WadokuGrammar
   rule dom
     ("{<Dom.:" space* domain:real_words ">}" white:(space*)) {
       def to_html
-        "<span class='dom'>#{domain}</span>#{white}"
+        "<span class='dom'><a href='<<<ROOT_URL>>>entries/by-dom/#{CGI.escape(domain.chop.downcase)}'>#{domain}</a></span>#{white}"
       end
     }
   end

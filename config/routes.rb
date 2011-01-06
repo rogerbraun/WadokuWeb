@@ -4,6 +4,7 @@ Wadoku::Application.routes.draw do
 
   resources :entries
   get "entries/by-daid/:wadoku_id" => "entries#by_id"
+  get "entries/by-dom/:dom" => "entries#by_domain"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

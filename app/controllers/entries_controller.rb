@@ -26,6 +26,10 @@ class EntriesController < ApplicationController
     redirect_to @entry
   end
 
+  def by_domain
+    redirect_to :controller => :search, :action => :index, :search => {:definition_contains => params[:dom]}
+  end
+
 
   # GET /entries/new
   # GET /entries/new.xml
