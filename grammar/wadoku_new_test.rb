@@ -76,7 +76,7 @@ class WadokuGrammarTest < Test::Unit::TestCase
 
     match = WadokuGrammar.parse("[1] <GENKI_1> nicht benötigen; <test> was auch immer; und ein <gut> dummer test.", :root => :subentry)
     assert match
-    assert_equal "entry number 1: <span class='genki_1'>nicht benötigen</span>; <span class='test'>was auch immer</span>; und ein <span class='gut'>dummer test</span>.", match.to_html
+    assert_equal "[1]: <span class='genki_1'>nicht benötigen</span>; <span class='test'>was auch immer</span>; und ein <span class='gut'>dummer test</span>.", match.to_html
 
     match = WadokuGrammar.parse("Spaß<Gen.: m> am Rauchen; Vorliebe<Gen.: f> fürs Rauchen.")
     assert match
@@ -98,7 +98,7 @@ class WadokuGrammarTest < Test::Unit::TestCase
     str = "(<POS: N.>) [1] <JLPT2> enden; zu Ende gehen; <JLPT2> beendet werden; zu Ende sein; beendet sein; fertig sein. [2] nicht benötigen; ohne zurecht kommen. [3] bezahlt werden."
     match = WadokuGrammar.parse(str)
     assert match
-    assert_equal "entry number 1: <span class='jlpt2'>enden</span>; zu Ende gehen; <span class='jlpt2'>beendet werden</span>; zu Ende sein; beendet sein; fertig sein. entry number 2: nicht benötigen; ohne zurecht kommen. entry number 3: bezahlt werden.", match.to_html
+    assert_equal "[1]: <span class='jlpt2'>enden</span>; zu Ende gehen; <span class='jlpt2'>beendet werden</span>; zu Ende sein; beendet sein; fertig sein. [2]: nicht benötigen; ohne zurecht kommen. [3]: bezahlt werden.", match.to_html
 
     str = "Problem<Gen.: n>, das mit Geld nicht zu lösen ist."
     match = WadokuGrammar.parse(str)
@@ -140,15 +140,27 @@ class WadokuGrammarTest < Test::Unit::TestCase
     str = "(<POS: N., mit <Transcr.: suru> trans. V.>) Spaß<Gen.: m> am Rezitieren; Spaß<Gen.: m> am Lesen (<Ref.: ⇒ <Transcr.: aigin> <Jap.: 愛吟><DaID: 4912007>>)."
     match = WadokuGrammar.parse(str)
     assert match
-    assert_equal "<span class='gen_m'>Spaß</span> am Rezitieren; <span class='gen_m'>Spaß</span> am Lesen (siehe <a href='/wadoku/entries/by-daid/4912007'>愛吟</a>).", match.to_html
+    assert_equal "<span class='gen_m'>Spaß</span> am Rezitieren; <span class='gen_m'>Spaß</span> am Lesen (⇒ <a href='<<<ROOT_URL>>>entries/by-daid/4912007'>愛吟 - <span class='transcr'>aigin</span></a>).", match.to_html
+
+    str = "(<POS: N.>) {<Dom.: Gebietsn.>} Aichi<Gen.: nNAr> (<Def.: Name einer Präf. in der Chūbu-Region>; <Expl.: Präfekturhauptstadt ist Nagoya>)."
+    match = WadokuGrammar.parse(str)
+    assert match
+    assert_equal "<span class='dom'>Gebietsn.</span> <span class='def'>Name einer Präf. in der Chūbu-Region</span>", match.to_html
   end
     
   def test_body
     str = "[1] <JLPT2> enden; zu Ende gehen; <JLPT2> beendet werden; zu Ende sein; beendet sein; fertig sein. [2] nicht benötigen; ohne zurecht kommen. [3] bezahlt werden."
     match = WadokuGrammar.parse(str,:root => :body)
     assert match
-    assert_equal "entry number 1: <span class='jlpt2'>enden</span>; zu Ende gehen; <span class='jlpt2'>beendet werden</span>; zu Ende sein; beendet sein; fertig sein. entry number 2: nicht benötigen; ohne zurecht kommen. entry number 3: bezahlt werden.", match.to_html
+    assert_equal "[1]: <span class='jlpt2'>enden</span>; zu Ende gehen; <span class='jlpt2'>beendet werden</span>; zu Ende sein; beendet sein; fertig sein. [2]: nicht benötigen; ohne zurecht kommen. [3]: bezahlt werden.", match.to_html
   end
+
+  def test_ref
+    match = WadokuGrammar.parse("(<Ref.: → <Transcr.: aichaku> <Jap.: 愛着><DaID: 1226801>>)", :root => :ref)
+    assert match
+    assert_equal "(→ <a href='<<<ROOT_URL>>>entries/by-daid/1226801'>愛着 - <span class='transcr'>aichaku</span></a>)", match.to_html
+  end
+
 
   def test_transcr
     str = "<Transcr.: ‑ma>"

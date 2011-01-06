@@ -71,7 +71,7 @@ grammar WadokuGrammar
   rule number
     ("[" num:[0-9] "]" space*) {
       def to_html
-        "entry number #{num}: "
+        "[#{num}]: "
       end
     }
   end
@@ -112,6 +112,22 @@ grammar WadokuGrammar
     ( ref |  def | expl | dom | usage | gen_mark | word | marker) 
   end
 
+  rule paren_child
+    (content:(def | expl) seperator:";"? space* ) {
+      def to_html
+        content.to_html + (seperator ? seperator.to_html : "")
+      end
+    }
+  end
+
+  rule parenthesized
+    "(" content:(paren_child+) ")" {
+      def to_html
+        "(" + content.map(&:to_html).join("") + ")"
+      end
+    }
+  end
+
   rule expl
     ("(<Expl.:" space* real_words ">)" white:(space*)) {
       def to_html
@@ -129,7 +145,7 @@ grammar WadokuGrammar
   end
 
   rule real_words
-    (word "." | word | space)+ {
+    (word "." | space | word)+ {
       def to_html
         self.to_s
       end 
@@ -153,9 +169,9 @@ grammar WadokuGrammar
   end
 
   rule ref
-    ( "(<Ref.: ⇒" space* transcr space* jap space* daid space* ">)" space* ) {
+    ( "(<Ref.:" space* arrow:("⇒" | "→" | "⇔" ) space* transcr space* jap space* daid space* ">)" space* ) {
       def to_html
-        "(siehe <a href='<<<ROOT_URL>>>entries/by-daid/#{daid.to_html}'>#{jap.to_html} - #{transcr.to_html}</a>)"
+        "(#{arrow} <a href='<<<ROOT_URL>>>entries/by-daid/#{daid.to_html}'>#{jap.to_html} - #{transcr.to_html}</a>)"
       end
     }
   end
@@ -177,7 +193,7 @@ grammar WadokuGrammar
   end
 
   rule letter
-    [/‑\-a-zA-ZäüöÄÜÖßō\w,·]
+    [/‑\-a-zA-ZäüöÄÜÖßōīēāū\w,·’]
   end
 
   rule nothing
