@@ -6,14 +6,13 @@ class Entry < ActiveRecord::Base
     self.defs_array.first 
   end
 
-
   def pos
     self.definition.match(/POS: (.)/)[1]
   end
 
   def defs_array
     p = self.definition
-    t = p.scan(/\[(\d+)\]([^[]+)/).map{|x| x[1].strip}
+    t = p.scan(/\[(\d+)\]([^\[]+)/).map{|x| x[1].strip}
     t.empty? || t == nil ? [p] : t
   end
 

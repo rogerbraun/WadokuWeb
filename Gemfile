@@ -24,7 +24,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem "meta_search"
 gem "will_paginate", "~> 3.0.pre2"
-gem "citrus"
+gem "citrus", :git =>"https://github.com/mjijackson/citrus.git"
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

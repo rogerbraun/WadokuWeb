@@ -1,8 +1,10 @@
+#encoding: utf-8
 require "rubygems"
 require "citrus"
 require "test/unit"
+require "cgi"
 
-Citrus.load("wadoku_new.ct")
+Citrus.load("wadoku_new")
 
 class WadokuGrammarTest < Test::Unit::TestCase
   

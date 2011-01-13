@@ -193,7 +193,7 @@ grammar WadokuGrammar
   end
 
   rule letter
-    [/‑\-a-zA-ZäüöÄÜÖßōīēāū\w,·’…]
+    [\/‑\-a-zA-ZäüöÄÜÖßōīēāū\w,·’…]
   end
 
   rule nothing
