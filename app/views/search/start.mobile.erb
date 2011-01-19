@@ -1,0 +1,17 @@
+<div id="home" class="current">
+  <div class="toolbar">
+    <h1>WadokuJT</h1>
+  </div>
+  <div class="info">
+    <p>
+     <%= t "search.info" %>
+    </p>
+  </div>
+      <%=form_for @search, :url => search_index_path, :html => {:class => :form} do |f| %>
+        <ul>
+          <li><%= f.text_field :romaji_or_writing_or_kana_starts_with, :class=> "text_field"%> </li>
+        </ul>
+        <a style="margin:0 10px;color:rgba(0,0,0,.9)" href="#" class="submit whiteButton"><%= t("search.search")%></a>
+      <% end %>
+</div>
+  
