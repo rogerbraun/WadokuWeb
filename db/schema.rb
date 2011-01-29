@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110112012754) do
   end
 
   create_table "ex_sentences", :force => true do |t|
+    t.integer  "tatoeba_id"
     t.string   "lang"
     t.text     "content"
     t.datetime "created_at"

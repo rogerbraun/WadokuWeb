@@ -1,6 +1,7 @@
 class CreateExSentences < ActiveRecord::Migration
   def self.up
     create_table :ex_sentences do |t|
+      t.integer :tatoeba_id
       t.string :lang
       t.text :content
 
