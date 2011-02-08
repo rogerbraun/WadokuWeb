@@ -1,4 +1,4 @@
-<div class="block notice">
+<div id="search_box" class="block notice">
   <h3>Suche</h3>
   <div class="content">
     <p><%= t "search.info" %></p>
@@ -22,4 +22,10 @@
     </p>
   </div>
 </div>
+
+<%= javascript_tag do %>
+  $(window).scroll(function(){
+    $("#search_box").animate({"margin-top": $(window).scrollTop() + "px"}, {queue: false});
+  });
+<% end %>
 
