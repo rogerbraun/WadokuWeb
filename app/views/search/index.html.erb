@@ -2,40 +2,15 @@
   <div class="content">          
     <h2 class="title"><%= t("search.results", :default => "Suchergebnisse")  %> </h2>
     <div class="inner">
-      <table class="table">
-        <tr>             
-          <th class="first">Lemma</th>
-          <th>
-            Romaji
-          </th>
-          <th>
-            Definition
-          </th> 
-          <th class="last">&nbsp;</th>
-        </tr>
-        <% @entries.each do |entry| -%>
-        <tr class="<%= cycle("odd", "even") %>">
-          <td>
-            <%= entry.writing %>
-          </td>
-          <td>
-            <%= entry.romaji %>
-          </td>
-          <td>
-            <%= entry.short_html(root_url)%>
-          </td>
-          <td class="last">
-            <%= link_to "#{t("web-app-theme.show", :default => "Detailansicht")}", entry_path(entry) %> 
-          </td>
-        </tr>          
-        <% end -%>
-      </table>
+      <div id="entries" class="entry">
+        <% @entries.each do |entry| %>
+          <p class="hanging-indent" ><%=entry.full_html %> <br /><%= link_to t("entry.detail"), entry_path(entry) %></p>
+        <% end %>
+      </div>
       <div class="actions-bar wat-cf">
         <div class="actions">
-        </div>
-        
         <%= will_paginate @entries  %>
-        
+        </div>
       </div>
     </div>
   </div>

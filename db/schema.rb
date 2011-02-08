@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110101184932) do
+ActiveRecord::Schema.define(:version => 20110129135643) do
 
   create_table "entries", :force => true do |t|
     t.integer  "wadoku_id"
@@ -21,6 +21,21 @@ ActiveRecord::Schema.define(:version => 20110101184932) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "entry_relation"
+  end
+
+  add_index "entries", ["romaji", "writing", "kana"], :name => "index_entries_on_romaji_and_writing_and_kana"
+
+  create_table "ex_sentences", :force => true do |t|
+    t.integer  "tatoeba_id"
+    t.string   "lang"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "translation_equivalents", :id => false, :force => true do |t|
+    t.integer "ex_sentence_id"
+    t.integer "translation_id"
   end
 
 end

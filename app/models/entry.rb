@@ -1,6 +1,6 @@
 class Entry < ActiveRecord::Base
   cattr_reader :per_page
-  @@per_page = 10
+  @@per_page = 30
 
   def short_definition
     self.defs_array.first 
@@ -23,6 +23,10 @@ class Entry < ActiveRecord::Base
         #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
         "parsing failed... #{self.definition}"
       end
+  end
+
+  def full_html(root_url = "")
+    "<span class='writing'><ruby><rb>#{self.writing}</rb><rp> (</rp><rt>#{self.kana}</rt><rp>) </rp></ruby></span> : #{self.to_html(root_url)}".html_safe
   end
 
   alias :short_html :to_html

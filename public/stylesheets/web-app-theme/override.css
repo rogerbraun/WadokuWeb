@@ -1,27 +1,27 @@
 /* Override here any style defined by web-app-theme */
  span.gen_m {
-  color:blue;
 }
 span.gen_n {
-  color:purple;
 }
 span.gen_f {
-  color:red;
 }
 
 span.gen_f:after {
   font-weight: bold;
-  content: " ♀";
+  content: "♀";
+  color:red;
 }
 
 span.gen_m:after {
   font-weight: bold;
-  content: " ♂";
+  content: "♂";
+  color:blue;
 }
 
 span.gen_n:after {
   font-weight: bold;
-  content: " ⚲"
+  content: "⚲"
+  color:purple;
 }
 
 span.dom {
@@ -31,3 +31,20 @@ span.dom {
 span.usage {
   font-style: italic;
 }
+
+.entry {-webkit-column-count: 2;-webkit-column-rule: 1px solid #bbb;
+-webkit-column-gap: 2em;font-family: 'Crimson Text',arial, serif; font-size: 1.5em;text-align:justify; padding-top:0.5em;}
+
+.hanging-indent {
+text-indent: -25px;
+padding-left: 25px;
+}
+
+.entry .writing {
+  font-size: 1.5em;
+}
+
+.entry p {
+  margin:0;
+}
+
