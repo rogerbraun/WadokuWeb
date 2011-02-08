@@ -4,7 +4,7 @@
     <div class="inner">
       <div id="entries" class="entry">
         <% @entries.each do |entry| %>
-          <p class="hanging-indent" ><%=entry.full_html %> <br /><%= link_to t("entry.detail"), entry_path(entry) %></p>
+          <p class="hanging-indent" ><%=entry.full_html(root_url) %> <br /><%= link_to t("entry.detail"), entry_path(entry) %></p>
         <% end %>
       </div>
       <div class="actions-bar wat-cf">
