@@ -10,18 +10,24 @@ span.gen_f:after {
   font-weight: bold;
   content: "♀";
   color:red;
+  font-size:xx-small;
+  vertical-align: top;
 }
 
 span.gen_m:after {
   font-weight: bold;
   content: "♂";
   color:blue;
+  font-size:xx-small;
+  vertical-align: top;
 }
 
 span.gen_n:after {
   font-weight: bold;
   content: "⚲"
   color:purple;
+  font-size:xx-small;
+  vertical-align: top;
 }
 
 span.dom {
@@ -48,3 +54,5 @@ padding-left: 25px;
   margin:0;
 }
 
+.entry p.even {
+  background: #BDC0BA;
