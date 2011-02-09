@@ -25,7 +25,14 @@
 
 <%= javascript_tag do %>
   $(window).scroll(function(){
-    $("#search_box").animate({"margin-top": $(window).scrollTop() + "px"}, {queue: false});
+    if($(window).scrollTop() > 100) {
+      $("#search_box").animate({"margin-top": ($(window).scrollTop() - 100) + "px"}, {queue: false});
+     }
+    else
+    {
+      $("#search_box").animate({"margin-top": "0px"}, {queue: false});
+    }
+      
   });
 <% end %>
 
