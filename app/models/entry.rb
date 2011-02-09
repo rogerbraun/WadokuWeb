@@ -26,7 +26,7 @@ class Entry < ActiveRecord::Base
   end
 
   def full_html(root_url = "")
-    "<span class='writing'><ruby><rb>#{self.writing}</rb><rp> (</rp><rt>#{self.kana}</rt><rp>) </rp></ruby></span> : #{self.to_html(root_url)}".html_safe
+    "<span class='writing'><ruby><rb>#{self.midashigo}</rb><rp> (</rp><rt>#{self.kana}</rt><rp>) </rp></ruby></span> : #{self.to_html(root_url)}".html_safe
   end
 
   alias :short_html :to_html
