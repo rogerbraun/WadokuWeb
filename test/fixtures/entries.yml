@@ -1,15 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  wadoku_id: 1
-  romaji: MyString
-  writing: MyString
-  kana: MyString
-  definition: MyText
+imouto:
+  wadoku_id: 9648681
+  romaji: 
+  writing: 妹; いもうと (義妹)
+  kana: いもうと
+  midashigo: 妹
+  definition: "(<POS: N.>) [1]<MGr: <TrE: <GENKI_K1, GENKI_K7, GENKI_K7 _s_>jüngere <HW f: Schwester> (<Expl.: des Sprechers>)>>. [2]<MGr: <TrE: <Def.: freundliche Anrede eines Mannes gegenüber einer Frau, z. B. gegenüber der Ehefrau oder Geliebten>>>. [3]<MGr: <TrE: <Def.: Anrede zwischen Frauen>. (<Etym.: Variante von <Ref.: <Transcr.: imo·hito> <Jap.: 妹人><DaID: 7236190>>>；<Ref.: ⇔ <Transcr.: ane> <Jap.: 姉><DaID: 0179607>>)>>."
 
-two:
-  wadoku_id: 1
-  romaji: MyString
-  writing: MyString
-  kana: MyString
-  definition: MyText

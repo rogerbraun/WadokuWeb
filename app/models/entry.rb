@@ -17,6 +17,10 @@ class Entry < ActiveRecord::Base
     t.empty? || t == nil ? [p] : t
   end
 
+  def parse
+    WadokuGrammar.parse(self.definition)
+  end
+
   def to_html(root_url = "")
       begin
         WadokuGrammar.parse(self.definition).to_html.gsub("<<<ROOT_URL>>>",root_url).html_safe
