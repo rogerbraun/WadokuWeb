@@ -1,6 +1,7 @@
 class SearchController < ApplicationController
   def index
-    @search = Entry.search(params[:search])
+    redirect_to "search#start" unless params[:search]
+    @search = Entry.search_by_any(params[:search])
     @entries = @search.paginate(:page => params[:page], :per_page => Entry.per_page)
     respond_to do |format|
       format.html

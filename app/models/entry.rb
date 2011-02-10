@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Entry < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 30
@@ -52,6 +53,15 @@ class Entry < ActiveRecord::Base
     end
     res || []
   end
+
+  def self.search_by_any(word)
+    if word[/[āōīūōA-z]/] then
+      Entry.where("definition like ?", "%#{word}%")
+    else
+      Entry.where("writing like ?", "#{word}%") +
+      Entry.where("kana like ?", "#{word}%")
+    end
+  end 
 
   private
 
