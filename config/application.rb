@@ -7,6 +7,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
 Citrus.load("grammar/wadoku_new")
+Citrus.load("grammar/wadoku_new_2")
 
 module Wadoku
   class Application < Rails::Application

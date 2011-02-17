@@ -18,7 +18,7 @@ class Entry < ActiveRecord::Base
   end
 
   def parse
-    WadokuGrammar.parse(self.definition)
+    WadokuNewGrammar.parse(self.definition)
   end
 
   def to_html(root_url = "")
