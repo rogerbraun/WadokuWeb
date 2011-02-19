@@ -1,0 +1,18 @@
+grammar WadokuNewGrammar
+
+  rule entry
+    pos? space* (meaninggroup (";"|"."))+ 
+  end
+
+  rule pos
+    /\(<POS:.*?>\)/ {
+      def to_html
+        "POS"
+      end
+    }
+  end
+
+  rule space
+    /\s/
+  end
+end
