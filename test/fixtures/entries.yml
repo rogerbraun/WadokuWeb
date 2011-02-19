@@ -14,4 +14,5 @@ c:
   writing: "C [1]"
   midashigo: "C [1]"
   kana: "wie entsprechende Zahl [1]"
-  definition: "(<POS: N.>) <MGr: <TrE: <HW NAr: C>>; <TrE: hundert>> (<Def.: röm. Ziffer für „<literal: 100>“>)."
+  definition: "(<POS: N.>) <MGr: <TrE: <HW NAr: C>>; <TrE: hundert>> (<Def.: röm. Ziffer für <literal: 100>>)."
+

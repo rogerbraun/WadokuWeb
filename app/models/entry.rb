@@ -23,7 +23,7 @@ class Entry < ActiveRecord::Base
 
   def to_html(root_url = "")
       begin
-        WadokuGrammar.parse(self.definition).to_html.gsub("<<<ROOT_URL>>>",root_url).html_safe
+        self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).html_safe
       rescue => e
         #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
         "parsing failed... #{self.definition}"

@@ -1,18 +1,85 @@
-grammar WadokuNewGrammar
+grammar WadokuNewGrammar 
 
   rule entry
-    pos? space* (meaninggroup (";"|"."))+ 
+    ("(<POS: " letter ".>)" space* meanings:(meaning_group)+ ) {
+      def to_html
+        meanings.matches.map{|m| m.to_html}.join("")  
+      end
+    }
   end
 
-  rule pos
-    /\(<POS:.*?>\)/ {
+  rule meaning_group
+    ("<MGr:" space* tres:(tre)+ ">" space* ( "(" space* tags:(tag)+ space* ")" )? ending:(".")?) {
+
       def to_html
-        "POS"
+        tres.matches.map{|t| t.to_html}.join("") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ")" : "") + ending.to_s
+      end
+    }
+  end
+
+  rule tre
+    ("<TrE:" space* contents:(content)+ ">" sep:(";")? space*) {
+      def to_html
+        contents.matches.map{|c| c.to_html}.join("") + sep.to_s + space.to_s
+      end 
+    }
+  end
+
+  rule content
+    tag | genus | words 
+  end
+
+  rule genus
+    ("<HW " sex:word ":" space* noun:word ">") {
+      def to_html
+        "<span class='genus #{sex.to_s}'>#{noun}</span>"
+      end
+    }
+  end
+
+  rule tag
+    ("<" spanclass:word (".:" | ":") space* contents:(content)+ ">") {
+      def to_html
+        "<span class='#{spanclass}'>#{contents.matches.map{|c| c.to_html}.join("")}</span>"
+      end
+    }
+  end
+
+
+  rule letter
+    [\/‑\-a-zA-ZäüöÄÜÖßōīēāū\w,·’….„“]
+  end
+
+  rule nothing
+    "" {
+      def to_html
+        ""
+      end
+    }
+  end
+
+  rule words
+    word+ {
+      def to_html
+        matches.map{|m| m.to_html}.join("")
       end
     }
   end
 
   rule space
-    /\s/
+    ("\t" | " " | " " | " ") {
+      def to_html
+        " "
+      end
+    }
   end
+
+  rule word
+    ((letter+) space?) {
+      def to_html
+        self.to_s 
+      end 
+    }
+  end
+
 end
