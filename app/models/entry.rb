@@ -3,18 +3,8 @@ class Entry < ActiveRecord::Base
   cattr_reader :per_page
   @@per_page = 30
 
-  def short_definition
-    self.defs_array.first 
-  end
-
   def pos
     self.definition.match(/POS: (.)/)[1]
-  end
-
-  def defs_array
-    p = self.definition
-    t = p.scan(/\[(\d+)\]([^\[]+)/).map{|x| x[1].strip}
-    t.empty? || t == nil ? [p] : t
   end
 
   def parse
@@ -36,18 +26,6 @@ class Entry < ActiveRecord::Base
 
   alias :short_html :to_html
 
-  def defs_array_html
-    p = defs_array
-    p.map{|x| 
-      begin
-        WadokuGrammar.parse(x).html.html_safe
-      rescue => e
-        #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
-        "parsing failed... #{x}"
-      end
-    }
-
-  end
 
   def related
     if self.entry_relation["HE"] then
@@ -66,33 +44,5 @@ class Entry < ActiveRecord::Base
       Entry.where("kana like ?", "#{word}%")
     end
   end 
-
-  private
-
-  CLEAN_REGEXPS = [/\{<.+?>\}/,/\(<.+?>\)/,/^\S/]
-
-  def pos_and_def
-    self.definition.match(/^(\(.+?\))(.*)/)[1..-1] 
-  end
-
-  def genus_html(defi)
-    defi.gsub(/<Gen.: (\w+)>/) do |mat|
-      " <em>#{$1}</em>"
-    end
-  end
-
-  def pos_html(defi)
-    defi.gsub(/\(<POS: (\w+).>\)/) do |mat|
-      " <strong>#{$1}</strong>"
-    end
-  end
-
-  def clean_markup(defi)
-    t = defi.dup
-    CLEAN_REGEXPS.each do |reg|
-      t.gsub!(reg,"")
-    end
-    t
-  end
 
 end
