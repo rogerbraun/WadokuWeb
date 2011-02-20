@@ -26,10 +26,9 @@ class Entry < ActiveRecord::Base
 
   alias :short_html :to_html
 
-
   def related
     if self.entry_relation["HE"] then
-      res = Entry.where(:entry_relation => self.writing + "\n")
+      res = Entry.where(:entry_relation => self.writing)
     else
       res = Entry.where(:writing => self.entry_relation.strip)
     end

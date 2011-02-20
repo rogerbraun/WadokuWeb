@@ -40,7 +40,7 @@
             <% @entry.related.each do |cur_entry| %>
               <li>
                 <h4>
-                  <%=link_to "#{cur_entry.writing} - #{cur_entry.romaji}", cur_entry %>
+                  <%=link_to "#{cur_entry.writing} - #{cur_entry.kana}", cur_entry %>
                 </h4>
                 <p>
                   <%= cur_entry.short_html(root_url)%>
