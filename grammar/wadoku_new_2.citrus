@@ -87,7 +87,7 @@ grammar WadokuNewGrammar
   end
 
   rule symbol
-    ("⇒" | "⇔" | "→" | "⇒" | "‑" | "[" | "]" | "=" ) {
+    ("⇒" | "⇔" | "→" | "⇒" | "‑" | "[" | "]" | "=" | "–" ) {
       def to_html
         self.to_s
       end
@@ -113,7 +113,7 @@ grammar WadokuNewGrammar
 
 
   rule letter
-    [\/‑\-a-zA-ZäüöÄÜÖßōīēāū,·’…„“]
+    [\/‑\-a-zA-ZäüöÄÜÖßōīēāūŪŌĪĒĀ,·’…„“]
   end
 
   rule nothing

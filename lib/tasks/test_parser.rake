@@ -4,6 +4,7 @@ namespace :db do
     @success = 0
     @entries = Entry.all
     pbar = ProgressBar.new("Entries parsed:", @entries.count)
+    failed= []
     @entries.each do |entry|
       @count +=1
       @success += 1
@@ -12,9 +13,12 @@ namespace :db do
         WadokuNewGrammar.parse(entry.definition)
       rescue => e 
         @success -= 1
+        failed << entry.definition
       end
     end
     pbar.finish
     puts "#{@count} entries, #{@success} successfully parsed, #{@success.to_f / @count.to_f * 100}% correct."
+    puts "wrote failed entries to log/failed.log"
+    open(File.join(Rails.root, "log", "failed.log"), "w").write(failed.join("\n"))
   end
 end
