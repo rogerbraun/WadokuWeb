@@ -17,7 +17,7 @@ namespace :db do
       end
     end
     pbar.finish
-    puts "#{@count} entries, #{@success} successfully parsed, #{@success.to_f / @count.to_f * 100}% correct."
+    puts "#{@count} entries, #{@success} successfully parsed, #{@count - @success} not parsed. (#{@success.to_f / @count.to_f * 100}%)"
     puts "wrote failed entries to log/failed.log"
     open(File.join(Rails.root, "log", "failed.log"), "w").write(failed.join("\n"))
   end
