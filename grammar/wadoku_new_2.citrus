@@ -18,32 +18,40 @@ grammar WadokuNewGrammar
   end
 
   rule meaning_group
-    ( number:("[" /\d+/ "]")? "<MGr:" space* dom? space* tres:(tre)+ ">" space* ( "(" space* tags:(tag)+ space* ")" )? ending:("." | "//")? sepspace:space? ) {
+    ( number:("[" /\d+/ "]")? "<MGr:" space* dom? space* tres:(tre)+ space* pre:bracketed_tags? space* ">" space* bracketed_tags? space* ending:("." | "//")? sepspace:space? ) {
 
       def to_html
-        (number ? number.to_s : "") + (dom ? dom.to_html + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ")" : "") + ending.to_s + sepspace.to_s
+        (number ? "<span class='mg_nr'>#{number.to_s}<span> " : "") + (dom ? dom.to_html + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (pre ? pre.to_html.to_s : "") + (bracketed_tags ? bracketed_tags.to_html.to_s : "") + ending.to_s + sepspace.to_s
       end
     }
   end
 
-  rule bracketed_tag
-    ( "(" space* tag space* ")" ) {
+  rule bracketed_tags
+    ( "(" space* tags:(tag)+ space* ")" ) {
       def to_html
-        "(#{tag.to_html})"
+        "(#{tags.matches.map(&:to_html).join("")})"
       end
     }
   end
 
   rule tre
-    ("<TrE:" space* contents:(content)+ bracketed_tag? ">" sep:(";")? ending:space*) {
+    ("<TrE:" space* contents:(content)+ ">" sep:(";")? ending:space*) {
       def to_html
-        contents.matches.map{|c| c.to_html}.join("") + (bracketed_tag ? bracketed_tag.to_html : "") + sep.to_s + ending.to_s
+        contents.matches.map{|c| c.to_html}.join("") + sep.to_s + ending.to_s
       end 
     }
   end
 
   rule content
-    jap | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag
+    jap | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag | bracketed_tags | number
+  end
+
+  rule number
+    /\d+/ {
+      def to_html
+        self.to_s
+      end
+    } 
   end
 
   rule simple_tag
@@ -71,7 +79,7 @@ grammar WadokuNewGrammar
   end
 
   rule punctuation
-    ("!" | ",") {
+    ("!" | ","| ".") {
       def to_html 
         self.to_s
       end
@@ -79,7 +87,7 @@ grammar WadokuNewGrammar
   end
 
   rule symbol
-    ("⇒" | "⇔" | "→") {
+    ("⇒" | "⇔" | "→" | "⇒" | "‑" | "[" | "]" | "=" ) {
       def to_html
         self.to_s
       end
@@ -96,16 +104,16 @@ grammar WadokuNewGrammar
   end
 
   rule tag
-    ("<" spanclass:word (".:" | ":") space* contents:(content)+ ">" space* seperator:(";")? space*) {
+    ("<" spanclass:word (".:" | ":") space* contents:(content)+ ">" space* sep:(";"|"；")? space*) {
       def to_html
-        "<span class='#{spanclass.to_s.downcase}'>#{contents.matches.map{|c| c.to_html}.join("")}</span>"
+        "<span class='#{spanclass.to_s.downcase}'>#{contents.matches.map{|c| c.to_html}.join("")}</span>" + (sep ? sep.to_s : "")
       end
     }
   end
 
 
   rule letter
-    [\/‑\-a-zA-ZäüöÄÜÖßōīēāū\w,·’…„“]
+    [\/‑\-a-zA-ZäüöÄÜÖßōīēāū,·’…„“]
   end
 
   rule nothing
