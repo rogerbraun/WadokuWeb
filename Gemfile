@@ -33,3 +33,5 @@ gem 'jquery-rails', '>= 0.2.6'
 group :development, :test do
   gem 'web-app-theme', '>= 0.6.2'
 end
+
+gem "progressbar"

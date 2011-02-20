@@ -1,32 +1,90 @@
 grammar WadokuNewGrammar 
 
   rule entry
-    ("(<POS: " letter ".>)" space* meanings:(meaning_group)+ ) {
+    (pos? space* ( "(" tags:(tag)+ ")" )? space* meanings:(meaning_group)+ ) {
       def to_html
-        meanings.matches.map{|m| m.to_html}.join("")  
+        (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ") " : "") + meanings.matches.map{|m| m.to_html}.join("")  
+      end
+    }
+  end
+
+
+  rule pos
+    ("(<POS: " (content)+  "."? ">)") {
+      def to_html
+        ""
       end
     }
   end
 
   rule meaning_group
-    ("<MGr:" space* tres:(tre)+ ">" space* ( "(" space* tags:(tag)+ space* ")" )? ending:(".")?) {
+    ( number:("[" /\d+/ "]")? "<MGr:" space* dom? space* tres:(tre)+ ">" space* ( "(" space* tags:(tag)+ space* ")" )? ending:("." | "//")? sepspace:space? ) {
 
       def to_html
-        tres.matches.map{|t| t.to_html}.join("") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ")" : "") + ending.to_s
+        (number ? number.to_s : "") + (dom ? dom.to_html + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ")" : "") + ending.to_s + sepspace.to_s
+      end
+    }
+  end
+
+  rule bracketed_tag
+    ( "(" space* tag space* ")" ) {
+      def to_html
+        "(#{tag.to_html})"
       end
     }
   end
 
   rule tre
-    ("<TrE:" space* contents:(content)+ ">" sep:(";")? space*) {
+    ("<TrE:" space* contents:(content)+ bracketed_tag? ">" sep:(";")? ending:space*) {
       def to_html
-        contents.matches.map{|c| c.to_html}.join("") + sep.to_s + space.to_s
+        contents.matches.map{|c| c.to_html}.join("") + (bracketed_tag ? bracketed_tag.to_html : "") + sep.to_s + ending.to_s
       end 
     }
   end
 
   rule content
-    tag | genus | words 
+    jap | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag
+  end
+
+  rule simple_tag
+    ("<" co:(/[^>]+/) ">") {
+      def to_html
+        "<span class='#{co.to_s.downcase}'>(#{co.to_s})</span> "
+      end  
+    }
+  end
+
+  rule dom
+    ("{" tag "}") {
+      def to_html
+        "{" + tag.to_html + "}"
+      end 
+    }
+  end
+
+  rule jap
+    ("<Jap.:" space* content:(/[^>]+/) ">" space*) {
+      def to_html
+        content.to_s
+      end
+    }
+  end
+
+  rule punctuation
+    ("!" | ",") {
+      def to_html 
+        self.to_s
+      end
+    }
+  end
+
+  rule symbol
+    ("⇒" | "⇔" | "→") {
+      def to_html
+        self.to_s
+      end
+    } 
+
   end
 
   rule genus
@@ -38,22 +96,30 @@ grammar WadokuNewGrammar
   end
 
   rule tag
-    ("<" spanclass:word (".:" | ":") space* contents:(content)+ ">") {
+    ("<" spanclass:word (".:" | ":") space* contents:(content)+ ">" space* seperator:(";")? space*) {
       def to_html
-        "<span class='#{spanclass}'>#{contents.matches.map{|c| c.to_html}.join("")}</span>"
+        "<span class='#{spanclass.to_s.downcase}'>#{contents.matches.map{|c| c.to_html}.join("")}</span>"
       end
     }
   end
 
 
   rule letter
-    [\/‑\-a-zA-ZäüöÄÜÖßōīēāū\w,·’….„“]
+    [\/‑\-a-zA-ZäüöÄÜÖßōīēāū\w,·’…„“]
   end
 
   rule nothing
     "" {
       def to_html
         ""
+      end
+    }
+  end
+
+  rule abbrev
+    (word ".") {
+      def to_html
+        self.to_s
       end
     }
   end

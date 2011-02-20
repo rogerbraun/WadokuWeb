@@ -6,7 +6,7 @@ span.gen_n {
 span.gen_f {
 }
 
-span.gen_f:after {
+span.f:after {
   font-weight: bold;
   content: "♀";
   color:red;
@@ -14,7 +14,7 @@ span.gen_f:after {
   vertical-align: top;
 }
 
-span.gen_m:after {
+span.m:after {
   font-weight: bold;
   content: "♂";
   color:blue;
@@ -22,7 +22,7 @@ span.gen_m:after {
   vertical-align: top;
 }
 
-span.gen_n:after {
+span.n:after {
   font-weight: bold;
   content: "⚲"
   color:purple;
