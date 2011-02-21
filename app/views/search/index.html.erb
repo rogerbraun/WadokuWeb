@@ -3,13 +3,16 @@
     <h2 class="title"><%= t("search.results", :default => "Suchergebnisse")  %> </h2>
     <div id="results" class="inner">
       <%= render :partial => "entries", :locals => {:entries => @entries} %>
-      <%= javascript_tag do %>
-        $("#results").live("ajax:beforeSend", function() {
-            $(this).fadeOut();
-        });
-        
-      <% end %>
     </div>
+    <%= javascript_tag do %>
+      $(".pagination").live("ajax:beforeSend", function() {
+          $("#results").hide("slide");
+      });
+      $("#search_box").live("ajax:beforeSend", function() {
+          $("#results").hide("slide");
+      });
+      
+    <% end %>
   </div>
 </div>
 
