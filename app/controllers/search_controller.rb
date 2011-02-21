@@ -5,6 +5,7 @@ class SearchController < ApplicationController
     @entries = @search.paginate(:page => params[:page], :per_page => Entry.per_page)
     respond_to do |format|
       format.html
+      format.js
     end 
   end
 

@@ -3,7 +3,7 @@
   <div class="content">
     <p><%= t "search.info" %></p>
     <p>
-      <%=form_tag search_index_path, :method => :get, :class => :form do %>
+      <%=form_tag search_index_path, :method => :get, :remote => true, :class => :form do %>
           <div class="group">
             <%= label_tag "search", t("search.any", :default => "Suchbegriff"),:class => "label" %>
             <%= text_field_tag "search", params[:search], :class => "text_field" %>

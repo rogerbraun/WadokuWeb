@@ -24,7 +24,7 @@ span.m:after {
 
 span.n:after {
   font-weight: bold;
-  content: "⚲"
+  content: "⚲";
   color:purple;
   font-size:xx-small;
   vertical-align: top;
@@ -35,6 +35,10 @@ span.dom {
 }
 
 span.usage {
+  font-style: italic;
+}
+
+span.transcr {
   font-style: italic;
 }
 

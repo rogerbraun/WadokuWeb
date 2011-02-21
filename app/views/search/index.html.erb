@@ -1,17 +1,14 @@
 <div class="block">
   <div class="content">          
     <h2 class="title"><%= t("search.results", :default => "Suchergebnisse")  %> </h2>
-    <div class="inner">
-      <div id="entries" class="entry">
-        <% @entries.each do |entry| %>
-          <p class="hanging-indent <%=cycle "even", "odd"%>" ><%=entry.full_html(root_url) %> <br /><%= link_to t("entry.detail"), entry_path(entry) %></p>
-        <% end %>
-      </div>
-      <div class="actions-bar wat-cf">
-        <div class="actions">
-        <%= will_paginate @entries  %>
-        </div>
-      </div>
+    <div id="results" class="inner">
+      <%= render :partial => "entries", :locals => {:entries => @entries} %>
+      <%= javascript_tag do %>
+        $("#results").live("ajax:beforeSend", function() {
+            $(this).fadeOut();
+        });
+        
+      <% end %>
     </div>
   </div>
 </div>

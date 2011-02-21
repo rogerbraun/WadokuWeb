@@ -1,0 +1,2 @@
+$("#results").html("<%= escape_javascript(render(:partial => "entries", :locals => {:entries => @entries})) %>");
+$("#results").fadeIn();
