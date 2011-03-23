@@ -1,4 +1,5 @@
 class EntriesController < ApplicationController
+  before_filter :authorize!, :except => [:show, :index]
   # GET /entries
   # GET /entries.xml
   def index
@@ -89,5 +90,13 @@ class EntriesController < ApplicationController
       format.html { redirect_to(entries_url) }
       format.xml  { head :ok }
     end
+  end
+
+  private
+
+  #placeholder for real authorization
+  def authorize!
+    flash[:notice] = t("users.not_authorized", :default => "Leider nicht möglich")
+    redirect_to :back
   end
 end
