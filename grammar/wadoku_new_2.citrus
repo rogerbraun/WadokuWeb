@@ -57,7 +57,7 @@ grammar WadokuNewGrammar
   rule ref
     ("<Ref.:" space* arrow:("⇒" | "→" | "⇔" ) space* transcr:tag space* jap space* daid:tag space* ">") {
       def to_html
-        "(#{arrow} <a href='<<<ROOT_URL>>>entries/by-daid/#{daid.to_html[/\d+/]}'>#{jap.to_html} - #{transcr.to_html}</a>)"
+        "#{arrow} <a href='<<<ROOT_URL>>>entries/by-daid/#{daid.to_html[/\d+/]}'>#{jap.to_html} - #{transcr.to_html}</a>"
       end
     }
   end
