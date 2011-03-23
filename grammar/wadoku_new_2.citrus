@@ -35,7 +35,7 @@ grammar WadokuNewGrammar
   end
 
   rule bracketed_tags
-    ( "(" space* tags:(tag)+ space* ")" ) {
+    ( "(" space* tags:(content)+ space* ")" ) {
       def to_html
         "(#{tags.matches.map(&:to_html).join("")})"
       end
@@ -51,7 +51,15 @@ grammar WadokuNewGrammar
   end
 
   rule content
-    jap | title | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag | bracketed_tags | number
+    ref | jap | title | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag | bracketed_tags | number
+  end
+
+  rule ref
+    ("<Ref.:" space* arrow:("⇒" | "→" | "⇔" ) space* transcr:tag space* jap space* daid:tag space* ">") {
+      def to_html
+        "(#{arrow} <a href='<<<ROOT_URL>>>entries/by-daid/#{daid.to_html[/\d+/]}'>#{jap.to_html} - #{transcr.to_html}</a>)"
+      end
+    }
   end
 
   rule number
