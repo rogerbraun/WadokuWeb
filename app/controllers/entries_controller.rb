@@ -1,3 +1,4 @@
+#encoding: utf-8
 class EntriesController < ApplicationController
   before_filter :authorize!, :except => [:show, :index, :by_id]
   # GET /entries

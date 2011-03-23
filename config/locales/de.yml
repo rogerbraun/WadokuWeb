@@ -1,3 +1,4 @@
+#encoding: utf-8
 de:
   web-app-theme:
   search:
@@ -7,6 +8,7 @@ de:
     search: "Suchen!"
     title: "Suche"
     info: "Die Suche funktioniert mit Japanisch in Romaji, Kanji und Kana, oder mit einem deutschen Wort."
+    nothing_found: "Zu dieser Anfrage wurde nichts gefunden."
   entry:
     detail: "Detailansicht"
 
