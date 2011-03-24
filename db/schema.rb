@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110209205643) do
+ActiveRecord::Schema.define(:version => 20110324093828) do
 
   create_table "entries", :force => true do |t|
     t.integer  "wadoku_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20110209205643) do
     t.datetime "updated_at"
     t.string   "entry_relation"
     t.string   "midashigo"
+    t.text     "parsed"
   end
 
   add_index "entries", ["romaji", "writing", "kana"], :name => "index_entries_on_romaji_and_writing_and_kana"

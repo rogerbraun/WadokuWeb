@@ -10,7 +10,10 @@ namespace :db do
       @success += 1
       pbar.inc
       begin
-        WadokuNewGrammar.parse(entry.definition)
+        p = WadokuNewGrammar.parse(entry.definition)
+        entry.parsed = p.to_html
+        entry.save
+        
       rescue => e 
         @success -= 1
         failed << entry.definition

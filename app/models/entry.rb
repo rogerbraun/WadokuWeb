@@ -12,12 +12,7 @@ class Entry < ActiveRecord::Base
   end
 
   def to_html(root_url = "")
-      begin
-        self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).html_safe
-      rescue => e
-        #"FFF " + pos_html(genus_html(clean_markup(short_definition)))
-        "parsing failed... #{self.definition}"
-      end
+    self.parsed.gsub("<<<ROOT_URL>>>",root_url).html_safe
   end
 
   def full_html(root_url = "")
@@ -37,10 +32,10 @@ class Entry < ActiveRecord::Base
 
   def self.search_by_any(word)
     if word[/[āōīūōA-z]/] then
-      Entry.where("definition like ?", "%#{word}%")
+      Entry.where("parsed is not null and definition like ?", "%#{word}%")
     else
-      Entry.where("writing like ?", "#{word}%") +
-      Entry.where("kana like ?", "#{word}%")
+      Entry.where("parsed is not null and writing like ?", "#{word}%") +
+      Entry.where("parsed is not null and kana like ?", "#{word}%")
     end
   end 
 
