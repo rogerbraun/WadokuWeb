@@ -24,7 +24,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem "meta_search"
 gem "will_paginate", "~> 3.0.pre2"
-gem "citrus", :git =>"https://github.com/mjijackson/citrus.git"
+gem "citrus", "2.3.4"
+# :git =>"https://github.com/mjijackson/citrus.git"
 gem 'jquery-rails', '>= 0.2.6'
 
 # Bundle gems for the local environment. Make sure to
