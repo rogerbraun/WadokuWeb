@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110419202431) do
+ActiveRecord::Schema.define(:version => 20110425230947) do
 
   create_table "entries", :force => true do |t|
     t.integer  "wadoku_id"
@@ -27,12 +27,33 @@ ActiveRecord::Schema.define(:version => 20110419202431) do
 
   add_index "entries", ["romaji", "writing", "kana"], :name => "index_entries_on_romaji_and_writing_and_kana"
 
+  create_table "entries_indices", :id => false, :force => true do |t|
+    t.integer "entry_id"
+    t.integer "index_id"
+  end
+
+  add_index "entries_indices", ["entry_id"], :name => "index_entries_indices_on_entry_id"
+  add_index "entries_indices", ["index_id"], :name => "index_entries_indices_on_index_id"
+
   create_table "ex_sentences", :force => true do |t|
     t.integer  "tatoeba_id"
     t.string   "lang"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "indices", :force => true do |t|
+    t.string   "query"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "indices", ["query"], :name => "index_indices_on_query"
+
+  create_table "picky_entries_index", :primary_key => "__picky_id", :force => true do |t|
+    t.integer "id"
+    t.text    "definition"
   end
 
   create_table "translation_equivalents", :id => false, :force => true do |t|

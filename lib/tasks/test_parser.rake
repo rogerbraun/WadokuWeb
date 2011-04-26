@@ -5,18 +5,20 @@ namespace :db do
     @entries = Entry
     pbar = ProgressBar.new("Entries parsed:", @entries.count)
     failed= []
-    Entry.find_each do |entry|
-      @count +=1
-      @success += 1
-      pbar.inc
-      begin
-        p = WadokuNewGrammar.parse(entry.definition)
-        entry.parsed = p.to_html
-        entry.save
-        
-      rescue => e 
-        @success -= 1
-        failed << entry.definition
+    ActiveRecord::Base.transaction do
+      Entry.find_each do |entry|
+        @count +=1
+        @success += 1
+        pbar.inc
+        begin
+          p = WadokuNewGrammar.parse(entry.definition)
+          entry.parsed = p.to_html
+          entry.save
+          
+        rescue => e 
+          @success -= 1
+          failed << entry.definition
+        end
       end
     end
     pbar.finish

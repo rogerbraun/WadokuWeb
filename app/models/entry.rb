@@ -1,5 +1,8 @@
 #encoding: utf-8
 class Entry < ActiveRecord::Base
+
+  has_and_belongs_to_many :indexes
+
   cattr_reader :per_page
   @@per_page = 30
 
@@ -12,7 +15,15 @@ class Entry < ActiveRecord::Base
   end
 
   def to_html(root_url = "")
-    self.parsed.gsub("<<<ROOT_URL>>>",root_url).html_safe
+    if Rails.env.development? then  
+      begin 
+        self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).html_safe
+      rescue => e
+        CGI::escape("Fehler in #{self.definition}")
+      end 
+    else
+      self.parsed.gsub("<<<ROOT_URL>>>",root_url).html_safe
+    end
   end
 
   def full_html(root_url = "")
@@ -31,12 +42,10 @@ class Entry < ActiveRecord::Base
   end
 
   def self.search_by_any(word)
-    if word[/[āōīūōA-z]/] then
-      Entry.where("parsed is not null and definition like ?", "%#{word}%")
-    else
-      Entry.where("parsed is not null and writing like ?", "#{word}%") +
-      Entry.where("parsed is not null and kana like ?", "#{word}%")
-    end
+    #index_ids = Index.where("query like ?", "#{word}%").map(&:id)
+    #entry_ids = connection.execute("select entry_id from entries_indices where index_id in (#{index_ids.join(",")})") 
+    #puts entry_ids
+    Index.where(:query => word).map(&:entries).flatten.uniq
   end 
 
 end
