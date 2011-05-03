@@ -141,7 +141,7 @@ grammar WadokuNewGrammar
 
 
   rule letter
-    [\/‑\-a-zA-ZäüöÄÜÖßōīēāūŪŌĪĒĀ,·’…„“\wÁó]
+    /[\/‑\-a-zA-ZäüöÄÜÖßōīēāūŪŌĪĒĀ,·’…„“\wÁóé]/
   end
 
   rule nothing
