@@ -11,9 +11,11 @@ namespace :db do
         @success += 1
         pbar.inc
         begin
-          p = WadokuNewGrammar.parse(entry.definition)
-          entry.parsed = p.to_html
-          entry.save
+          unless entry.parsed then
+            p = WadokuNewGrammar.parse(entry.definition)
+            entry.parsed = p.to_html
+            entry.save
+          end
           
         rescue => e 
           @success -= 1
