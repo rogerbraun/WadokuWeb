@@ -28,6 +28,8 @@ gem "citrus", "2.3.4"
 # :git =>"https://github.com/mjijackson/citrus.git"
 gem 'jquery-rails', '>= 0.2.6'
 
+gem "romkan"
+
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:

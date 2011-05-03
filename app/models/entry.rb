@@ -15,11 +15,11 @@ class Entry < ActiveRecord::Base
   end
 
   def to_html(root_url = "")
-    if Rails.env.development? then  
+    if not self.parsed then  
       begin 
         self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).html_safe
       rescue => e
-        CGI::escape("Fehler in #{self.definition}")
+        "Fehler in #{self.definition}"
       end 
     else
       self.parsed.gsub("<<<ROOT_URL>>>",root_url).html_safe
@@ -45,7 +45,8 @@ class Entry < ActiveRecord::Base
     #index_ids = Index.where("query like ?", "#{word}%").map(&:id)
     #entry_ids = connection.execute("select entry_id from entries_indices where index_id in (#{index_ids.join(",")})") 
     #puts entry_ids
-    Index.where(:query => word).map(&:entries).flatten.uniq
+    
+    Index.where(:query => word.to_kana).map(&:entries).flatten.uniq
   end 
 
 end
