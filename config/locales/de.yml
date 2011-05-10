@@ -11,5 +11,10 @@ de:
     nothing_found: "Zu dieser Anfrage wurde nichts gefunden."
   entry:
     detail: "Detailansicht"
-
-
+  views:
+    pagination:
+      first: "<<<"
+      last: ">>>"
+      truncate: "…"
+      previous: "<<"
+      next: ">>"

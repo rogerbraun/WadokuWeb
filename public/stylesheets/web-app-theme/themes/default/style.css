@@ -217,7 +217,7 @@ hr {
 
 /* pagination */
 
-.pagination a, .pagination span {
+.pagination span.page, .pagination span.first, .pagination span.last, .pagination span.next, .pagination span.prev {
   background-color: #f4f4f4;
   background-image: url("images/button-background.png");
   color: #111;
@@ -437,7 +437,7 @@ ul.list li .item .avatar {
   border-top-right-radius: 9px;
 }
 
-a.button, button.button, .pagination a, .pagination span {
+a.button, button.button  {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
