@@ -41,7 +41,7 @@ grammar WadokuNewGrammar
   rule bracketed_tags
     ( "(" space* tags:(content)+ space* ")" space* ) {
       def to_html
-        "(#{tags.matches.map(&:to_html).join("")})"
+        " (#{tags.matches.map(&:to_html).join("")})"
       end
     }
   end
@@ -59,9 +59,9 @@ grammar WadokuNewGrammar
   end
 
   rule ref
-    ("<Ref.:" space* arrow:("⇒" | "→" | "⇔" ) space* transcr:tag space* jap space* daid:tag space* ">") {
+    ("<Ref.:" space* arrow:("⇒" | "→" | "⇔" )? space* transcr:tag space* jap space* daid:tag space* ">") {
       def to_html
-        "#{arrow} <a href='<<<ROOT_URL>>>entries/by-daid/#{daid.to_html[/\d+/]}'>#{jap.to_html} - #{transcr.to_html}</a>"
+        (arrow ? "#{arrow} " : "") + "<a href='<<<ROOT_URL>>>entries/by-daid/#{daid.to_html[/\d+/]}'>#{jap.to_html} - #{transcr.to_html}</a>"
       end
     }
   end

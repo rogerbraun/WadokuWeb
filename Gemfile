@@ -23,7 +23,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'aws-s3', :require => 'aws/s3'
 
 gem "meta_search"
-gem "will_paginate", "~> 3.0.pre2"
+#gem "will_paginate", "~> 3.0.pre2"
+gem "kaminari"
 gem "citrus", "2.3.4"
 # :git =>"https://github.com/mjijackson/citrus.git"
 gem 'jquery-rails', '>= 0.2.6'
