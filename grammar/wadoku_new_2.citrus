@@ -55,7 +55,16 @@ grammar WadokuNewGrammar
   end
 
   rule content
-    ref | jap | title | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag | bracketed_tags | number
+    url | ref | jap | title | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag | bracketed_tags | number
+  end
+
+  rule url
+    ("<URL" (".:" | ":") space* contents:(content)+ ">" space* sep:(";"|"；")? space*) {
+      def to_html
+        "<a href='#{contents.to_s}'>#{contents.matches.map{|c| c.to_html}.join("")}</a>" + (sep ? sep.to_s : "")
+      end
+    }
+
   end
 
   rule ref
