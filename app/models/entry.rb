@@ -24,7 +24,10 @@ class Entry < ActiveRecord::Base
   end
 
   def full_html(root_url = "")
-    "<span class='writing'><ruby><rb>".html_safe + self.midashigo + "</rb><rp> (</rp><rt>".html_safe + self.kana + "</rt><rp>) </rp></ruby></span> ".html_safe + self.to_html(root_url)
+    if self.first_midashigo == self.cleaned_kana then 
+      "<span class='writing'>".html_safe + self.first_midashigo + "</span>".html_safe 
+    else "<span class='writing'><ruby><rb>".html_safe + self.first_midashigo + "</rb><rp> (</rp><rt>".html_safe + self.cleaned_kana + "</rt><rp>) </rp></ruby></span> ".html_safe
+    end + (rest_midashigo.empty? ? "" : rest_midashigo.join("; ")) + " " + self.to_html(root_url)
   end
 
   alias :short_html :to_html
@@ -38,9 +41,24 @@ class Entry < ActiveRecord::Base
     res || []
   end
 
+  def sub_entries
+    Entry.where(:entry_relation => self.writing)
+  end
+
   def self.search_by_any(word, page, per_page)
     word = word.to_kana
     Entry.where("writing like ? or kana like ?", "#{word}%", "#{word}%").page(page).per(per_page)
   end 
 
+  def first_midashigo
+    self.midashigo.split(";").first
+  end
+
+  def rest_midashigo 
+    self.midashigo.split(";")[1..-1]
+  end
+
+  def cleaned_kana
+    self.kana[/[^\d\[\]\s]+/]
+  end
 end

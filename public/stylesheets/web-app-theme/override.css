@@ -8,39 +8,37 @@ span.gen_f {
 
 span.f:after {
   font-weight: bold;
-  content: "♀";
+  content: "(f)";
   color:red;
   font-size:xx-small;
-  vertical-align: top;
 }
 
 span.m:after {
   font-weight: bold;
-  content: "♂";
+  content: "(m)";
   color:blue;
   font-size:xx-small;
-  vertical-align: top;
 }
 
 span.n:after {
   font-weight: bold;
-  content: "⚲";
+  content: "(n)";
   color:purple;
   font-size:xx-small;
-  vertical-align: top;
 }
 
 span.dom {
   font-weight: bold;
 }
 
-span.usage {
+span.usage, span.title, span.transcr, span.etym, span.scientif {
   font-style: italic;
 }
 
-span.transcr {
-  font-style: italic;
+span.def {
+  color: green;
 }
+
 
 .entries {
   -webkit-column-count: 2;
@@ -84,7 +82,10 @@ padding-left: 25px;
   background: #E5ECF9;
 }
 
+.entry.main_entry {
+  background: #F8C3CD;
+}
+
 .prior_1, .prior_2, .prior_3, .prior_4, .jlpt1, .jlpt2, .jlpt3, .jlpt4 {
   display:none;
 }
-

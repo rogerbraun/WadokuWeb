@@ -10,7 +10,7 @@ de:
     info: "Die Suche funktioniert mit Japanisch in Romaji, Kanji und Kana"
     nothing_found: "Zu dieser Anfrage wurde nichts gefunden."
   entry:
-    detail: "Detailansicht"
+    detail: "Untereinträge"
   views:
     pagination:
       first: "<<<"

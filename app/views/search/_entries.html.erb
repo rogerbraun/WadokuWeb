@@ -2,7 +2,10 @@
 <div id="entries" class="entries">
   <% entries.each do |entry| %>
     <div class="entry <%= cycle "even", "odd" %>">
-      <p class="hanging-indent" ><%=entry.full_html(root_url) %> <br /><%= link_to t("entry.detail"), entry_path(entry) %></p>
+      <p class="hanging-indent" ><%=entry.full_html(root_url) %> 
+        <% unless  entry.sub_entries.empty? %>
+          <br /><%= link_to t("entry.detail"), entry_path(entry) %></p>
+        <% end %>
     </div>
   <% end %>
 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110425230947) do
+ActiveRecord::Schema.define(:version => 20110515144018) do
 
   create_table "entries", :force => true do |t|
     t.integer  "wadoku_id"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110425230947) do
     t.text     "parsed"
   end
 
+  add_index "entries", ["entry_relation"], :name => "index_entries_on_entry_relation"
   add_index "entries", ["romaji", "writing", "kana"], :name => "index_entries_on_romaji_and_writing_and_kana"
 
   create_table "entries_indices", :id => false, :force => true do |t|
@@ -50,11 +51,6 @@ ActiveRecord::Schema.define(:version => 20110425230947) do
   end
 
   add_index "indices", ["query"], :name => "index_indices_on_query"
-
-  create_table "picky_entries_index", :primary_key => "__picky_id", :force => true do |t|
-    t.integer "id"
-    t.text    "definition"
-  end
 
   create_table "translation_equivalents", :id => false, :force => true do |t|
     t.integer "ex_sentence_id"
