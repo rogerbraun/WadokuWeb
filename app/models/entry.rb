@@ -1,7 +1,7 @@
 #encoding: utf-8
 class Entry < ActiveRecord::Base
 
-  has_and_belongs_to_many :keywords
+  has_many :keywords
 
   def pos
     self.definition.match(/POS: (.)/)[1]
@@ -47,7 +47,7 @@ class Entry < ActiveRecord::Base
 
   def self.search_by_any(word, page, per_page)
     word = word.to_kana
-    Entry.where("writing like ? or kana like ?", "#{word}%", "#{word}%").page(page).per(per_page)
+    Keyword.where("word like ?", "#{word}%").page(page).per(per_page)
   end 
 
   def first_midashigo
