@@ -47,8 +47,8 @@ class Entry < ActiveRecord::Base
 
   def self.search_by_any(word, page, per_page)
     word = word.to_kana
-    ids = Keyword.where("word like ?", "#{word}%").map(&:entry_id)
-    Entry.where("id in (?) ", ids).page(page).per(per_page)
+    entries = Entry.joins(:keywords) & (Keyword.where("word like ?", "#{word}%"))
+    entries.select("distinct entries.id, midashigo, kana, parsed, definition, writing").page(page).per(per_page)
   end 
 
   def first_midashigo
