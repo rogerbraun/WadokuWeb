@@ -46,7 +46,6 @@ class Entry < ActiveRecord::Base
   end
 
   def self.search_by_any(word, page, per_page)
-    word = word.to_kana
     entries = Entry.joins(:keywords) & (Keyword.where("word like ?", "#{word}%"))
     entries.select("distinct entries.id, midashigo, kana, parsed, definition, writing").page(page).per(per_page)
   end 

@@ -1,9 +1,11 @@
 <div class="block">
   <div class="content">          
     <h2 class="title"><%= t("search.results", :default => "Suchergebnisse")  %> </h2>
-    <div id="results" class="inner">
-      <%= render :partial => "entries", :locals => {:entries => @entries} %>
-    </div>
+    <% cache({:page => params[:page] || 1,:search => params[:search] }) do %>
+      <div id="results" class="inner">
+        <%= render :partial => "entries", :locals => {:entries => @entries} %>
+      </div>
+    <% end %>
     <%= javascript_tag do %>
       $(".pagination").live("ajax:beforeSend", function() {
           $("#results").hide("slide");
