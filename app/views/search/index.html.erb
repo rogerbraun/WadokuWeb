@@ -5,12 +5,7 @@
       <%= render :partial => "entries", :locals => {:entries => @entries} %>
     </div>
     <%= javascript_tag do %>
-      $(".pagination").live("ajax:beforeSend", function() {
-          $("#results").hide("slide");
-      });
-      $("#search_box").live("ajax:beforeSend", function() {
-          $("#results").hide("slide");
-      });
+      $(".svg a").lightBox();
       
     <% end %>
   </div>

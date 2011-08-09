@@ -89,3 +89,20 @@ padding-left: 25px;
 .prior_1, .prior_2, .prior_3, .prior_4, .jlpt1, .jlpt2, .jlpt3, .jlpt4 {
   display:none;
 }
+
+.svg_image {
+  display: block;
+}
+
+.svg_image .image_caption {
+  font-size: 120%;
+  font-weight: bold;
+  display: block;
+}
+
+.svg_image .svg a img{
+  width: 150px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;  
+}

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <title>WadokuJT</title>
-  <%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/default/style", "web-app-theme/override", :cache => true %>
+  <title>WaDokuJT</title>
+  <%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/default/style", "web-app-theme/override", "jquery.lightbox-0.5.css", :cache => true %>
   <%= javascript_include_tag :defaults, :cache => true %>
   <%= javascript_include_tag "jquery-ui-1.8.9.custom.min.js" %>
+  <%= javascript_include_tag "jquery.lightbox-0.5.pack.js" %>
   <%= javascript_include_tag "Hyphenator.js" %>
   <%= javascript_include_tag "patterns/de.js" %>
   <%= csrf_meta_tag %>
@@ -15,7 +16,7 @@
 <body>
   <div id="container">
     <div id="header">
-      <h1><%= link_to "WadokuJT", root_url %></h1>
+      <h1><%= link_to "WaDokuJT", root_url %></h1>
       <div id="user-navigation">
         <ul class="wat-cf">
         <!--  <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>

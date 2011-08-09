@@ -20,7 +20,7 @@ grammar WadokuNewGrammar
   rule pict
     ("<Pict.:" space* "<Capt.:" space* caption:content+  "><FileN:" space* filename:word ">>" ) {
       def to_html
-        "<span class='svg_image'><span class='image_caption'>#{caption}</span><span class='svg'></span><embed src='<<<ROOT_URL>>>svg/#{filename}.svg' type='image/svg+xml' /></span>" 
+        "<span class='svg_image'><span class='image_caption'>#{caption}</span><span class='svg'><a href='<<<ROOT_URL>>>svg/#{filename}.svg'><img src='<<<ROOT_URL>>>svg/#{filename}.svg' type='image/svg+xml' /></a></span></span>" 
       end
     }
   end
@@ -46,6 +46,15 @@ grammar WadokuNewGrammar
     }
   end
 
+  rule bracketed_pict
+    ( "(" pict ")" ) {
+      def to_html
+        pict.to_html
+      end
+
+    }
+  end
+
   rule tre
     ("<TrE:" space* contents:(content)+ ">" sep:(";")? ending:space*) {
       def to_html
@@ -55,7 +64,7 @@ grammar WadokuNewGrammar
   end
 
   rule content
-    url | ref | jap | title | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag | bracketed_tags | number
+    url | ref | jap | title | pict | tag | genus | abbrev | word | space | punctuation | dom | symbol | simple_tag | bracketed_pict | bracketed_tags | number
   end
 
   rule url
