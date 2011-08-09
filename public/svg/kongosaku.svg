@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:#FFFFFF;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st1 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="214" height="133.5" viewBox="0 0 214 133.5" style="overflow:visible;enable-background:new 0 0 214 133.5"
+	 xml:space="preserve">
+	<g id="Bild">
+		<line style="&st1;" x1="56.5" y1="126" x2="56.5" y2="0.5"/>
+		<line style="&st1;" x1="56.5" y1="60" x2="161.5" y2="60"/>
+		<line style="&st1;" x1="161.5" y1="0.5" x2="161.5" y2="127"/>
+		<line style="&st1;" x1="183.5" y1="127" x2="183.5" y2="0.5"/>
+		<polyline style="&st1;" points="213.5,133 138.5,133 0.5,133 "/>
+		<line style="&st1;" x1="32.5" y1="126" x2="32.5" y2="1"/>
+		<line style="&st1;" x1="56.44" y1="72" x2="161.5" y2="72"/>
+		<line style="&st1;" x1="155.5" y1="72" x2="155.5" y2="117"/>
+		<line style="&st1;" x1="161.5" y1="117" x2="56.5" y2="117"/>
+		<line style="&st1;" x1="63.5" y1="117" x2="63.5" y2="72"/>
+		<line style="&st1;" x1="67.5" y1="72" x2="67.5" y2="117"/>
+		<line style="&st1;" x1="71.5" y1="72" x2="71.5" y2="117"/>
+		<line style="&st1;" x1="77.5" y1="72" x2="77.5" y2="117"/>
+		<line style="&st1;" x1="81.5" y1="72" x2="81.5" y2="117"/>
+		<line style="&st1;" x1="85.5" y1="72" x2="85.5" y2="117"/>
+		<line style="&st1;" x1="91.5" y1="72" x2="91.5" y2="117"/>
+		<line style="&st1;" x1="95.5" y1="72" x2="95.5" y2="117"/>
+		<line style="&st1;" x1="99.5" y1="72" x2="99.5" y2="117"/>
+		<line style="&st1;" x1="105.5" y1="72" x2="105.5" y2="117"/>
+		<line style="&st1;" x1="109.5" y1="72" x2="109.5" y2="117"/>
+		<line style="&st1;" x1="113.5" y1="72" x2="113.5" y2="117"/>
+		<line style="&st1;" x1="119.5" y1="72" x2="119.5" y2="117"/>
+		<line style="&st1;" x1="123.5" y1="72" x2="123.5" y2="117"/>
+		<line style="&st1;" x1="127.5" y1="72" x2="127.5" y2="117"/>
+		<line style="&st1;" x1="133.5" y1="72" x2="133.5" y2="117"/>
+		<line style="&st1;" x1="137.5" y1="72" x2="137.5" y2="117"/>
+		<line style="&st1;" x1="141.5" y1="72" x2="141.5" y2="117"/>
+		<line style="&st1;" x1="147.5" y1="72" x2="147.5" y2="117"/>
+		<line style="&st1;" x1="151.5" y1="72" x2="151.5" y2="117"/>
+		<path style="&st1;" d="M139,133c0-4,6.5-6,22.5-6h22c16,0,22.5,2,22.5,6"/>
+		<path style="&st1;" d="M10,132.5c0-4,6.5-6.5,22.5-6.5h24c16,0,22.5,2.5,22.5,6.5"/>
+		<line style="&st1;" x1="63.5" y1="60" x2="67.5" y2="33.82"/>
+		<line style="&st1;" x1="71.5" y1="60" x2="67.5" y2="33.82"/>
+		<circle style="&st0;" cx="67.5" cy="37" r="3.18"/> 
+		<line style="&st1;" x1="67.5" y1="60" x2="67.5" y2="34.5"/>
+		<line style="&st1;" x1="77.5" y1="60" x2="81.5" y2="33.82"/>
+		<line style="&st1;" x1="85.5" y1="60" x2="81.5" y2="33.82"/>
+		<circle style="&st0;" cx="81.5" cy="37" r="3.18"/> 
+		<line style="&st1;" x1="81.5" y1="60" x2="81.5" y2="34.5"/>
+		<line style="&st1;" x1="91.5" y1="60" x2="95.5" y2="33.82"/>
+		<line style="&st1;" x1="99.5" y1="60" x2="95.5" y2="33.82"/>
+		<circle style="&st0;" cx="95.5" cy="37" r="3.18"/> 
+		<line style="&st1;" x1="95.5" y1="60" x2="95.5" y2="34.5"/>
+		<line style="&st1;" x1="105.5" y1="60" x2="109.5" y2="33.82"/>
+		<line style="&st1;" x1="113.5" y1="60" x2="109.5" y2="33.82"/>
+		<circle style="&st0;" cx="109.5" cy="37" r="3.18"/> 
+		<line style="&st1;" x1="109.5" y1="60" x2="109.5" y2="34.5"/>
+		<line style="&st1;" x1="119.5" y1="60" x2="123.5" y2="33.82"/>
+		<line style="&st1;" x1="127.5" y1="60" x2="123.5" y2="33.82"/>
+		<circle style="&st0;" cx="123.5" cy="37" r="3.18"/> 
+		<line style="&st1;" x1="123.5" y1="60" x2="123.5" y2="34.5"/>
+		<line style="&st1;" x1="133.5" y1="60" x2="137.5" y2="33.82"/>
+		<line style="&st1;" x1="141.5" y1="60" x2="137.5" y2="33.82"/>
+		<circle style="&st0;" cx="137.5" cy="37" r="3.18"/> 
+		<line style="&st1;" x1="137.5" y1="60" x2="137.5" y2="34.5"/>
+		<line style="&st1;" x1="147.5" y1="60" x2="151.5" y2="33.82"/>
+		<line style="&st1;" x1="155.5" y1="60" x2="151.5" y2="33.82"/>
+		<circle style="&st0;" cx="151.5" cy="37" r="3.18"/> 
+		<line style="&st1;" x1="151.5" y1="60" x2="151.5" y2="34.5"/>
+	</g>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st1 "fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="193.84" height="188.31" viewBox="0 0 193.84 188.31" style="overflow:visible;enable-background:new 0 0 193.84 188.31"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<g>
+			<line style="&st0;" x1="106.34" y1="73.99" x2="87.65" y2="125.06"/>
+			<line style="&st0;" x1="119.21" y1="84.7" x2="73.96" y2="115.21"/>
+			<line style="&st0;" x1="124" y1="99.73" x2="69.74" y2="99.73"/>
+			<line style="&st0;" x1="87.51" y1="74.02" x2="106.2" y2="125.06"/>
+			<line style="&st0;" x1="74.69" y1="84.74" x2="119.79" y2="115.15"/>
+			<polygon style="&st0;" points="115.71,74.01 127.32,109.76 96.92,131.85 66.51,109.76 78.13,74.01 "/>
+			<circle style="&st1;" cx="96.92" cy="99.73" r="12.5"/> 
+		</g>
+		<g>
+			<path style="&st0;" d="M120,80.64c0,20.08,16.34,36.42,36.42,36.42c20.08,0,36.42-16.34,36.42-36.42
+				c0-20.08-16.34-36.42-36.42-36.42C136.34,44.21,120,60.55,120,80.64z"/>
+			<path style="&st0;" d="M97.25,150.64c0,20.08,16.34,36.42,36.42,36.42c20.08,0,36.42-16.34,36.42-36.42
+				c0-20.08-16.34-36.42-36.42-36.42C113.59,114.21,97.25,130.55,97.25,150.64z"/>
+			<path style="&st0;" d="M23.75,150.89c0,20.08,16.34,36.42,36.42,36.42c20.08,0,36.42-16.34,36.42-36.42
+				c0-20.08-16.34-36.42-36.42-36.42C40.09,114.46,23.75,130.8,23.75,150.89z"/>
+			<path style="&st0;" d="M1,80.64c0,20.08,16.34,36.42,36.42,36.42c20.08,0,36.42-16.34,36.42-36.42
+				c0-20.08-16.34-36.42-36.42-36.42C17.34,44.21,1,60.55,1,80.64z"/>
+			<path style="&st0;" d="M60.5,37.42c0,20.08,16.34,36.42,36.42,36.42c20.08,0,36.42-16.34,36.42-36.42S117,1,96.92,1
+				C76.84,1,60.5,17.34,60.5,37.42z"/>
+		</g>
+	</g>
+</svg>

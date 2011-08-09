@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st1 "fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="208" height="165.5" viewBox="0 0 208 165.5" style="overflow:visible;enable-background:new 0 0 208 165.5"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<line style="&st0;" x1="103.75" y1="45.25" x2="103.75" y2="69.75"/>
+		<line style="&st0;" x1="103.75" y1="96.25" x2="103.75" y2="120.75"/>
+		<line style="&st0;" x1="117" y1="83" x2="141.5" y2="83"/>
+		<line style="&st0;" x1="66" y1="83" x2="90.5" y2="83"/>
+		<circle style="&st1;" cx="103.75" cy="83" r="13.25"/> 
+		<line style="&st1;" x1="55.75" y1="45.25" x2="92.5" y2="75.25"/>
+		<line style="&st1;" x1="115.5" y1="75.25" x2="152.25" y2="45.25"/>
+		<line style="&st1;" x1="55.75" y1="120.25" x2="92.5" y2="90.25"/>
+		<line style="&st1;" x1="115.5" y1="90.25" x2="152.25" y2="120.25"/>
+		<path style="&st1;" d="M152.25,120.25c17.5,11.25,35,1.75,34.25-20.75c10.75,0,19.5-8.25,19.5-17s-8.75-17-19.5-17
+			c0.75-22.5-16.75-31.5-34.25-20.25"/>
+		<path style="&st1;" d="M55.75,120.25c-17.5,11.25-35,1.75-34.25-20.75C10.75,99.5,2,91.25,2,82.5s8.75-17,19.5-17
+			C20.75,43,38.25,34,55.75,45.25"/>
+		<path style="&st1;" d="M152.25,45.25c8-20.5-13.5-37.5-33.75-27.75C118.25,8.75,111.75,2,104,2S89.75,8.75,89.5,17.5
+			c-20.25-9.75-41.75,7.25-33.75,27.75"/>
+		<path style="&st1;" d="M152.25,120.25c8,20.5-13.5,37.5-33.75,27.75c-0.25,8.75-6.75,15.5-14.5,15.5s-14.25-6.75-14.5-15.5
+			c-20.25,9.75-41.75-7.25-33.75-27.75"/>
+	</g>
+</svg>

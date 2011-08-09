@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:#FFFFFF;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="201" height="201" viewBox="0 0 201 201" style="overflow:visible;enable-background:new 0 0 201 201" xml:space="preserve"
+	>
+	<g id="Layer_1">
+		<polygon style="&st0;" points="0.5,0.5 200.5,0.5 200.5,100.5 200.5,200.5 100.5,200.5 0.5,200.5 "/>
+		<line style="&st0;" x1="100.5" y1="200.5" x2="50.5" y2="150.5"/>
+		<line style="&st0;" x1="150.5" y1="150.5" x2="150.5" y2="50.5"/>
+		<polyline style="&st0;" points="200.5,0.5 150.5,50.5 100.5,100.5 50.5,150.5 0.5,200.5 "/>
+		<line style="&st0;" x1="150.5" y1="150.5" x2="0.5" y2="0.5"/>
+		<polyline style="&st0;" points="200.5,100.5 150.5,150.5 100.5,200.5 "/>
+	</g>
+</svg>

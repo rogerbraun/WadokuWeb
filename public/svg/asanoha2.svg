@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="170.75" height="170.75" viewBox="0 0 170.75 170.75" style="overflow:visible;enable-background:new 0 0 170.75 170.75"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<circle style="&st0;" cx="85.37" cy="85.38" r="71.55"/> 
+		<circle style="&st0;" cx="85.37" cy="85.38" r="83.87"/> 
+		<g>
+			<line style="&st0;" x1="30.14" y1="53.49" x2="140.61" y2="117.26"/>
+			<line style="&st0;" x1="140.61" y1="53.49" x2="30.14" y2="117.26"/>
+			<polyline style="&st0;" points="85.37,149.16 85.37,85.38 85.37,21.6 "/>
+			<polyline style="&st0;" points="66.96,53.49 30.14,53.49 48.55,85.38 "/>
+			<polyline style="&st0;" points="122.2,85.38 140.61,117.26 103.79,117.26 "/>
+			<polyline style="&st0;" points="122.2,85.38 140.61,53.49 103.79,53.49 "/>
+			<polygon style="&st0;" points="66.96,117.26 85.37,85.38 103.79,117.26 85.37,149.16 "/>
+			<polygon style="&st0;" points="66.96,53.49 85.37,21.6 103.79,53.49 85.37,85.38 "/>
+			<polyline style="&st0;" points="66.96,117.26 30.14,117.26 48.55,85.38 "/>
+			<line style="&st0;" x1="48.55" y1="85.38" x2="122.2" y2="85.38"/>
+		</g>
+	</g>
+</svg>

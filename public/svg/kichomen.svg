@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;">
+	<!ENTITY st1 "fill:#FFFFFF;">
+	<!ENTITY st2 "fill:none;">
+	<!ENTITY st3 "fill:none;stroke:#000000;stroke-dasharray:4 3;">
+	<!ENTITY st4 "fill:none;stroke:#000000;stroke-width:0.3;stroke-linejoin:bevel;">
+	<!ENTITY st5 "fill:none;stroke:#000000;stroke-width:0.3;stroke-linejoin:round;">
+	<!ENTITY st6 "fill:url(#Gypsum);">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="173.73" height="173.56" viewBox="0 0 173.73 173.56" style="overflow:visible;enable-background:new 0 0 173.73 173.56"
+	 xml:space="preserve">
+	<pattern  x="-312.48" y="384.94" width="72" height="72" patternUnits="userSpaceOnUse" id="Gypsum" viewBox="28.86 -76.62 72 72">
+		<g>
+			<polygon style="&st2;" points="28.86-4.62 28.86-76.62 100.85-76.62 100.85-4.62 "/>
+			<line style="&st1;" x1="5.11" y1="-10.62" x2="11.11" y2="-4.62"/>
+			<line style="&st1;" x1="5.11" y1="-4.62" x2="11.11" y2="-10.62"/>
+			<line style="&st5;" x1="21.37" y1="-66.11" x2="39.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-60.11" x2="45.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-54.11" x2="51.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-48.11" x2="57.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-42.11" x2="63.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-36.11" x2="69.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-30.11" x2="75.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-24.11" x2="81.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-18.11" x2="87.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-12.11" x2="93.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-6.11" x2="99.37" y2="-84.11"/>
+			<line style="&st5;" x1="21.37" y1="-0.11" x2="105.37" y2="-84.11"/>
+			<line style="&st5;" x1="27.37" y1="-0.11" x2="105.37" y2="-78.11"/>
+			<line style="&st5;" x1="33.37" y1="-0.11" x2="105.37" y2="-72.11"/>
+			<line style="&st5;" x1="39.37" y1="-0.11" x2="105.37" y2="-66.11"/>
+			<line style="&st5;" x1="45.37" y1="-0.11" x2="105.37" y2="-60.11"/>
+			<line style="&st5;" x1="51.37" y1="-0.11" x2="105.37" y2="-54.11"/>
+			<line style="&st5;" x1="57.37" y1="-0.11" x2="105.37" y2="-48.11"/>
+			<line style="&st5;" x1="63.37" y1="-0.11" x2="105.37" y2="-42.11"/>
+			<line style="&st5;" x1="69.37" y1="-0.11" x2="105.37" y2="-36.11"/>
+			<line style="&st5;" x1="75.37" y1="-0.11" x2="105.37" y2="-30.11"/>
+			<line style="&st5;" x1="81.37" y1="-0.11" x2="105.37" y2="-24.11"/>
+			<line style="&st5;" x1="87.37" y1="-0.11" x2="105.37" y2="-18.11"/>
+			<line style="&st5;" x1="93.37" y1="-0.11" x2="105.37" y2="-12.11"/>
+			<line style="&st4;" x1="0.11" y1="-63.12" x2="10.11" y2="-73.12"/>
+		</g>
+	</pattern>
+	<g id="Pfade">
+		<path style="&st6;" d="M172.97,173.56V99.08h-12.8c0,0,0,0,11.7-79.85c1.16-7.93,1.6-13.56-1.31-16.46
+			c-3.47-3.47-8.28-2.23-16.22-1.06C74.48,13.4,74.48,13.4,74.48,13.4V0.6H0v20c0,0,33.08,0,54.48,0c0,6.83,0,15.95,0,15.95
+			s86.38-12.65,96.7-14.16c-1.51,10.33-14.16,96.7-14.16,96.7s9.11,0,15.95,0c0,21.4,0,54.48,0,54.48H172.97z"/>
+		<line style="&st3;" x1="159.92" y1="0.6" x2="74.48" y2="0.6"/>
+		<line style="&st3;" x1="173.23" y1="11.9" x2="173.23" y2="99.35"/>
+		<path style="&st0;" d="M172.97,173.56V99.08h-12.8c0,0,0,0,11.7-79.85c1.16-7.93,1.6-13.56-1.31-16.46
+			c-3.47-3.47-8.28-2.23-16.21-1.06C74.48,13.4,74.48,13.4,74.48,13.4V0.6H0"/>
+	</g>
+</svg>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:#0A0809;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st1 "fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="171.8" height="172.94" viewBox="0 0 171.8 172.94" style="overflow:visible;enable-background:new 0 0 171.8 172.94"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<path style="&st0;" d="M103.8,71.55c1.84-35.19-5.17-64.17-15.66-64.72S67.64,34.37,65.8,69.56c-1.85,35.2,5.16,64.17,15.66,64.72
+			C91.95,134.83,101.95,106.75,103.8,71.55z"/>
+		<ellipse style="&st0;" cx="85.9" cy="36.01" rx="84.9" ry="35.01"/> 
+		<path style="&st0;" d="M89.24,171.88C73.43,170.1,76.87,145.2,77.52,140c-4.41-3.83-9.12-11.72-11.55-15.74
+			c-1.58-2.62,0.57-4.1,2.37-3.11s8.36,6.65,9.83,9.09c1.29-3.01,3.31-9.81,4.23-12c0.99-2.35,2.49-1.91,2.61,0.12
+			s0.62,7.03,0.96,10.58c3.92-3.14,6.87-5.29,9-6.67c1.4-0.91,3.61-0.33,2.29,2.16c-2.12,3.97-7.62,11.72-9.98,15.58
+			c-1.95,9.11-1.45,23.09,5.21,26.03C95.69,167.44,94.94,172.52,89.24,171.88z"/>
+		<g>
+			<path style="&st1;" d="M38.8,36.93c18.22,0,27.33,9.98,45.98,9.98s28.63-9.54,42.95-9.54"/>
+			<path style="&st1;" d="M74.8,50.6c8.68,4.77,12.15,14.75,12.15,17.35c0.87-5.21,3.47-13.45,9.98-17.79"/>
+			<path style="&st1;" d="M43.35,46.69c-9.54,3.47-16.49,10.41-16.92,13.01c5.21-5.21,17.79-9.54,22.12-9.54"/>
+			<path style="&st1;" d="M129.68,47.99c9.54,3.47,16.49,10.41,16.92,13.01c-5.21-5.21-17.79-9.54-22.12-9.54"/>
+			<path style="&st1;" d="M27.95,26.3c-3.47-5.21-9.54-6.94-14.75-7.38c8.24-1.3,16.92,1.3,18.65,3.9"/>
+			<path style="&st1;" d="M144.65,25.65c3.47-5.21,9.54-6.94,14.75-7.38c-8.24-1.3-16.92,1.3-18.65,3.9"/>
+			<path style="&st1;" d="M74.37,45.02C70.9,29.4,51.81,7.65,44.44,4.61c15.18,6.51,34.71,28.7,35.14,40.85"/>
+			<path style="&st1;" d="M97.8,44.77c3.47-15.62,22.56-37.13,29.93-40.16c-15.18,6.51-34.71,28.7-35.14,40.85"/>
+			<path style="&st1;" d="M87.82,15.02c-4.77-6.51-4.77-10.84-3.04-13.88c1.73,5.64,6.94,11.71,10.41,13.01"/>
+		</g>
+	</g>
+</svg>

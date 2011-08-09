@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st1 "fill:#FFFFFF;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st2 "stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="171.38" height="172.62" viewBox="0 0 171.38 172.62" style="overflow:visible;enable-background:new 0 0 171.38 172.62"
+	 xml:space="preserve">
+	<g id="Bild">
+		<path style="&st2;" d="M85.38,0.5c46.88,0,84.88,20.87,84.88,46.62s-38.01,46.62-84.88,46.62c-20.34,0-39.01-3.93-53.63-10.48
+			c-5.38-2.41-10.2-5.17-14.37-8.23C6.78,67.24,0.5,57.58,0.5,47.12C0.5,21.37,38.5,0.5,85.38,0.5z"/>
+		<path style="&st1;" d="M85.38,11.76c40.22,0,72.83,15.83,72.83,35.36s-32.61,35.36-72.83,35.36c-20.91,0-39.77-4.28-53.05-11.13
+			c-6.23-3.21-11.23-6.99-14.65-11.16c-3.31-4.04-5.14-8.45-5.14-13.07C12.55,27.59,45.16,11.76,85.38,11.76z"/>
+		<line style="&st2;" x1="51.88" y1="89.99" x2="51.88" y2="91.24"/>
+		<path style="&st2;" d="M68.63,94.37l-3.75,77.75l-13-2V91.24C56.48,92.45,62.33,93.72,68.63,94.37z"/>
+		<line style="&st2;" x1="68.63" y1="94.37" x2="68.76" y2="92.87"/>
+		<line style="&st0;" x1="17.43" y1="74.99" x2="17.38" y2="77.24"/>
+		<line style="&st0;" x1="17.82" y1="58.05" x2="17.77" y2="60.24"/>
+		<line style="&st0;" x1="32.38" y1="71.37" x2="32.48" y2="69.43"/>
+		<line style="&st0;" x1="31.7" y1="85.05" x2="31.78" y2="83.37"/>
+		<line style="&st0;" x1="170.27" y1="47.12" x2="170.38" y2="56.05"/>
+		<line style="&st0;" x1="159.7" y1="72.24" x2="159.45" y2="69.93"/>
+		<line style="&st0;" x1="161.32" y1="70.62" x2="161.07" y2="68.3"/>
+		<polyline style="&st2;" points="64.88,172.12 72.88,155.12 66.38,153.12 "/>
+		<path style="&st2;" d="M31.7,85.05c-4.56-1.75-8.82-4.31-14.32-7.81l-0.49,21.38l27.5,12l5.5-4l-18.5-15.5L31.7,85.05z"/>
+		<path style="&st2;" d="M159.7,72.24l4.36,55.12l-18.68-3.25l-3,8l26,6.5l2.5-9.5l-0.5-73.06C170.32,58.3,165.79,68.11,159.7,72.24
+			z"/>
+		<line style="&st2;" x1="18.38" y1="33.24" x2="18.31" y2="36.68"/>
+		<path style="&st2;" d="M18.31,35.68l-0.49,22.37c2.19,2.69,10.29,9.69,14.66,11.37l2.24-45.62
+			C27.88,27.62,22.63,31.37,18.31,35.68"/>
+		<line style="&st2;" x1="34.72" y1="23.8" x2="34.88" y2="21.62"/>
+	</g>
+</svg>

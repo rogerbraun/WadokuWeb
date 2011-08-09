@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-width:0.9769;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="187.56" height="139.35" viewBox="0 0 187.56 139.35" style="overflow:visible;enable-background:new 0 0 187.56 139.35"
+	 xml:space="preserve">
+	<g id="Layer_1">
+		<path style="&st0;" d="M180.76,108.92c-21.03,23.22-81.97,11.72-105.63-0.86C40.36,89.57,6.73,43.93,13.89,1.76"/>
+		<path style="&st0;" d="M1.61,2.87c32.43-6.26,68.66-1.48,111.78,30.34c43.92,32.42,61.33,54.25,73.68,90.2
+			c-21.91,24.19-93.15,16.11-119.57,2.06C29.69,105.37-6.38,49.95,1.61,2.87z"/>
+		<ellipse style="&st0;" cx="77.95" cy="33.21" rx="5.49" ry="5.75"/> 
+		<ellipse style="&st0;" cx="112.39" cy="56.74" rx="5.49" ry="5.75"/> 
+	</g>
+</svg>

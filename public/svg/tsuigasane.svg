@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="217.84" height="177.46" viewBox="0 0 217.84 177.46" style="overflow:visible;enable-background:new 0 0 217.84 177.46"
+	 xml:space="preserve">
+	<g id="Layer_1">
+	</g>
+	<g id="Pfade">
+		<polygon style="&st0;" points="211.45,0.6 76.29,2.87 0.75,96.62 149.56,96.09 217.34,0.5 "/>
+		<polygon style="&st0;" points="7,93.6 148,93.1 211.5,3.6 77.75,5.85 "/>
+		<polyline style="&st0;" points="0.5,117.46 149.75,117.46 217.34,23.75 217.34,0.5 "/>
+		<line style="&st0;" x1="0.75" y1="96.62" x2="0.5" y2="117.46"/>
+		<line style="&st0;" x1="149.56" y1="96.09" x2="149.75" y2="117.46"/>
+		<line style="&st0;" x1="77.75" y1="5.85" x2="77.94" y2="21.72"/>
+		<line style="&st0;" x1="77.94" y1="21.72" x2="21" y2="93.46"/>
+		<line style="&st0;" x1="199.75" y1="19.46" x2="77.94" y2="21.72"/>
+		<polyline style="&st0;" points="23.5,117.46 24.5,176.96 146.5,176.96 146.5,117.96 "/>
+		<polyline style="&st0;" points="146.5,176.96 206.5,95.96 206.5,39.96 "/>
+		<path style="&st0;" d="M105,117.96c3.5,3,9.78,8.89,11.89,11.2c2.79,3.05,4.11,7.34,4.11,11.8c0,10.49-8.51,19-19,19
+			c-7.44,0-13.94-4.31-17.06-10.54c-3.4,5.17-9.3,8.54-15.94,8.54c-10.49,0-19-8.51-19-19c0-5.25,2.05-10.07,5.56-13.43
+			c3.06-2.93,7.94-6.07,10.94-8.07"/>
+		<path style="&st0;" d="M117.94,151.89c-3.44,3.44-8.19,5.57-13.44,5.57c-7.44,0-13.94-4.31-17.06-10.54
+			c-3.4,5.17-9.3,8.54-15.94,8.54c-10.49,0-19-8.51-19-19c0-5.25,2.05-10.07,5.56-13.43c1.81-1.73,4.24-3.53,6.55-5.12"/>
+		<line style="&st0;" x1="87.44" y1="146.92" x2="84.94" y2="149.42"/>
+		<path style="&st0;" d="M169,90.46c-2,5.5-3.13,8.79-4.25,15.5c-1.5,9,3.28,15,8.25,15c7.5,0,10-8,10-23.5c8.5,0,13-1,13-15
+			c0-8.28-3-15-8.25-16.25"/>
+		<path style="&st0;" d="M169.75,120.46c7.5,0,10-8,10-23.5c8.5,0,13-1,13-15c0-7.04-2.17-12.95-6.04-15.33"/>
+	</g>
+</svg>

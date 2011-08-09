@@ -18,9 +18,9 @@ grammar WadokuNewGrammar
   end
 
   rule pict
-    (bracketed_tags space* ".") {
+    ("<Pict.:" space* "<Capt.:" space* caption:content+  "><FileN:" space* filename:word ">>" ) {
       def to_html
-        bracketed_tags.to_html + space.to_s + "."
+        "<span class='svg_image'><span class='image_caption'>#{caption}</span><span class='svg'></span><embed src='<<<ROOT_URL>>>svg/#{filename}.svg' type='image/svg+xml' /></span>" 
       end
     }
   end
@@ -30,7 +30,7 @@ grammar WadokuNewGrammar
   end
 
   rule meaning_group
-    ( verwendung? space* number:("[" /\d+/ "]")? space* "<MGr:" space* dom? space* (ra:bracketed_tags)? space* tres:(tre)+ space* (pre:bracketed_tags)? space* ">" space* (after:bracketed_tags)? space* ending:("." | "//")? (sepspace:space)? pict?) {
+    ( verwendung? space* number:("[" /\d+/ "]")? space* "<MGr:" space* dom? space* (ra:bracketed_tags)? space* tres:(tre)+ space* (pre:bracketed_tags)? space* ">" space* (after:bracketed_tags)? space* ending:("." | "//")? (sepspace:space)? ( "(" pict ")." )? ) {
 
       def to_html
         (number ? "<span class='mg_nr'>#{number.to_s}<span> " : "") + (dom ? dom.to_html + " " : "") + (ra ? ra.to_html.to_s + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (pre ? pre.to_html.to_s : "") + (after ? after.to_html.to_s : "") + ending.to_s + sepspace.to_s + (pict ? pict.to_html : "")

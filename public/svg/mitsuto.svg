@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="169.34" height="145.35" viewBox="0 0 169.34 145.35" style="overflow:visible;enable-background:new 0 0 169.34 145.35"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<rect x="69" y="21.01" style="&st0;" width="31.35" height="17.42"/> 
+		<rect x="122.4" y="21.01" style="&st0;" width="31.35" height="17.42"/> 
+		<line style="&st0;" x1="153.36" y1="29.14" x2="168.46" y2="29.14"/>
+		<line style="&st0;" x1="100.34" y1="29.14" x2="122.79" y2="29.14"/>
+		<path style="&st0;" d="M153.75,38.43c-3.1,1.94-4.64,6.97-4.64,10.06"/>
+		<path style="&st0;" d="M100.34,38.43c-3.1,1.94-4.64,6.97-4.64,10.06"/>
+		<path style="&st0;" d="M122.4,38.43c3.1,1.94,4.64,6.97,4.64,10.06"/>
+		<path style="&st0;" d="M105.76,80.61c-3.1,1.93-4.64,6.97-4.64,10.06"/>
+		<path style="&st0;" d="M63.58,70.93c0,0-15.48,0-22.45,0c-3.87,0-16.25-7.35-20.9-11.61V48.49h128.87v10.84
+			c-4.64,4.26-17.03,11.61-20.9,11.61c-6.97,0-22.45,0-22.45,0"/>
+		<rect x="63.58" y="60.48" style="&st0;" width="42.18" height="20.12"/> 
+		<polyline style="&st0;" points="63.97,144.85 63.97,90.67 105.38,90.67 105.38,144.85 "/>
+		<rect x="15.59" y="21.01" style="&st0;" width="31.35" height="17.42"/> 
+		<line style="&st0;" x1="15.98" y1="29.14" x2="0.89" y2="29.14"/>
+		<line style="&st0;" x1="69" y1="29.14" x2="46.55" y2="29.14"/>
+		<line style="&st0;" x1="0.5" y1="0.5" x2="168.84" y2="0.5"/>
+		<path style="&st0;" d="M15.59,38.43c3.1,1.94,4.64,6.97,4.64,10.06"/>
+		<path style="&st0;" d="M69,38.43c3.1,1.94,4.64,6.97,4.64,10.06"/>
+		<path style="&st0;" d="M46.94,38.43c-3.1,1.94-4.64,6.97-4.64,10.06"/>
+		<path style="&st0;" d="M63.58,80.61c3.1,1.93,4.64,6.97,4.64,10.06"/>
+	</g>
+</svg>

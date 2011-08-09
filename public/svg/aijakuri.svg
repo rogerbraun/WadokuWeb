@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="197.5" height="62" viewBox="0 0 197.5 62" style="overflow:visible;enable-background:new 0 0 197.5 62"
+	 xml:space="preserve">
+	<g id="Bild">
+		<polyline style="&st0;" points="0.5,61.5 35.5,61.5 35.5,46.5 53.5,46.5 53.5,30.5 0.5,30.5 "/>
+		<polygon style="&st0;" points="38.5,61.5 38.5,46.5 56.5,46.5 56.5,30.5 150.5,30.5 150.5,46.5 132.5,46.5 132.5,61.5 "/>
+		<polyline style="&st0;" points="197,61.5 135.5,61.5 135.5,46.5 153.62,46.5 153.62,30.5 197,30.5 "/>
+		<line style="&st0;" x1="132.5" y1="61.5" x2="135.44" y2="58.56"/>
+		<line style="&st0;" x1="35.5" y1="61.5" x2="38.56" y2="58.44"/>
+		<line style="&st0;" x1="53.5" y1="46.5" x2="56.56" y2="43.44"/>
+		<line style="&st0;" x1="150.69" y1="46.44" x2="153.62" y2="43.5"/>
+		<line style="&st0;" x1="53.5" y1="30.5" x2="83" y2="1"/>
+		<line style="&st0;" x1="56.5" y1="30.5" x2="86" y2="1"/>
+		<line style="&st0;" x1="153.62" y1="30.5" x2="183.12" y2="1"/>
+		<line style="&st0;" x1="150.5" y1="30.5" x2="180" y2="1"/>
+		<line style="&st0;" x1="0.5" y1="0.5" x2="83" y2="0.75"/>
+		<line style="&st0;" x1="86" y1="0.75" x2="180" y2="0.75"/>
+		<line style="&st0;" x1="183.38" y1="0.75" x2="197" y2="0.5"/>
+		<line style="&st0;" x1="83" y1="0.75" x2="83" y2="4.75"/>
+		<line style="&st0;" x1="180" y1="0.75" x2="180" y2="4.75"/>
+	</g>
+</svg>

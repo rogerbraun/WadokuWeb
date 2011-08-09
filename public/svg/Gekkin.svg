@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st1 "fill:#FFFFFF;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st2 "fill:#999999;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="281.22" height="481.49" viewBox="0 0 281.22 481.49" style="overflow:visible;enable-background:new 0 0 281.22 481.49"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<line style="&st1;" x1="153.33" y1="49.27" x2="153.33" y2="201.33"/>
+		<circle style="&st0;" cx="140.61" cy="340.87" r="131.87"/> 
+		<circle style="&st0;" cx="140.61" cy="340.87" r="140.11"/> 
+		<path style="&st0;" d="M174.27,434.92c-7.33,10.74-19.67,17.79-33.66,17.79s-26.32-7.05-33.66-17.79H174.27z"/>
+		<circle style="&st0;" cx="125.56" cy="439.95" r="1.85"/> 
+		<circle style="&st0;" cx="134.82" cy="438.1" r="1.85"/> 
+		<circle style="&st0;" cx="141.07" cy="442.96" r="1.85"/> 
+		<circle style="&st0;" cx="156.57" cy="439.95" r="1.85"/> 
+		<circle style="&st0;" cx="147.31" cy="438.1" r="1.85"/> 
+		<rect x="119.19" y="304.16" style="&st0;" width="43.74" height="2.31"/> 
+		<rect x="119.19" y="311.36" style="&st0;" width="43.74" height="2.32"/> 
+		<rect x="119.19" y="296.85" style="&st0;" width="43.74" height="2.31"/> 
+		<rect x="119.19" y="289.58" style="&st0;" width="43.74" height="2.31"/> 
+		<rect x="119.19" y="281.34" style="&st0;" width="43.74" height="2.32"/> 
+		<rect x="119.19" y="271.99" style="&st0;" width="43.74" height="2.32"/> 
+		<rect x="119.19" y="262.5" style="&st0;" width="43.74" height="2.32"/> 
+		<rect x="119.19" y="253.24" style="&st0;" width="43.74" height="2.31"/> 
+		<rect x="119.19" y="244.31" style="&st0;" width="43.74" height="2.31"/> 
+		<rect x="123.57" y="234.82" style="&st0;" width="34.99" height="2.31"/> 
+		<rect x="123.57" y="224.17" style="&st0;" width="34.99" height="2.31"/> 
+		<rect x="124.35" y="216.44" style="&st0;" width="33.44" height="2.31"/> 
+		<rect x="125.63" y="206.72" style="&st0;" width="30.86" height="2.31"/> 
+		<line style="&st0;" x1="128.83" y1="49.27" x2="128.83" y2="201.33"/>
+		<rect x="127.69" y="195.61" style="&st1;" width="26.74" height="2.31"/> 
+		<rect x="127.69" y="184.36" style="&st1;" width="26.74" height="2.32"/> 
+		<rect x="127.69" y="173.26" style="&st1;" width="26.74" height="2.31"/> 
+		<rect x="127.69" y="160.89" style="&st1;" width="26.74" height="2.31"/> 
+		<line style="&st1;" x1="128.85" y1="143.7" x2="153.1" y2="143.7"/>
+		<rect x="128.8" y="131.41" style="&st2;" width="24.3" height="7.91"/> 
+		<path style="&st0;" d="M145,118.24c0,2.17-1.76,3.93-3.93,3.93l0,0c-2.17,0-3.93-1.76-3.93-3.93V60.11c0-2.17,1.76-3.94,3.93-3.94
+			l0,0c2.17,0,3.93,1.76,3.93,3.94V118.24z"/>
+		<path style="&st0;" d="M128.8,72.64l-51.12,3.24c-4.09,0-7.41-3.32-7.41-7.41s3.5-7.41,7.41-7.41s50.89,6.25,50.89,6.25"/>
+		<path style="&st0;" d="M153.53,75.44l58.92-5.46c4.09-0.18,7.54,2.99,7.72,7.08c0.18,4.09-3.17,7.55-7.08,7.72
+			s-59.36-4.02-59.36-4.02"/>
+		<path style="&st0;" d="M128.8,72.64c0,0-46.24,3.24-51.12,3.24c-4.89,0-7.41-3.32-7.41-7.41"/>
+		<path style="&st0;" d="M153.5,114.63l60.2-0.1c4.09,0.18,7.26,3.63,7.08,7.72c-0.18,4.09-3.81,7.25-7.72,7.08
+			c-3.91-0.17-59.82-9.39-59.82-9.39"/>
+		<path style="&st0;" d="M128.34,107.84l-51.35,15.1c-3.98,0.96-7.98-1.48-8.94-5.46c-0.96-3.98,1.66-8.02,5.46-8.94
+			c3.16-0.76,41.86-5.42,54.82-6.96"/>
+		<path style="&st0;" d="M141.07,49.92c-2.62-1.23-2.88-3.2-6.43-3.39c-5.41-0.29-9.67-4.03-9.67-8.99
+			c-6.77,0-12.27-5.49-12.27-12.27s5.49-12.27,12.27-12.27c0-7.34,6.77-12.51,16.1-12.51s16.1,5.17,16.1,12.51
+			c6.78,0,12.27,5.49,12.27,12.27s-5.49,12.27-12.27,12.27c0,4.96-4.26,8.69-9.67,8.99C143.94,46.72,143.69,48.7,141.07,49.92z"/>
+		<path style="&st0;" d="M112.7,25.28v4.12c0,6.77,5.49,12.27,12.27,12.27c0,4.96,4.26,8.69,9.67,8.99
+			c3.55,0.19,3.81,2.17,6.43,3.39c2.62-1.23,2.88-3.2,6.43-3.39c5.41-0.29,9.67-4.03,9.67-8.99c6.78,0,12.27-5.49,12.27-12.27
+			l0.1-4.66"/>
+		<polyline style="&st0;" points="140.1,99.54 138.09,131.15 134.82,438.1 "/>
+		<polyline style="&st0;" points="139.84,67.86 132.99,131.25 125.56,439.95 "/>
+		<polyline style="&st0;" points="142.42,112.16 143.8,131.16 147.31,438.1 "/>
+		<polyline style="&st0;" points="142.42,74.04 149.21,131.15 156.57,439.95 "/>
+	</g>
+</svg>

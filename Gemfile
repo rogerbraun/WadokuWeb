@@ -39,3 +39,4 @@ group :development, :test do
 end
 
 gem "progressbar"
+gem "rspec-rails", :group => [:development, :test]

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="409.24" height="110.31" viewBox="0 0 409.24 110.31" style="overflow:visible;enable-background:new 0 0 409.24 110.31"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<path style="&st0;" d="M37.53,9.11c0,4.76-3.74,8.61-8.79,8.61c-5.04,0-8.78-3.86-8.78-8.61s3.74-8.61,8.78-8.61
+			C33.79,0.5,37.53,4.36,37.53,9.11z"/>
+		<rect x="12.21" y="29.44" style="&st0;" width="31.35" height="13.44"/> 
+		<rect x="22.55" y="51.14" style="&st0;" width="11.37" height="12.4"/> 
+		<polyline style="&st0;" points="33.92,54.59 42.53,54.59 42.53,109.46 "/>
+		<polyline style="&st0;" points="12.21,109.46 12.21,54.59 22.2,54.59 "/>
+		<polyline style="&st0;" points="14.62,54.59 14.62,50.8 40.81,50.8 40.81,54.59 "/>
+		<line style="&st0;" x1="13.25" y1="43.91" x2="16" y2="49.76"/>
+		<line style="&st0;" x1="42.53" y1="43.91" x2="39.77" y2="49.76"/>
+		<polyline style="&st0;" points="11.87,37.71 0.5,37.71 0.5,17.38 20.14,17.38 20.14,29.44 "/>
+		<line style="&st0;" x1="37.53" y1="9.11" x2="37.71" y2="28.75"/>
+		<line style="&st0;" x1="19.96" y1="9.11" x2="19.96" y2="18.07"/>
+		<line style="&st0;" x1="20.48" y1="23.58" x2="37.36" y2="23.58"/>
+		<path style="&st0;" d="M371.71,9.46c0,4.76,3.74,8.61,8.78,8.61s8.79-3.86,8.79-8.61c0-4.76-3.74-8.61-8.79-8.61
+			S371.71,4.7,371.71,9.46z"/>
+		<rect x="365.68" y="29.78" style="&st0;" width="31.35" height="13.44"/> 
+		<rect x="375.32" y="51.49" style="&st0;" width="11.37" height="12.4"/> 
+		<polyline style="&st0;" points="375.32,54.93 366.71,54.93 366.71,109.81 "/>
+		<polyline style="&st0;" points="397.03,109.81 397.03,54.93 387.04,54.93 "/>
+		<polyline style="&st0;" points="394.62,54.93 394.62,51.14 368.43,51.14 368.43,54.93 "/>
+		<line style="&st0;" x1="395.99" y1="44.25" x2="393.24" y2="50.11"/>
+		<line style="&st0;" x1="366.71" y1="44.25" x2="369.47" y2="50.11"/>
+		<polyline style="&st0;" points="397.37,38.05 408.74,38.05 408.74,17.73 389.1,17.73 389.1,29.78 "/>
+		<line style="&st0;" x1="371.71" y1="9.46" x2="371.53" y2="29.09"/>
+		<line style="&st0;" x1="389.28" y1="9.46" x2="389.28" y2="18.41"/>
+		<line style="&st0;" x1="388.76" y1="23.93" x2="371.88" y2="23.93"/>
+		<path style="&st0;" d="M366.02,38.05c-14.12-5.17-19.29-5.17-30.32-5.17c-11.02,0-251.15-0.34-262.17-0.34
+			c-11.02,0-16.19,0-30.32,5.17"/>
+		<path style="&st0;" d="M371.19,17.04c-12.75-5.86-28.94-9.65-49.95-10.68C300.22,5.32,273,2.22,204.62,2.05
+			C136.24,1.88,109.02,4.98,88,6.01C66.99,7.05,50.8,10.84,38.05,16.69"/>
+	</g>
+</svg>

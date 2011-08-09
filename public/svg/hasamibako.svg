@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:#868686;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st1 "fill:#CACACA;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st2 "fill:#777777;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st3 "fill:#A2A2A2;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st4 "fill:#525252;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st5 "fill:#DADADA;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st6 "stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="288.75" height="135.5" viewBox="0 0 288.75 135.5" style="overflow:visible;enable-background:new 0 0 288.75 135.5"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<polyline style="&st5;" points="37.02,17.45 31.5,20.75 282.98,120.8 288.25,117.5 37.02,17.45 "/>
+		<polygon style="&st2;" points="31.5,20.75 31.5,26.25 282.98,126.3 282.98,120.8 "/>
+		<polygon style="&st3;" points="282.98,126.3 288.25,123 288.25,117.5 282.98,120.8 "/>
+		<path style="&st6;" d="M39.25,28.5c0,0,0-2.96,0-4.18c1.13-0.68,5.52-3.33,5.52-3.33c0.47-0.28,0.73-0.78,0.73-1.29
+			c0-0.26-0.07-0.53-0.22-0.77c-0.43-0.71-1.35-0.94-2.06-0.51l-6.25,3.77c-0.45,0.27-0.73,0.76-0.73,1.28v7.02L39.25,28.5z"/>
+		<path style="&st6;" d="M95.25,51.13c0,0,0-3.34,0-4.55c1.13-0.68,5.52-3.33,5.52-3.33c0.47-0.28,0.73-0.78,0.73-1.29
+			c0-0.26-0.07-0.53-0.22-0.77c-0.43-0.71-1.35-0.94-2.06-0.51l-6.25,3.77c-0.45,0.27-0.73,0.76-0.73,1.28v7.02L95.25,51.13z"/>
+		<g>
+			<polygon style="&st6;" points="57.25,89.64 57.25,135 140.91,84.76 140.91,69.78 137.15,68.27 137.15,82.27 101.08,103.93 
+				101.07,69.64 114.09,61.83 114.09,59.11 110.5,57.67 84.25,73.47 84.25,79.75 97.07,72.06 97.08,106.77 61,128 61,87.41 "/>
+			<polygon style="&st6;" points="137.15,57.34 137.15,41.67 140.91,39.42 140.91,58.81 "/>
+			<polygon style="&st6;" points="94.45,51.3 87.25,55.62 87.25,71.62 91.25,69.23 91.25,57.25 98.5,52.92 "/>
+		</g>
+		<polygon style="&st6;" points="52.66,88.83 52.66,128.72 7,110.5 7,70.6 3.62,69.26 3.62,113.6 57.25,135 57.25,89.64 
+			56.25,90.25 "/>
+		<g>
+			<polygon style="&st4;" points="0.5,52 56.25,74.25 56.25,90.25 0.5,68 "/>
+			<polygon style="&st4;" points="7,70.6 52.66,88.83 52.66,128.72 7,110.5 "/>
+		</g>
+		<g>
+			<polygon style="&st0;" points="137.15,41.67 137.15,57.34 121.46,51.08 "/>
+			<polygon style="&st0;" points="61,87.41 84.25,73.47 84.25,79.75 97.07,72.06 97.08,106.77 61,128 "/>
+			<polygon style="&st0;" points="101.07,69.64 114.09,61.83 114.09,59.11 137.15,68.27 137.15,82.27 101.08,103.93 "/>
+			<polygon style="&st0;" points="56.25,74.25 87.25,55.62 87.25,71.62 56.25,90.25 "/>
+			<polygon style="&st0;" points="91.25,57.25 98.5,52.92 110.5,57.67 91.25,69.23 "/>
+			<polygon style="&st0;" points="105.42,44.69 142,22.75 142,38.75 121.46,51.08 "/>
+		</g>
+		<g>
+			<polygon style="&st1;" points="0.5,52 56.25,74.25 92.25,52.75 92.28,50.42 38.58,29.2 "/>
+			<path style="&st1;" d="M101.5,41.96c0-0.26-0.07-0.53-0.22-0.77c-0.43-0.71-1.35-0.94-2.06-0.51l-1.54,0.93L49.85,22.45L86.5,0.5
+				L142,22.75l-36.58,21.94l-4.21-1.7L101.5,41.96z"/>
+		</g>
+	</g>
+</svg>

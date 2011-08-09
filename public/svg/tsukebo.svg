@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "stroke:#000000;stroke-width:1.2491;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st1 "fill:none;stroke:#000000;stroke-width:1.2491;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st2 "fill:#FFFFFF;stroke:#000000;stroke-width:1.2491;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="124.45" height="180.98" viewBox="0 0 124.45 180.98" style="overflow:visible;enable-background:new 0 0 124.45 180.98"
+	 xml:space="preserve">
+	<g id="Bild">
+		<path style="&st1;" d="M31.54,19.84C31.7,9.69,27.33,5.47,21.39,1.1c5-1.25,9.99,1.25,12.49,6.25c1.25-1.25,1.25-2.5,2.5-2.5
+			c2.5-1.25,5,0,6.25,2.5c-7.49,0-6.4,5.47-6.4,12.49"/>
+		<path style="&st1;" d="M36.38,32.33c0,5,0,11.24-5,13.74c-1.25,0-2.5,0-3.75,0c5.15-5.46,3.75-8.74,3.75-13.74"/>
+		<polyline style="&st1;" points="61.36,180.35 61.36,66.99 62.3,44.82 "/>
+		<line style="&st1;" x1="58.48" y1="31.94" x2="58.55" y2="180.35"/>
+		<line style="&st1;" x1="8.52" y1="24.59" x2="61.99" y2="24.52"/>
+		<line style="&st1;" x1="8.28" y1="28.58" x2="62.3" y2="28.58"/>
+		<line style="&st1;" x1="8.12" y1="22.02" x2="61.36" y2="22.02"/>
+		<polygon style="&st1;" points="67.77,57.47 71.83,59.34 67.92,61.14 "/>
+		<polygon style="&st1;" points="67.77,98.84 71.83,100.72 67.92,102.51 "/>
+		<polygon style="&st1;" points="67.77,113.68 71.83,115.55 67.92,117.35 "/>
+		<polygon style="&st1;" points="67.77,128.43 71.83,130.31 67.92,132.1 "/>
+		<polygon style="&st1;" points="67.77,141 71.83,142.88 67.92,144.67 "/>
+		<polygon style="&st1;" points="67.77,156.62 71.83,158.49 67.92,160.29 "/>
+		<polygon style="&st1;" points="67.77,85.57 71.83,87.45 67.92,89.24 "/>
+		<polygon style="&st1;" points="67.77,71.75 71.83,73.63 67.92,75.42 "/>
+		<polygon style="&st2;" points="60.19,57.43 56.13,59.3 60.04,61.1 "/>
+		<polygon style="&st2;" points="4.68,23.78 0.62,25.65 4.53,27.45 "/>
+		<polygon style="&st2;" points="60.19,98.81 56.13,100.68 60.04,102.48 "/>
+		<polygon style="&st2;" points="60.19,113.64 56.13,115.51 60.04,117.31 "/>
+		<polygon style="&st2;" points="60.19,128.4 56.13,130.27 60.04,132.06 "/>
+		<polygon style="&st2;" points="60.19,140.96 56.13,142.84 60.04,144.63 "/>
+		<polygon style="&st2;" points="60.19,156.58 56.13,158.45 60.04,160.25 "/>
+		<polygon style="&st2;" points="60.19,85.53 56.13,87.41 60.04,89.2 "/>
+		<polygon style="&st2;" points="60.19,71.71 56.13,73.59 60.04,75.38 "/>
+		<path style="&st1;" d="M4.22,24.05c0-2.11,0.89-4.06,1.4-4.06c0.78,0,0.83,1.8,0.94,3.75c0.16,2.81,0-0.31,0,5.31
+			c0,1.23-0.32,2.48-0.86,2.58c-0.56,0.1-1.33-0.99-1.33-2.26L4.22,24.05z"/>
+		<polygon style="&st2;" points="40.6,20.07 42.24,15.7 44.42,19.91 "/>
+		<polygon style="&st2;" points="24.59,19.91 26.47,15.85 28.26,19.76 "/>
+		<polygon style="&st2;" points="10.85,19.6 12.73,15.54 14.52,19.45 "/>
+		<polygon style="&st2;" points="53.25,19.99 55.2,16.32 56.21,19.99 "/>
+		<polygon style="&st2;" points="14.6,31.47 12.73,35.53 10.93,31.62 "/>
+		<polygon style="&st0;" points="16.24,25.61 15.46,28.11 13.66,26.63 "/>
+		<polygon style="&st0;" points="29.04,25.46 28.26,27.96 26.47,26.47 "/>
+		<polygon style="&st0;" points="44.19,25.61 43.41,28.11 41.61,26.63 "/>
+		<polygon style="&st0;" points="55.67,25.69 54.88,28.19 53.09,26.71 "/>
+		<polygon style="&st2;" points="28.34,31.62 26.47,35.68 24.67,31.78 "/>
+		<polygon style="&st2;" points="43.33,31.78 41.46,35.84 39.66,31.94 "/>
+		<polygon style="&st2;" points="55.35,31.94 53.48,36 51.68,32.09 "/>
+		<path style="&st1;" d="M5.62,20.46c1.64,0,1.87,0.62,2.5,1.56c0.47,0.86,0.23,1.57,0.31,2.5c0.08,1.01,0.34,2.68-0.16,4.06
+			c-0.39,1.09-0.31,3.04-2.58,3.04h55.51"/>
+		<polyline style="&st1;" points="62.77,43.73 67.3,43.73 66.36,46.38 64.8,46.38 62.3,44.82 62.3,25.15 61.36,22.02 66.36,22.02 
+			67.61,25.77 67.61,180.35 "/>
+		<path style="&st1;" d="M92.91,19.84C92.75,9.69,97.12,5.31,103.06,0.94c-5-1.25-9.99,1.25-12.49,6.25c-1.25-1.25-1.25-2.5-2.5-2.5
+			c-2.5-1.25-5,0-6.25,2.5c7.5,0,6.56,6.56,6.25,12.8"/>
+		<path style="&st1;" d="M88.06,32.17c0,5,0,11.24,5,13.74c1.25,0,2.5,0,3.75,0c-4.84-5.15-3.75-8.74-3.75-13.74"/>
+		<line style="&st1;" x1="120.62" y1="24.44" x2="67.14" y2="24.36"/>
+		<line style="&st1;" x1="120.54" y1="28.42" x2="67.77" y2="28.42"/>
+		<line style="&st1;" x1="119.45" y1="22.02" x2="66.36" y2="22.02"/>
+		<polygon style="&st2;" points="120.78,23.66 123.82,25.5 120.78,27.1 "/>
+		<polygon style="&st2;" points="84.08,19.91 81.98,15.62 80.8,19.84 "/>
+		<polygon style="&st2;" points="99.31,19.84 97.98,16.01 96.18,19.91 "/>
+		<polygon style="&st2;" points="113.05,19.99 111.72,15.39 109.77,19.99 "/>
+		<polygon style="&st2;" points="70.97,19.68 69.02,15.31 67.38,19.76 "/>
+		<polygon style="&st2;" points="109.85,31.31 111.72,35.37 113.52,31.47 "/>
+		<polygon style="&st0;" points="113.28,25.46 112.5,27.96 110.71,26.47 "/>
+		<polygon style="&st0;" points="99.23,25.3 98.45,27.8 96.65,26.32 "/>
+		<polygon style="&st0;" points="85.33,25.46 84.55,27.96 82.76,26.47 "/>
+		<polygon style="&st0;" points="72.61,25.54 71.83,28.03 70.03,26.55 "/>
+		<polygon style="&st2;" points="96.11,31.47 97.98,35.53 99.78,31.62 "/>
+		<polygon style="&st2;" points="81.12,31.62 82.99,35.68 84.79,31.78 "/>
+		<polygon style="&st2;" points="69.09,31.78 70.97,35.84 72.76,31.94 "/>
+		<path style="&st1;" d="M5.62,20.46"/>
+		<path style="&st1;" d="M117.58,20.3"/>
+		<path style="&st1;" d="M67.61,31.47h49.89c1.95,0.08,2.73-1.33,3.04-3.04c0.26-1.44,0.16-3.04,0.16-4.06
+			c0-1.25-0.02-1.63-0.55-2.42c-0.62-0.94-1.25-1.95-2.58-1.95"/>
+		<line style="&st1;" x1="5.62" y1="19.99" x2="117.58" y2="19.99"/>
+	</g>
+</svg>

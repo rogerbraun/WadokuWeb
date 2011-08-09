@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:url(#XMLID_5_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st1 "fill:url(#XMLID_7_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st2 "fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;">
+	<!ENTITY st3 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st4 "fill:none;stroke:#000000;stroke-width:0.3;">
+	<!ENTITY st5 "fill:url(#XMLID_4_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st6 "fill:url(#Anhydrite);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st7 "fill:url(#XMLID_2_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st8 "fill:#FFFFFF;">
+	<!ENTITY st9 "fill:url(#XMLID_6_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st10 "fill:none;">
+	<!ENTITY st11 "stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st12 "fill:url(#XMLID_8_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st13 "fill:url(#XMLID_1_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st14 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st15 "fill:url(#XMLID_3_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st16 "fill:none;stroke:#000000;stroke-width:0.3;stroke-linecap:square;stroke-linejoin:bevel;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="198.62" height="128.5" viewBox="0 0 198.62 128.5" style="overflow:visible;enable-background:new 0 0 198.62 128.5"
+	 xml:space="preserve">
+	
+		<pattern  x="-207.12" y="457.5" width="72" height="72" patternUnits="userSpaceOnUse" id="Anhydrite" viewBox="24.21 -72.21 72 72">
+		<g>
+			<polygon style="&st10;" points="24.21-0.21 24.21-72.21 96.21-72.21 96.21-0.21 "/>
+			<line style="&st8;" x1="8.21" y1="-6.21" x2="14.21" y2="-0.21"/>
+			<line style="&st8;" x1="8.21" y1="-0.21" x2="14.21" y2="-6.21"/>
+			<line style="&st16;" x1="24.21" y1="-72.21" x2="96.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.21" y1="-69.21" x2="90.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.21" y1="-63.22" x2="84.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.2" y1="-57.22" x2="78.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.2" y1="-51.22" x2="72.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.2" y1="-45.23" x2="66.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.19" y1="-39.23" x2="60.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.19" y1="-33.24" x2="54.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.19" y1="-27.24" x2="48.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.18" y1="-21.24" x2="42.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.18" y1="-15.25" x2="36.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.17" y1="-9.25" x2="30.21" y2="-0.21"/>
+			<line style="&st16;" x1="21.17" y1="-3.25" x2="24.21" y2="-0.21"/>
+			<line style="&st16;" x1="30.21" y1="-72.21" x2="99.21" y2="-3.21"/>
+			<line style="&st16;" x1="36.21" y1="-72.21" x2="99.22" y2="-9.21"/>
+			<line style="&st16;" x1="42.21" y1="-72.21" x2="99.22" y2="-15.2"/>
+			<line style="&st16;" x1="48.21" y1="-72.21" x2="99.23" y2="-21.2"/>
+			<line style="&st16;" x1="54.21" y1="-72.21" x2="99.23" y2="-27.2"/>
+			<line style="&st16;" x1="60.21" y1="-72.21" x2="99.23" y2="-33.19"/>
+			<line style="&st16;" x1="66.21" y1="-72.21" x2="99.24" y2="-39.19"/>
+			<line style="&st16;" x1="72.21" y1="-72.21" x2="99.24" y2="-45.18"/>
+			<line style="&st16;" x1="78.21" y1="-72.21" x2="99.24" y2="-51.18"/>
+			<line style="&st16;" x1="84.21" y1="-72.21" x2="99.25" y2="-57.18"/>
+			<line style="&st16;" x1="90.21" y1="-72.21" x2="99.25" y2="-63.17"/>
+			<line style="&st16;" x1="96.21" y1="-72.21" x2="99.26" y2="-69.17"/>
+			<line style="&st16;" x1="0.21" y1="-68.71" x2="10.21" y2="-58.71"/>
+			<line style="&st16;" x1="96.21" y1="-72.21" x2="24.21" y2="-0.21"/>
+			<line style="&st16;" x1="90.21" y1="-72.21" x2="21.21" y2="-3.21"/>
+			<line style="&st16;" x1="84.21" y1="-72.21" x2="21.21" y2="-9.21"/>
+			<line style="&st16;" x1="78.21" y1="-72.21" x2="21.2" y2="-15.2"/>
+			<line style="&st16;" x1="72.21" y1="-72.21" x2="21.2" y2="-21.2"/>
+			<line style="&st16;" x1="66.21" y1="-72.21" x2="21.2" y2="-27.2"/>
+			<line style="&st16;" x1="60.21" y1="-72.21" x2="21.19" y2="-33.19"/>
+			<line style="&st16;" x1="54.21" y1="-72.21" x2="21.19" y2="-39.19"/>
+			<line style="&st16;" x1="48.21" y1="-72.21" x2="21.19" y2="-45.18"/>
+			<line style="&st16;" x1="42.21" y1="-72.21" x2="21.18" y2="-51.18"/>
+			<line style="&st16;" x1="36.21" y1="-72.21" x2="21.18" y2="-57.18"/>
+			<line style="&st16;" x1="30.21" y1="-72.21" x2="21.17" y2="-63.17"/>
+			<line style="&st16;" x1="24.21" y1="-72.21" x2="21.17" y2="-69.17"/>
+			<line style="&st16;" x1="99.21" y1="-69.21" x2="30.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.22" y1="-63.22" x2="36.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.22" y1="-57.22" x2="42.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.23" y1="-51.22" x2="48.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.23" y1="-45.23" x2="54.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.23" y1="-39.23" x2="60.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.24" y1="-33.24" x2="66.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.24" y1="-27.24" x2="72.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.24" y1="-21.24" x2="78.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.25" y1="-15.25" x2="84.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.25" y1="-9.25" x2="90.21" y2="-0.21"/>
+			<line style="&st16;" x1="99.26" y1="-3.25" x2="96.21" y2="-0.21"/>
+			<line style="&st16;" x1="0.21" y1="-58.71" x2="10.21" y2="-68.71"/>
+		</g>
+	</pattern>
+	<pattern  x="-207.12" y="457.5" width="72" height="72" patternUnits="userSpaceOnUse" id="Breccia" viewBox="16 -76.21 72 72">
+		<g>
+			<polygon style="&st10;" points="16-4.21 16-76.21 88-76.21 88-4.21 "/>
+			<line style="&st8;" x1="0" y1="-10.21" x2="6" y2="-4.21"/>
+			<line style="&st8;" x1="0" y1="-4.21" x2="6" y2="-10.21"/>
+			<line style="&st2;" x1="21.25" y1="-47.21" x2="21.25" y2="-47.21"/>
+			<line style="&st2;" x1="31.75" y1="-65.46" x2="31.75" y2="-65.46"/>
+			<line style="&st2;" x1="28.25" y1="-64.46" x2="28.25" y2="-64.46"/>
+			<line style="&st2;" x1="34.25" y1="-41.21" x2="34.25" y2="-41.21"/>
+			<line style="&st2;" x1="34" y1="-60.96" x2="34" y2="-60.96"/>
+			<line style="&st2;" x1="32.5" y1="-58.21" x2="32.5" y2="-58.21"/>
+			<line style="&st2;" x1="25.5" y1="-54.46" x2="25.5" y2="-54.46"/>
+			<line style="&st2;" x1="22" y1="-53.96" x2="22" y2="-53.96"/>
+			<line style="&st2;" x1="24.25" y1="-42.96" x2="24.25" y2="-42.96"/>
+			<line style="&st2;" x1="23" y1="-59.96" x2="23" y2="-59.96"/>
+			<line style="&st2;" x1="20" y1="-66.96" x2="20" y2="-66.96"/>
+			<line style="&st2;" x1="54.25" y1="-51.71" x2="54.25" y2="-51.71"/>
+			<line style="&st2;" x1="19" y1="-72.46" x2="19" y2="-72.46"/>
+			<line style="&st2;" x1="24.75" y1="-74.71" x2="24.75" y2="-74.71"/>
+			<line style="&st2;" x1="27.5" y1="-73.71" x2="27.5" y2="-73.71"/>
+			<line style="&st2;" x1="32" y1="-71.96" x2="32" y2="-71.96"/>
+			<line style="&st2;" x1="38" y1="-70.96" x2="38" y2="-70.96"/>
+			<line style="&st2;" x1="38.75" y1="-67.21" x2="38.75" y2="-67.21"/>
+			<line style="&st2;" x1="41.25" y1="-66.21" x2="41.25" y2="-66.21"/>
+			<line style="&st2;" x1="38" y1="-63.71" x2="38" y2="-63.71"/>
+			<line style="&st2;" x1="36.5" y1="-59.96" x2="36.5" y2="-59.96"/>
+			<line style="&st2;" x1="43" y1="-59.46" x2="43" y2="-59.46"/>
+			<line style="&st2;" x1="46.25" y1="-60.46" x2="46.25" y2="-60.46"/>
+			<line style="&st2;" x1="46.75" y1="-63.71" x2="46.75" y2="-63.71"/>
+			<line style="&st2;" x1="44" y1="-64.46" x2="44" y2="-64.46"/>
+			<line style="&st2;" x1="47" y1="-68.21" x2="47" y2="-68.21"/>
+			<line style="&st2;" x1="50.25" y1="-69.21" x2="50.25" y2="-69.21"/>
+			<line style="&st2;" x1="46" y1="-70.71" x2="46" y2="-70.71"/>
+			<line style="&st2;" x1="51" y1="-73.21" x2="51" y2="-73.21"/>
+			<line style="&st2;" x1="61" y1="-65.46" x2="61" y2="-65.46"/>
+			<line style="&st2;" x1="57" y1="-64.46" x2="57" y2="-64.46"/>
+			<line style="&st2;" x1="36.5" y1="-52.96" x2="36.5" y2="-52.96"/>
+			<line style="&st2;" x1="41.25" y1="-48.46" x2="41.25" y2="-48.46"/>
+			<line style="&st2;" x1="50" y1="-51.21" x2="50" y2="-51.21"/>
+			<line style="&st2;" x1="51.25" y1="-57.71" x2="51.25" y2="-57.71"/>
+			<line style="&st2;" x1="59.25" y1="-58.71" x2="59.25" y2="-58.71"/>
+			<line style="&st2;" x1="65" y1="-67.21" x2="65" y2="-67.21"/>
+			<line style="&st2;" x1="59.75" y1="-70.96" x2="59.75" y2="-70.96"/>
+			<line style="&st2;" x1="58.5" y1="-74.71" x2="58.5" y2="-74.71"/>
+			<line style="&st2;" x1="74" y1="-69.21" x2="74" y2="-69.21"/>
+			<line style="&st2;" x1="72.5" y1="-74.46" x2="72.5" y2="-74.46"/>
+			<line style="&st2;" x1="84" y1="-72.96" x2="84" y2="-72.96"/>
+			<line style="&st2;" x1="85" y1="-67.96" x2="85" y2="-67.96"/>
+			<line style="&st2;" x1="80.75" y1="-66.71" x2="80.75" y2="-66.71"/>
+			<line style="&st2;" x1="86.25" y1="-64.21" x2="86.25" y2="-64.21"/>
+			<line style="&st2;" x1="85.75" y1="-58.46" x2="85.75" y2="-58.46"/>
+			<line style="&st2;" x1="82" y1="-57.21" x2="82" y2="-57.21"/>
+			<line style="&st2;" x1="74.5" y1="-58.46" x2="74.5" y2="-58.46"/>
+			<line style="&st2;" x1="71.5" y1="-63.46" x2="71.5" y2="-63.46"/>
+			<line style="&st2;" x1="68.75" y1="-61.71" x2="68.75" y2="-61.71"/>
+			<line style="&st2;" x1="66.5" y1="-57.46" x2="66.5" y2="-57.46"/>
+			<line style="&st2;" x1="62.5" y1="-55.96" x2="62.5" y2="-55.96"/>
+			<line style="&st2;" x1="66.5" y1="-53.71" x2="66.5" y2="-53.71"/>
+			<line style="&st2;" x1="71.25" y1="-51.71" x2="71.25" y2="-51.71"/>
+			<line style="&st2;" x1="67.25" y1="-47.21" x2="67.25" y2="-47.21"/>
+			<line style="&st2;" x1="63.5" y1="-43.71" x2="63.5" y2="-43.71"/>
+			<line style="&st2;" x1="74.5" y1="-39.21" x2="74.5" y2="-39.21"/>
+			<line style="&st2;" x1="81.75" y1="-35.21" x2="81.75" y2="-35.21"/>
+			<line style="&st2;" x1="83.25" y1="-40.96" x2="83.25" y2="-40.96"/>
+			<line style="&st2;" x1="32.25" y1="-44.96" x2="32.25" y2="-44.96"/>
+			<line style="&st2;" x1="56" y1="-47.21" x2="56" y2="-47.21"/>
+			<line style="&st2;" x1="48.25" y1="-44.71" x2="48.25" y2="-44.71"/>
+			<line style="&st2;" x1="42.75" y1="-40.96" x2="42.75" y2="-40.96"/>
+			<line style="&st2;" x1="43.75" y1="-34.46" x2="43.75" y2="-34.46"/>
+			<line style="&st2;" x1="50.25" y1="-30.46" x2="50.25" y2="-30.46"/>
+			<line style="&st2;" x1="45.25" y1="-30.46" x2="45.25" y2="-30.46"/>
+			<line style="&st2;" x1="49" y1="-26.46" x2="49" y2="-26.46"/>
+			<line style="&st2;" x1="39.5" y1="-28.71" x2="39.5" y2="-28.71"/>
+			<line style="&st2;" x1="36" y1="-31.46" x2="36" y2="-31.46"/>
+			<line style="&st2;" x1="37.5" y1="-25.96" x2="37.5" y2="-25.96"/>
+			<line style="&st2;" x1="29.75" y1="-30.71" x2="29.75" y2="-30.71"/>
+			<line style="&st2;" x1="29.75" y1="-34.96" x2="29.75" y2="-34.96"/>
+			<line style="&st2;" x1="25.5" y1="-36.21" x2="25.5" y2="-36.21"/>
+			<line style="&st2;" x1="19.25" y1="-33.71" x2="19.25" y2="-33.71"/>
+			<line style="&st2;" x1="23.75" y1="-30.71" x2="23.75" y2="-30.71"/>
+			<line style="&st2;" x1="23.5" y1="-27.71" x2="23.5" y2="-27.71"/>
+			<line style="&st2;" x1="21" y1="-25.71" x2="21" y2="-25.71"/>
+			<line style="&st2;" x1="22" y1="-22.96" x2="22" y2="-22.96"/>
+			<line style="&st2;" x1="24" y1="-19.46" x2="24" y2="-19.46"/>
+			<line style="&st2;" x1="28.5" y1="-15.96" x2="28.5" y2="-15.96"/>
+			<line style="&st2;" x1="20.5" y1="-13.46" x2="20.5" y2="-13.46"/>
+			<line style="&st2;" x1="24" y1="-14.46" x2="24" y2="-14.46"/>
+			<line style="&st2;" x1="28" y1="-21.46" x2="28" y2="-21.46"/>
+			<line style="&st2;" x1="41.25" y1="-20.46" x2="41.25" y2="-20.46"/>
+			<line style="&st2;" x1="44.75" y1="-19.71" x2="44.75" y2="-19.71"/>
+			<line style="&st2;" x1="43.75" y1="-16.96" x2="43.75" y2="-16.96"/>
+			<line style="&st2;" x1="38" y1="-17.71" x2="38" y2="-17.71"/>
+			<line style="&st2;" x1="37" y1="-12.96" x2="37" y2="-12.96"/>
+			<line style="&st2;" x1="32" y1="-11.96" x2="32" y2="-11.96"/>
+			<line style="&st2;" x1="27.25" y1="-11.21" x2="27.25" y2="-11.21"/>
+			<line style="&st2;" x1="30.5" y1="-7.46" x2="30.5" y2="-7.46"/>
+			<line style="&st2;" x1="18.75" y1="-6.46" x2="18.75" y2="-6.46"/>
+			<line style="&st2;" x1="55.5" y1="-33.46" x2="55.5" y2="-33.46"/>
+			<line style="&st2;" x1="60" y1="-33.46" x2="60" y2="-33.46"/>
+			<line style="&st2;" x1="55.5" y1="-40.46" x2="55.5" y2="-40.46"/>
+			<line style="&st2;" x1="66.75" y1="-32.71" x2="66.75" y2="-32.71"/>
+			<line style="&st2;" x1="72.25" y1="-31.46" x2="72.25" y2="-31.46"/>
+			<line style="&st2;" x1="80.75" y1="-26.21" x2="80.75" y2="-26.21"/>
+			<line style="&st2;" x1="85.25" y1="-31.71" x2="85.25" y2="-31.71"/>
+			<line style="&st2;" x1="85" y1="-26.96" x2="85" y2="-26.96"/>
+			<line style="&st2;" x1="86.25" y1="-19.21" x2="86.25" y2="-19.21"/>
+			<line style="&st2;" x1="86" y1="-14.71" x2="86" y2="-14.71"/>
+			<line style="&st2;" x1="79" y1="-13.46" x2="79" y2="-13.46"/>
+			<line style="&st2;" x1="82.75" y1="-9.96" x2="82.75" y2="-9.96"/>
+			<line style="&st2;" x1="79" y1="-7.21" x2="79" y2="-7.21"/>
+			<line style="&st2;" x1="70" y1="-5.71" x2="70" y2="-5.71"/>
+			<line style="&st2;" x1="72.5" y1="-9.96" x2="72.5" y2="-9.96"/>
+			<line style="&st2;" x1="66.5" y1="-17.21" x2="66.5" y2="-17.21"/>
+			<line style="&st2;" x1="73.75" y1="-16.71" x2="73.75" y2="-16.71"/>
+			<line style="&st2;" x1="65" y1="-12.71" x2="65" y2="-12.71"/>
+			<line style="&st2;" x1="62" y1="-8.46" x2="62" y2="-8.46"/>
+			<line style="&st2;" x1="57.75" y1="-7.96" x2="57.75" y2="-7.96"/>
+			<line style="&st2;" x1="52" y1="-7.46" x2="52" y2="-7.46"/>
+			<line style="&st2;" x1="54.75" y1="-13.71" x2="54.75" y2="-13.71"/>
+			<line style="&st2;" x1="54.5" y1="-16.71" x2="54.5" y2="-16.71"/>
+			<line style="&st2;" x1="50" y1="-18.46" x2="50" y2="-18.46"/>
+			<line style="&st2;" x1="49.75" y1="-14.46" x2="49.75" y2="-14.46"/>
+			<line style="&st2;" x1="49.25" y1="-9.21" x2="49.25" y2="-9.21"/>
+			<line style="&st2;" x1="44" y1="-5.96" x2="44" y2="-5.96"/>
+			<line style="&st2;" x1="43.25" y1="-12.46" x2="43.25" y2="-12.46"/>
+			<line style="&st2;" x1="38.75" y1="-7.71" x2="38.75" y2="-7.71"/>
+			<line style="&st2;" x1="64.5" y1="-24.46" x2="64.5" y2="-24.46"/>
+			<line style="&st2;" x1="75" y1="-22.96" x2="75" y2="-22.96"/>
+			<path style="&st2;" d="M3.5-63.71c0.21,0,0.38-0.17,0.38-0.38c0-0.21-0.17-0.38-0.38-0.38c-0.21,0-0.38,0.17-0.38,0.38
+				C3.12-63.88,3.29-63.71,3.5-63.71z"/>
+			<polygon style="&st4;" points="21.75-70.96 23.75-72.96 25.5-71.96 28.5-72.21 27.75-68.46 24-68.96 "/>
+			<polygon style="&st4;" points="33.5-69.71 36-70.96 38-65.71 36-65.21 "/>
+			<polygon style="&st4;" points="28.75-61.96 25.75-61.46 26-58.96 23.25-57.21 25.75-55.96 30.5-60.96 "/>
+			<polygon style="&st4;" points="36.25-57.71 35.25-55.71 41.75-54.71 42-58.21 "/>
+			<polygon style="&st4;" points="41-63.46 38.25-60.96 39-59.71 44-61.96 "/>
+			<polygon style="&st4;" points="64-31.46 59.5-28.21 59.25-26.21 61.5-24.71 61.75-27.21 67-28.71 "/>
+			<polygon style="&st4;" points="48-66.46 48.25-62.71 50-62.96 50.75-67.71 "/>
+			<polygon style="&st4;" points="40.75-69.96 40-68.21 43.75-67.46 44.25-69.71 "/>
+			<polygon style="&st4;" points="19.25-9.21 21.25-7.21 23-8.21 26-7.96 25.25-11.71 21.5-11.21 "/>
+			<polygon style="&st4;" points="34.5-43.71 37-42.46 39-47.71 37-48.21 "/>
+			<polygon style="&st4;" points="46.75-46.71 45.75-48.71 52.25-49.71 52.5-46.21 "/>
+			<polygon style="&st4;" points="42-49.96 39.25-52.46 40-53.71 45-51.46 "/>
+			<polygon style="&st4;" points="48.25-19.96 43.75-23.21 43.5-25.21 45.75-26.71 46-24.21 51.25-22.71 "/>
+			<polygon style="&st4;" points="45.5-13.71 45.75-17.46 47.5-17.21 48.25-12.46 "/>
+			<polygon style="&st4;" points="41.75-43.46 41-45.21 44.75-45.96 45.25-43.71 "/>
+			<polygon style="&st4;" points="54.75-53.96 56.75-51.96 58.5-52.96 61.5-52.71 60.75-56.46 57-55.96 "/>
+			<polygon style="&st4;" points="62.25-58.71 64.75-57.46 66.75-62.71 64.75-63.21 "/>
+			<polygon style="&st4;" points="57.5-66.46 54.5-66.96 54.75-69.46 52-71.21 54.5-72.46 59.25-67.46 "/>
+			<polygon style="&st4;" points="65-70.71 64-72.71 70.5-73.71 70.75-70.21 "/>
+			<polygon style="&st4;" points="69.75-64.96 67-67.46 67.75-68.71 72.75-66.46 "/>
+			<polygon style="&st4;" points="79.5-68.21 75-71.46 74.75-73.46 77-74.96 77.25-72.46 82.5-70.96 "/>
+			<polygon style="&st4;" points="75-62.21 75.25-65.96 77-65.71 77.75-60.96 "/>
+			<polygon style="&st4;" points="69.5-58.46 68.75-60.21 72.5-60.96 73-58.71 "/>
+			<polygon style="&st4;" points="23.5-46.21 26-44.96 28-50.21 26-50.71 "/>
+			<polygon style="&st4;" points="31-52.46 28.25-54.96 29-56.21 34-53.96 "/>
+			<polygon style="&st4;" points="77-34.46 75-32.46 73.25-33.46 70.25-33.21 71-36.96 74.75-36.46 "/>
+			<polygon style="&st4;" points="65.25-35.71 62.75-34.46 60.75-39.71 62.75-40.21 "/>
+			<polygon style="&st4;" points="70-43.46 73-43.96 72.75-46.46 75.5-48.21 73-49.46 68.25-44.46 "/>
+			<polygon style="&st4;" points="66-48.46 67-50.46 60.5-51.46 60.25-47.96 "/>
+			<polygon style="&st4;" points="57.75-41.96 60.5-44.46 59.75-45.71 54.75-43.46 "/>
+			<polygon style="&st4;" points="50.75-38.96 50.5-42.71 48.75-42.46 48-37.71 "/>
+			<polygon style="&st4;" points="58-35.46 58.75-37.21 55-37.96 54.5-35.71 "/>
+			<polygon style="&st4;" points="75-51.71 79.5-54.96 79.75-56.96 77.5-58.46 77.25-55.96 72-54.46 "/>
+			<polygon style="&st4;" points="26-38.21 30.5-41.46 30.75-43.46 28.5-44.96 28.25-42.46 23-40.96 "/>
+			<polygon style="&st4;" points="31.75-46.96 30.12-47.94 32.73-50.74 34.44-49.21 "/>
+			<polygon style="&st4;" points="51.5-27.21 54-25.96 56-31.21 54-31.71 "/>
+			<polygon style="&st4;" points="14.75-67.46 14-69.21 17.75-69.96 18.25-67.71 "/>
+			<polygon style="&st4;" points="22.25-43.46 20.25-41.46 18.5-42.46 15.5-42.21 16.25-45.96 20-45.46 "/>
+			<polygon style="&st4;" points="50.75-54.21 48.25-52.96 46.25-58.21 48.25-58.71 "/>
+			<polygon style="&st4;" points="15.25-52.46 18.25-52.96 18-55.46 20.75-57.21 18.25-58.46 13.5-53.46 "/>
+			<polygon style="&st4;" points="74.5-26.46 75.5-28.46 69-29.46 68.75-25.96 "/>
+			<polygon style="&st4;" points="63-74.71 65.75-77.21 65-78.46 60-76.21 "/>
+			<polygon style="&st4;" points="50.75-32.21 51.5-33.96 47.75-34.71 47.25-32.46 "/>
+			<polygon style="&st4;" points="20.25-60.71 24.75-63.96 25-65.96 22.75-67.46 22.5-64.96 17.25-63.46 "/>
+			<polygon style="&st4;" points="21.5-49.21 22.25-50.96 18.5-51.71 18-49.46 "/>
+			<polygon style="&st4;" points="40.5-73.46 38-72.21 36-77.46 38-77.96 "/>
+			<polygon style="&st4;" points="33.25-73.21 34-74.96 30.25-75.71 29.75-73.46 "/>
+			<polygon style="&st4;" points="20.75-73.96 23.5-76.46 22.75-77.71 17.75-75.46 "/>
+			<polygon style="&st4;" points="49.25-75.46 48.25-77.46 54.75-78.46 55-74.96 "/>
+			<polygon style="&st4;" points="44.25-72.21 43.5-73.96 47.25-74.71 47.75-72.46 "/>
+			<polygon style="&st4;" points="54.5-59.71 54.75-63.46 56.5-63.21 57.25-58.46 "/>
+			<polygon style="&st4;" points="65-20.96 67-18.96 68.75-19.96 71.75-19.71 71-23.46 67.25-22.96 "/>
+			<polygon style="&st4;" points="81-42.21 78.5-40.96 76.5-46.21 78.5-46.71 "/>
+			<polygon style="&st4;" points="82.75-15.96 83.75-17.96 77.25-18.96 77-15.46 "/>
+			<polygon style="&st4;" points="81.5-50.21 84.25-52.71 83.5-53.96 78.5-51.71 "/>
+			<polygon style="&st4;" points="85.25-45.96 86-47.71 82.25-48.46 81.75-46.21 "/>
+			<polygon style="&st4;" points="79.25-76.21 81.25-74.21 83-75.21 86-74.96 85.25-78.71 81.5-78.21 "/>
+			<polygon style="&st4;" points="63-2.71 65.75-5.21 65-6.46 60-4.21 "/>
+			<polygon style="&st4;" points="40.5-1.46 38-0.21 36-5.46 38-5.96 "/>
+			<polygon style="&st4;" points="33-7.71 35.75-10.21 35-11.46 30-9.21 "/>
+			<polygon style="&st4;" points="20.75-1.96 23.5-4.46 22.75-5.71 17.75-3.46 "/>
+			<polygon style="&st4;" points="49.25-3.46 48.25-5.46 54.75-6.46 55-2.96 "/>
+			<polygon style="&st4;" points="79.25-4.21 81.25-2.21 83-3.21 86-2.96 85.25-6.71 81.5-6.21 "/>
+			<polygon style="&st4;" points="11.25-37.71 13.25-35.71 15-36.71 18-36.46 17.25-40.21 13.5-39.71 "/>
+			<polygon style="&st4;" points="42.75-36.96 40.25-35.71 38.25-40.96 40.25-41.46 "/>
+			<polygon style="&st4;" points="19.25-37.71 21.75-38.96 23.75-33.71 21.75-33.21 "/>
+			<polygon style="&st4;" points="13.75-24.46 12.75-22.46 19.25-21.46 19.5-24.96 "/>
+			<polygon style="&st4;" points="18.5-30.21 15.75-27.71 16.5-26.46 21.5-28.71 "/>
+			<polygon style="&st4;" points="28.25-26.96 23.75-23.71 23.5-21.71 25.75-20.21 26-22.71 31.25-24.21 "/>
+			<polygon style="&st4;" points="25.5-33.21 25.75-29.46 27.5-29.71 28.25-34.46 "/>
+			<polygon style="&st4;" points="21-15.21 18.25-17.71 19-18.96 24-16.71 "/>
+			<polygon style="&st4;" points="32.25-20.71 34.25-18.71 36-19.71 39-19.46 38.25-23.21 34.5-22.71 "/>
+			<polygon style="&st4;" points="35-33.21 32-33.71 32.25-36.21 29.5-37.96 32-39.21 36.75-34.21 "/>
+			<polygon style="&st4;" points="43.25-6.96 40.5-9.46 41.25-10.71 46.25-8.46 "/>
+			<polygon style="&st4;" points="15.5-9.46 13.87-10.44 16.48-13.24 18.19-11.71 "/>
+			<polygon style="&st4;" points="32-26.46 32.25-30.21 34-29.96 34.75-25.21 "/>
+			<polygon style="&st4;" points="33.75-13.96 30.75-14.46 31-16.96 28.25-18.71 30.75-19.96 35.5-14.96 "/>
+			<polygon style="&st4;" points="40.75-30.96 38-33.46 38.75-34.71 43.75-32.46 "/>
+			<polygon style="&st4;" points="41.5-25.46 39.87-26.44 42.48-29.24 44.19-27.71 "/>
+			<polygon style="&st4;" points="52.5-20.46 54.5-18.46 56.25-19.46 59.25-19.21 58.5-22.96 54.75-22.46 "/>
+			<polygon style="&st4;" points="77-30.21 77.25-33.96 79-33.71 79.75-28.96 "/>
+			<polygon style="&st4;" points="38.5-14.21 37.75-15.96 41.5-16.71 42-14.46 "/>
+			<polygon style="&st4;" points="67.75-9.96 70.75-10.46 70.5-12.96 73.25-14.71 70.75-15.96 66-10.96 "/>
+			<polygon style="&st4;" points="63.75-14.96 64.75-16.96 58.25-17.96 58-14.46 "/>
+			<polygon style="&st4;" points="55.5-8.46 58.25-10.96 57.5-12.21 52.5-9.96 "/>
+			<polygon style="&st4;" points="78.75-8.71 76.25-7.46 74.25-12.71 76.25-13.21 "/>
+			<polygon style="&st4;" points="67.5-38.96 66.75-40.71 70.5-41.46 71-39.21 "/>
+			<polygon style="&st4;" points="86.75-67.46 86-69.21 89.75-69.96 90.25-67.71 "/>
+			<polygon style="&st4;" points="94.25-43.46 92.25-41.46 90.5-42.46 87.5-42.21 88.25-45.96 92-45.46 "/>
+			<polygon style="&st4;" points="87.25-52.46 90.25-52.96 90-55.46 92.75-57.21 90.25-58.46 85.5-53.46 "/>
+			<polygon style="&st4;" points="83.25-37.71 85.25-35.71 87-36.71 90-36.46 89.25-40.21 85.5-39.71 "/>
+			<polygon style="&st4;" points="85.75-24.46 84.75-22.46 91.25-21.46 91.5-24.96 "/>
+			<polygon style="&st4;" points="90.5-30.21 87.75-27.71 88.5-26.46 93.5-28.71 "/>
+			<polygon style="&st4;" points="80.5-19.21 77.75-21.71 78.5-22.96 83.5-20.71 "/>
+			<polygon style="&st4;" points="87.5-9.46 85.87-10.44 88.48-13.24 90.19-11.71 "/>
+			<polygon style="&st4;" points="78.75-61.96 80.75-59.96 82.5-60.96 85.5-60.71 84.75-64.46 81-63.96 "/>
+			<polygon style="&st4;" points="2.25-60.96 1.5-59.21 5.25-58.46 5.75-60.71 "/>
+		</g>
+	</pattern>
+	<g id="Bild">
+		<polyline style="&st14;" points="118.38,62.5 101.38,69.5 105.62,77.5 128.62,68 127.73,66.65 126.72,65.14 "/>
+		<polyline style="&st14;" points="101.38,69.5 98.12,72.25 104.88,76.62 "/>
+		<line style="&st14;" x1="88.5" y1="6.31" x2="160.19" y2="35.38"/>
+		<line style="&st14;" x1="155.38" y1="52.25" x2="155.38" y2="60.62"/>
+		<line style="&st14;" x1="174.12" y1="44.75" x2="174.12" y2="52.75"/>
+		<path style="&st14;" d="M88.5,6.31c-1.81,4.12-4.12,5.94-7.25,7.94c-3.13,2-4.69,3.06-9.69,3.06l82.06,35.06l25.25-9.88l-8.5-3.75
+			c-3.38-1.44-4.81-2.12-7.56-4.25c-1.5,6.25-3.44,9.56-7.44,13.31l-1.75,4.56"/>
+		<path style="&st14;" d="M153.19,47.62c3.06-2.06,6.69-8,7.69-11.88"/>
+		<polyline style="&st14;" points="163.62,37.56 171.38,41.19 160.44,45 "/>
+		<polygon style="&st11;" points="162.25,51.25 168.25,48.81 168.25,50.81 162.25,53.38 "/>
+		<line style="&st14;" x1="81.12" y1="84.36" x2="81.12" y2="91"/>
+		<line style="&st14;" x1="103.99" y1="94.89" x2="165.62" y2="128"/>
+		<line style="&st14;" x1="175.12" y1="128" x2="104.29" y2="92.17"/>
+		<polyline style="&st14;" points="113.62,74.25 113.62,79.5 119.62,81.17 119.62,71.75 "/>
+		<line style="&st14;" x1="81.62" y1="21.83" x2="81.62" y2="28.38"/>
+		<polyline style="&st14;" points="161.38,33.75 162.25,33.38 162,31.75 160.5,31.62 161.25,31 161.12,29.75 162,31.75 163.25,32.5 
+			163.88,33.88 162.81,34.5 161.38,33.75 162.81,34.5 89.38,4.75 "/>
+		<polyline style="&st14;" points="89.38,4.75 88.5,6.31 87.29,4.17 88.96,2.83 88.96,0.5 89.54,2.08 90.79,2.25 89.46,3 
+			89.38,4.75 "/>
+		<line style="&st14;" x1="121.75" y1="45.75" x2="121.75" y2="38.75"/>
+		<line style="&st14;" x1="80.43" y1="32.27" x2="83.02" y2="31.37"/>
+		<path style="&st14;" d="M0.62,60"/>
+		<line style="&st14;" x1="119.62" y1="81.17" x2="123.06" y2="82.88"/>
+		<line style="&st14;" x1="123.12" y1="74.75" x2="123.12" y2="70.38"/>
+		<line style="&st14;" x1="136.47" y1="81.92" x2="198.12" y2="112"/>
+		<line style="&st14;" x1="106.38" y1="77.75" x2="106.38" y2="81.06"/>
+		<polyline style="&st14;" points="86.12,36.31 86.12,32.5 83.02,31.37 "/>
+		<line style="&st3;" x1="118.44" y1="42.31" x2="91.5" y2="30.69"/>
+		<line style="&st3;" x1="91.5" y1="30.69" x2="91.5" y2="25.94"/>
+		<line style="&st3;" x1="107.12" y1="77" x2="107.12" y2="80.75"/>
+		<polyline style="&st14;" points="91.38,52.17 94.2,51.06 94.2,36.88 "/>
+		<line style="&st3;" x1="99.79" y1="34.12" x2="99.79" y2="29.38"/>
+		<line style="&st3;" x1="101.86" y1="35" x2="101.86" y2="30.25"/>
+		<line style="&st3;" x1="103.93" y1="35.88" x2="103.93" y2="31.12"/>
+		<line style="&st3;" x1="106" y1="36.81" x2="106" y2="32.06"/>
+		<line style="&st3;" x1="108.08" y1="37.75" x2="108.08" y2="33"/>
+		<line style="&st3;" x1="112.22" y1="39.38" x2="112.22" y2="34.62"/>
+		<line style="&st3;" x1="114.29" y1="40.38" x2="114.29" y2="35.62"/>
+		<line style="&st3;" x1="116.37" y1="41.38" x2="116.37" y2="36.44"/>
+		<line style="&st3;" x1="110.15" y1="38.5" x2="110.15" y2="33.75"/>
+		<line style="&st3;" x1="118.44" y1="42.17" x2="118.44" y2="37.42"/>
+		<line style="&st3;" x1="97.72" y1="33.06" x2="97.69" y2="28.56"/>
+		<line style="&st3;" x1="95.64" y1="32.39" x2="95.64" y2="27.64"/>
+		<line style="&st3;" x1="93.57" y1="31.56" x2="93.56" y2="26.75"/>
+		<line style="&st3;" x1="99.12" y1="53.38" x2="99.12" y2="39.19"/>
+		<line style="&st3;" x1="103.7" y1="55.44" x2="103.7" y2="41.25"/>
+		<line style="&st3;" x1="116.75" y1="61.6" x2="116.75" y2="46.9"/>
+		<polyline style="&st3;" points="118.19,62.31 111,58.94 111,44.19 "/>
+		<line style="&st3;" x1="94.2" y1="51.06" x2="103.7" y2="55.44"/>
+		<polyline style="&st3;" points="103.7,55.44 108.88,53.62 108.88,43.44 "/>
+		<g>
+			<pattern  id="XMLID_9_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			<polyline style="fill:url(#XMLID_9_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;" points="
+				198.12,63.64 156.23,80.56 155.38,60.62 198.12,43 "/>
+			<pattern  id="XMLID_10_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			
+				<polyline style="fill:url(#XMLID_10_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;" points="
+				0.62,66.75 29.5,56.38 29.5,74.34 0.62,84.88 "/>
+			<pattern  id="XMLID_11_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			<polygon style="fill:url(#XMLID_11_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;" points="107.12,80.75 
+				108.88,90 104.49,92.04 104.29,92.17 103.99,94.89 81.12,104 81.12,91 "/>
+			<pattern  id="XMLID_12_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			<polygon style="fill:url(#XMLID_12_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;" points="81.12,91 81.12,104 
+				29.5,74.34 29.5,62 "/>
+			<pattern  id="XMLID_13_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			<polygon style="fill:url(#XMLID_13_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;" points="
+				123.12,74.75 123.12,82.88 127.29,82.33 "/>
+			<pattern  id="XMLID_14_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			<polygon style="fill:url(#XMLID_14_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;" points="
+				127.29,82.33 123.12,74.75 147.88,64.25 147.96,76.68 136.47,81.92 132.75,80.13 "/>
+			<pattern  id="XMLID_15_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			<polygon style="fill:url(#XMLID_15_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;" points="
+				156.23,80.56 155.38,60.62 81.62,28.38 80.43,32.27 83.02,31.37 86.12,32.5 86.12,49.9 91.38,52.17 91.38,35.75 118.38,47.56 
+				118.38,62.5 123.62,60.5 126.72,65.14 145.69,58.06 147.88,58.94 147.88,64.25 147.96,76.68 "/>
+			<pattern  id="XMLID_16_" xlink:href="#Breccia" patternTransform="matrix(0.9 0 0 0.9 -336.4722 -469.2021)">
+			</pattern>
+			<polygon style="fill:url(#XMLID_16_);stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;" points="
+				46.29,63.76 31.25,55.79 86.12,36.31 86.12,49.9 "/>
+		</g>
+		<g>
+			<polyline style="&st6;" points="198.12,36.81 174.12,46 174.12,47.5 198.12,38.29 "/>
+			<polyline style="&st6;" points="0.62,60 83.02,31.37 86.12,32.5 0.5,62.12 "/>
+			<polygon style="&st6;" points="81.12,82.22 81.12,84.36 29.45,56.42 31.25,55.79 "/>
+			<polyline style="&st6;" points="104.38,75.5 81.12,84.36 81.12,82.22 101.44,74.56 "/>
+			<polygon style="&st6;" points="127.73,66.65 126.71,64.92 145.63,57.96 147.82,58.83 "/>
+		</g>
+	</g>
+</svg>

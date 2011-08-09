@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="200" height="148.06" viewBox="0 0 200 148.06" style="overflow:visible;enable-background:new 0 0 200 148.06"
+	 xml:space="preserve">
+	<g id="Pfade">
+		<polygon style="&st0;" points="100,69.29 53.72,35.14 100,1 146.28,35.14 "/>
+		<polygon style="&st0;" points="100,78.78 53.72,112.92 100,147.06 146.28,112.92 "/>
+		<polygon style="&st0;" points="47.28,108.17 93.57,74.03 47.28,39.89 1,74.03 "/>
+		<polygon style="&st0;" points="152.71,39.89 106.43,74.03 152.71,108.17 199,74.03 "/>
+	</g>
+</svg>

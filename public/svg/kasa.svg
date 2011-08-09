@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:#0A0809;stroke:#FFFFFF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;">
+	<!ENTITY st1 "stroke:#FFFFFF;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="242.95" height="140.03" viewBox="0 0 242.95 140.03" style="overflow:visible;enable-background:new 0 0 242.95 140.03"
+	 xml:space="preserve">
+	<g id="&#xC9;&#xE5;&#xC9;C&#xC9;&#xD1;&#xC5;_x5B__x5F_2">
+		<g>
+			<g>
+				<path style="&st0;" d="M236.27,94.46c-17.63-19.73-62.37-33.75-114.8-33.75c-52.77,0-97.74,14.2-115.13,34.12
+					c31.6,6.92,71.16,11.03,114.1,11.03C164.17,105.87,204.39,101.61,236.27,94.46z"/>
+				<path style="&st0;" d="M216.86,126.27c-24.04-5.69-54.09-30.9-54.68-62.24l-8-0.85c0.62,32.75,28.16,65.14,53.02,74.81
+					L216.86,126.27z"/>
+				<path style="&st0;" d="M88.99,63.13c7.34,28.99,29.59,49.89,57.05,52.86c26.69,2.89,52.99-12.07,66.6-37.7l-7.32-3.5
+					c-12.07,22.73-34.75,35.53-58.17,33c-24.11-2.61-43.64-20.16-50.16-45.87L88.99,63.13z"/>
+				<path style="&st0;" d="M26.84,126.13c23.42-5.9,53.22-31.95,54.45-62.26l8.24-0.93c-1.32,32.5-29.66,66.08-54.55,75.08
+					L26.84,126.13z"/>
+				<path style="&st1;" d="M95.85,107.78c-23.43,2.53-46.11-10.27-58.18-33.01l-7.32,3.5c13.61,25.65,39.9,40.6,66.6,37.71
+					c27.46-2.97,49.71-23.87,57.05-52.85l-8.26-0.96C139.24,87.88,119.95,105.18,95.85,107.78z"/>
+			</g>
+			<path style="&st0;" d="M146.87,24.18c1.72-29.56-52.47-29.58-50.79,0C112.85,21.35,130.1,21.35,146.87,24.18"/>
+			<path style="&st1;" d="M121.47,60.81c57.98,0,106.57,17.14,119.48,40.18c-10.37-44.9-59.92-78.93-119.48-78.93
+				C61.92,22.06,12.37,56.09,2,100.99C14.91,77.95,63.5,60.81,121.47,60.81z"/>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 11 Build 196, SVG Export Plug-In . SVG Version: 6.0.0 Build 78)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN"    "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+	<!ENTITY st0 "fill:#FFFFFF;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+	<!ENTITY st1 "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:2;">
+]>
+<svg  xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 width="89.75" height="173.12" viewBox="0 0 89.75 173.12" style="overflow:visible;enable-background:new 0 0 89.75 173.12"
+	 xml:space="preserve">
+	<g id="Bild">
+		<path style="&st1;" d="M61,60.12"/>
+		<line style="&st1;" x1="40.25" y1="84.37" x2="40.25" y2="172.62"/>
+		<path style="&st1;" d="M42,66.12"/>
+		<line style="&st1;" x1="49" y1="84.37" x2="49" y2="172.62"/>
+		<line style="&st1;" x1="46.25" y1="84.62" x2="46.25" y2="172.62"/>
+		<path style="&st0;" d="M46.25,108.37l4.81-1.06l-4.81-1.94C45.56,106.31,45.69,107.93,46.25,108.37z"/>
+		<path style="&st0;" d="M46.19,95.56L51,94.5l-4.81-1.94C45.5,93.5,45.63,95.12,46.19,95.56z"/>
+		<path style="&st0;" d="M46.19,120.62l4.81-1.06l-4.81-1.94C45.5,118.56,45.63,120.18,46.19,120.62z"/>
+		<path style="&st0;" d="M46.12,133.62l4.81-1.06l-4.81-1.94C45.43,131.56,45.57,133.18,46.12,133.62z"/>
+		<path style="&st0;" d="M46.31,145.37l4.81-1.06l-4.81-1.94C45.62,143.31,45.75,144.93,46.31,145.37z"/>
+		<path style="&st0;" d="M46.25,158.37l4.81-1.06l-4.81-1.94C45.56,156.31,45.69,157.93,46.25,158.37z"/>
+		<path style="&st1;" d="M43.5,75.62V62.87c-6.25,0-14.56-2.32-18.5-7.75c-7.25-10,5.25-46.25-24.25-54.5
+			C6.15-0.09,15.25,2.37,19,7.37c10.45,13.93,6,39,10,44.25c4.14,5.43,11.67,6.4,16,6.25s11.86-0.82,16-6.25
+			c4-5.25-0.45-30.32,10-44.25c3.75-5,12.85-7.46,18.25-6.75c-29.5,8.25-17,44.5-24.25,54.5c-3.94,5.43-12.25,7.75-18.5,7.75v12.75"
+			/>
+		<path style="&st1;" d="M0.5,0.62c15.5,11.5,15.75,24.25,17.25,45.5c0.82,11.64,7,21.75,22.5,21.75v12.75h-1v3.75H50.5v-3.75h-1
+			V67.87c15.5,0,21.68-10.11,22.5-21.75c1.5-21.25,1.75-34,17.25-45.5"/>
+		<path style="&st0;" d="M40.1,107.96l-4.81-1.06l4.81-1.94C40.79,105.9,40.65,107.53,40.1,107.96z"/>
+		<path style="&st0;" d="M40.16,95.15l-4.81-1.06l4.81-1.94C40.85,93.09,40.72,94.71,40.16,95.15z"/>
+		<path style="&st0;" d="M40.16,120.21l-4.81-1.06l4.81-1.94C40.85,118.15,40.72,119.78,40.16,120.21z"/>
+		<path style="&st0;" d="M40.22,133.21l-4.81-1.06l4.81-1.94C40.91,131.15,40.78,132.78,40.22,133.21z"/>
+		<path style="&st0;" d="M40.03,144.96l-4.81-1.06l4.81-1.94C40.72,142.9,40.59,144.53,40.03,144.96z"/>
+		<path style="&st0;" d="M40.1,157.96l-4.81-1.06l4.81-1.94C40.79,155.9,40.65,157.53,40.1,157.96z"/>
+		<line style="&st1;" x1="40.25" y1="80.62" x2="44.5" y2="80.62"/>
+	</g>
+</svg>
