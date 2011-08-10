@@ -5,6 +5,11 @@ require "spec_helper"
 
 describe WadokuNewGrammar do
 
+  it "should parse <Ref> tags " do
+    WadokuNewGrammar.parse("<Ref.: ⇔ <Transcr.: kudari> <Jap.: 下だり><DaID: 9431695>>", :root => :ref).to_html.should == "⇔ <a href='<<<ROOT_URL>>>entries/by-daid/9431695'><span class='jap'>下だり</span> - <span class='transcr'>kudari</span></a>" 
+
+  end
+
   it "should parse <Pict> tags" do
     WadokuNewGrammar.parse("<Pict.: <Capt.: Argyle-Muster><FileN: argyl>>", :root => :pict).to_html.should == "<span class='svg_image'><span class='image_caption'>Argyle-Muster</span><span class='svg'><a href='<<<ROOT_URL>>>svg/argyl.svg'><img src='<<<ROOT_URL>>>svg/argyl.svg' type='image/svg+xml' /></a></span></span>"
   end

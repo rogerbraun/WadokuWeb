@@ -25,7 +25,13 @@ class EntriesController < ApplicationController
 
   def by_id
     @entry = Entry.find_by_wadoku_id(params[:wadoku_id]) if params[:wadoku_id]
-    redirect_to @entry
+    @json = {"entry" => { "id" => @entry.id, :definition => @entry.full_html, :writing => @entry.writing, :kana => @entry.kana}}
+    respond_to do |format|
+      format.html { redirect_to @entry}
+      format.json  { render :json => @json }
+      format.xml  { render :xml => @entry }
+      
+    end
   end
 
   def by_domain

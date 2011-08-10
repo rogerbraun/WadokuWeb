@@ -93,6 +93,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.24)
+    watchr (0.7)
     web-app-theme (0.6.3)
 
 PLATFORMS
@@ -108,4 +109,5 @@ DEPENDENCIES
   romkan
   rspec-rails
   sqlite3-ruby
+  watchr
   web-app-theme (>= 0.6.2)
