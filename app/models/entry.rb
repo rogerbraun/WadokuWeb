@@ -11,16 +11,15 @@ class Entry < ActiveRecord::Base
     WadokuNewGrammar.parse(self.definition)
   end
 
+
   def to_html(root_url = "")
-    if not self.parsed then  
-      begin 
-        self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).gsub("；","; ").html_safe
-      rescue => e
-        "Fehler in #{self.definition}"
-      end 
-    else
-      self.parsed.gsub("<<<ROOT_URL>>>",root_url).html_safe
-    end
+    begin 
+      res = self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).gsub("；","; ").html_safe
+    rescue => e
+      res = "Fehler in #{self.definition}"
+    end 
+    
+    self.hacks(res)
   end
 
   def full_html(root_url = "")
@@ -47,8 +46,10 @@ class Entry < ActiveRecord::Base
 
   def self.search_by_any(word, page, per_page)
     word = word.to_kana
-    entries = Entry.joins(:keywords) & (Keyword.where("word like ?", "#{word}%"))
-    entries.select("distinct entries.id, midashigo, kana, parsed, definition, writing").page(page).per(per_page)
+   
+    # UNSAFE!!!! FIX FIX FIX FIX!!!! 
+    entries = Entry.joins("join (select distinct entry_id from keywords where word like '#{word}%') on entries.id = entry_id").page(page).per(per_page)
+    #entries.select("distinct entries.id, midashigo, kana, parsed, definition, writing").page(page).per(per_page)
   end 
 
   def first_midashigo
@@ -61,5 +62,17 @@ class Entry < ActiveRecord::Base
 
   def cleaned_kana
     self.kana[/[^\d\[\]\s]+/]
+  end
+
+  # This is to change the result of the to_html result. Nothing should implemented here, but it may be for
+  # a quick fix.
+  def hacks(ready_html)
+
+    res = ready_html.scan(/(.*)(<span class='svg_image'>.*?<\/a><\/span><\/span>)(.*)/).first
+
+    return ready_html unless res
+    
+    [res[0], res[2], res[1]].join("").html_safe
+   
   end
 end
