@@ -41,3 +41,5 @@ end
 gem "progressbar"
 gem "rspec-rails", :group => [:development, :test]
 gem "watchr", :group => [:development, :test]
+
+gem "picky-client"

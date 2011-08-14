@@ -51,6 +51,9 @@ GEM
       activesupport (~> 3.0.2)
       arel (~> 2.0.2)
     mime-types (1.16)
+    picky-client (2.7.0)
+      activesupport (>= 3.0.0)
+      yajl-ruby (>= 0.7.8)
     polyglot (0.3.1)
     progressbar (0.9.0)
     rack (1.2.1)
@@ -95,6 +98,7 @@ GEM
     tzinfo (0.3.24)
     watchr (0.7)
     web-app-theme (0.6.3)
+    yajl-ruby (0.8.2)
 
 PLATFORMS
   ruby
@@ -104,6 +108,7 @@ DEPENDENCIES
   jquery-rails (>= 0.2.6)
   kaminari
   meta_search
+  picky-client
   progressbar
   rails (= 3.0.3)
   romkan
