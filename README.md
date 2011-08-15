@@ -1,12 +1,13 @@
-== WaDokuJT Web Version
+## WaDokuJT Web Version
 
-=== About
+### About
+
 This is the web interface for the WaDokuJT dictionary (http://wadoku-ev.de). 
 
-=== License 
-The data is under a creative commons license, the code is under GPL3.
+### License The data is under a creative commons license, the code is under GPL3.
 
-=== Installation
+### Installation
+
 If you want to install your own version of this interface, you have to follow these steps:
 
 1. Clone this repository.
@@ -16,16 +17,18 @@ If you want to install your own version of this interface, you have to follow th
 5. Start the server with "rails s"
 6. Open the page in your browser. That's it!
 
-=== Contribute
+#### Contribute
 Contributions are very welcome. If you want to contribute, please fork the project and issue a pull request. Bonus points for specs. 
+
 Some things you could work on: 
+
 - The parser (found in /grammar). It does not yet parse every construct in the original file.
 - Ajax support, preferably pjax (https://github.com/defunkt/jquery-pjax).
 - DIN-Romanization (see Issue 1)
 - Better page layout, nicer look.
 - Integration with example sentences, from tatoeba.org or the Tanaka Corpus.
 
-=== Contributors
+#### Contributors
 This repository is maintained by Roger Braun (github.com/rogerbraun).
 
 Other contributers:
