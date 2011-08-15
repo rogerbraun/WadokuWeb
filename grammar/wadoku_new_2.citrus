@@ -1,9 +1,17 @@
 grammar WadokuNewGrammar 
 
   rule entry
-    (pos? space* dom? space* ( "(" tags:(tag)+ ")" )? space* meanings:(meaning_group)+ ) {
+    (pos? space* dom? space* ( "(" tags:(tag)+ ")" )? space* meanings:(meaning_group)+ space* audio_tag? "."?) {
       def to_html
         (dom ? dom.to_html.to_s : "") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ") " : "") + meanings.matches.map{|m| m.to_html}.join("")  
+      end
+
+      def audio_file
+        if audio_tag then
+          audio_tag.basename
+        else
+          nil
+        end
       end
     }
   end
@@ -13,6 +21,18 @@ grammar WadokuNewGrammar
     ("(<POS: " (content)+  "."? ">)") {
       def to_html
         ""
+      end
+    }
+  end
+
+  rule audio_tag
+    ("(<Audio: " filename:(words) ">)") {
+      def to_html
+        ""
+      end
+
+      def basename
+        filename
       end
     }
   end

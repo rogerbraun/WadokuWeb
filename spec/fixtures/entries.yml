@@ -1,0 +1,7 @@
+#encoding: utf-8
+test:
+  wadoku_id: 2640093
+  writing: "テスト"
+  midashigo: "テスト"
+  kana: "てすと"
+  definition: "(<POS: N., mit <Transcr.: suru> trans. V.>) <MGr: <TrE: <JLPT2><GENKI_K5><HW m: Test>>; <TrE: <JLPT2><GENKI_K5><HW f: Probe>>; <TrE: <JLPT2><GENKI_K5><HW f: Prüfung>>; <TrE: <HW n: Quiz>>>. (<Audio: tesuto_Ac1>)."

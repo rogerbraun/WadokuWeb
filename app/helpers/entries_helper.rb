@@ -7,4 +7,5 @@ module EntriesHelper
       "</nav>"
     ).html_safe
   end
+
 end

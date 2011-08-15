@@ -106,3 +106,13 @@ padding-left: 25px;
   padding-bottom: 15px;
   padding-left: 25px;  
 }
+
+.pron_audio {
+  background-image: url(/images/loudspeaker.png);
+  background-repeat: no-repeat;
+  vertical-align: super;
+}
+
+.pron_audio a {
+  margin-left: 15px;
+}

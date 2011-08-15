@@ -32,7 +32,21 @@ describe WadokuNewGrammar do
 
     WadokuNewGrammar.parse(example4).to_html.should include "<span class='svg_image'><span class='image_caption'>Tanzender Phönix</span><span class='svg'><a href='<<<ROOT_URL>>>svg/maihouou.svg'><img src='<<<ROOT_URL>>>svg/maihouou.svg' type='image/svg+xml' /></a></span></span>"
 
+  end
+
+  it "should parse audio tags" do
+    WadokuNewGrammar.parse("(<Audio: tesuto_Ac1>)", :root => :audio_tag).should == "(<Audio: tesuto_Ac1>)"
+
+    WadokuNewGrammar.parse("(<Audio: otoko·no·ko_Ac3>)", :root => :audio_tag).should == "(<Audio: otoko·no·ko_Ac3>)"
+  end
+
+  it "should give audio file name in context" do
+
+    example = "(<POS: N., mit <Transcr.: suru> trans. V.>) <MGr: <TrE: <JLPT2><GENKI_K5><HW m: Test>>; <TrE: <JLPT2><GENKI_K5><HW f: Probe>>; <TrE: <JLPT2><GENKI_K5><HW f: Prüfung>>; <TrE: <HW n: Quiz>>>. (<Audio: tesuto_Ac1>)."
+
+    WadokuNewGrammar.parse(example).audio_file.should == "tesuto_Ac1"
 
   end
+
 
 end

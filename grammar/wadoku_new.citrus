@@ -52,6 +52,13 @@ grammar WadokuGrammar
     }
   end
 
+  rule audio_tag
+    ("(<Audio: " words ">)") {
+      def to_html
+        ""
+      end
+  end
+
   rule transcr
     ("<Transcr.: " word ">") {
       def to_html
