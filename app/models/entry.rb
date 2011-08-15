@@ -1,8 +1,6 @@
 #encoding: utf-8
 class Entry < ActiveRecord::Base
 
-  has_many :keywords
-
   def pos
     self.definition.match(/POS: (.)/)[1]
   end
@@ -43,14 +41,6 @@ class Entry < ActiveRecord::Base
   def sub_entries
     Entry.where(:entry_relation => self.writing)
   end
-
-  def self.search_by_any(word, page, per_page)
-    word = word.to_kana
-   
-    # UNSAFE!!!! FIX FIX FIX FIX!!!! 
-    entries = Entry.joins("join (select distinct entry_id from keywords where word like '#{word}%') on entries.id = entry_id").page(page).per(per_page)
-    #entries.select("distinct entries.id, midashigo, kana, parsed, definition, writing").page(page).per(per_page)
-  end 
 
   def first_midashigo
     self.midashigo.split(";").first
