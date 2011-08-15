@@ -11,6 +11,7 @@
 </div>
 <div class="actions-bar wat-cf">
   <div class="actions">
-  <%= paginate entries  %>
+    <%= paginate @page, @total%>
   </div>
 </div>
+<p>Suchdauer <%=@search_time%> Sekunden.</p>
