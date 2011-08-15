@@ -9,11 +9,11 @@ class Entry < ActiveRecord::Base
     WadokuNewGrammar.parse(self.definition)
   end
 
-
   def to_html(root_url = "")
     begin 
       res = self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).gsub("；","; ").html_safe
-    rescue => e
+    rescue Citrus::ParseError => e
+      logger.error "Could not parse #{self.id}:\n #{e}" 
       res = "Fehler in #{self.definition}"
     end 
     
@@ -28,9 +28,14 @@ class Entry < ActiveRecord::Base
   end
 
   def audio_tag
-    if parse.audio_file then
-      ("<span class='pron_audio'>" + link_to(t("pronounciation", :default => "Aussprache"), "/audio/#{parse.audio_file}.mp3") + "</span>").html_safe
-    else
+    begin
+      if parse.audio_file then
+        ("<span class='pron_audio'>" + link_to(t("pronounciation", :default => "Aussprache"), "/audio/#{parse.audio_file}.mp3") + "</span>").html_safe
+      else
+        ""
+      end
+    rescue Citrus::ParseError => e
+      logger.error "Could not parse #{self.id}:\n #{e}" 
       ""
     end
   end
