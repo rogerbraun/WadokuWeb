@@ -4,6 +4,15 @@
 require "spec_helper"
 
 describe WadokuNewGrammar do
+  it "should parse <MGr> tags" do
+    WadokuNewGrammar.parse("[1]<MGr: <TrE: <HW m: Vogel> des Glücks>> //", :root => :meaning_group).to_html.should == "<span class='mg_nr'>[1]<span> <span class='tre'><span class='genus m'>Vogel</span> des Glücks</span> //"
+  
+  end
+
+  it "should parse <LangNiv.:...> tags" do
+    WadokuNewGrammar.parse("(<LangNiv.: ugs.>) ", :root => :bracketed_tags).to_html.should == "(<span class='langniv'>ugs.</span>) "
+    WadokuNewGrammar.parse("(<LangNiv.: schriftspr.>) ", :root => :bracketed_tags).to_html.should == "(<span class='langniv'>schriftspr.</span>) "
+  end
 
   it "should parse <Ref> tags " do
     WadokuNewGrammar.parse("<Ref.: ⇔ <Transcr.: kudari> <Jap.: 下だり><DaID: 9431695>>", :root => :ref).to_html.should == "⇔ <a href='<<<ROOT_URL>>>entries/by-daid/9431695'><span class='jap'>下だり</span> - <span class='transcr'>kudari</span></a>" 

@@ -50,18 +50,18 @@ grammar WadokuNewGrammar
   end
 
   rule meaning_group
-    ( verwendung? space* number:("[" /\d+/ "]")? space* "<MGr:" space* dom? space* (ra:bracketed_tags)? space* tres:(tre)+ space* (pre:bracketed_tags)? space* ">" space* (after:bracketed_tags)? space* ending:("." | "//")? (sepspace:space)? ( "(" pict ")." )? ) {
+    ( verwendung? space* number:("[" /\d+/ "]")? space* "<MGr:" space* dom? space* (ra:bracketed_tags)? space* tres:(tre)+ space* (pre:bracketed_tags)? space* ">" (prespace1:space*) (after:bracketed_tags)? (prespace2:space*) ending:("." | "//")? (sepspace:space)? ( "(" pict ")." )? ) {
 
       def to_html
-        (number ? "<span class='mg_nr'>#{number.to_s}<span> " : "") + (dom ? dom.to_html + " " : "") + (ra ? ra.to_html.to_s + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (pre ? pre.to_html.to_s : "") + (after ? after.to_html.to_s : "") + ending.to_s + sepspace.to_s + (pict ? pict.to_html : "")
+        (number ? "<span class='mg_nr'>#{number.to_s}<span> " : "") + (dom ? dom.to_html + " " : "") + (ra ? ra.to_html.to_s + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (pre ? pre.to_html.to_s : "") + (prespace1 ? prespace1.to_s : "") + (after ? after.to_html.to_s : "") + (prespace2 ? prespace2.to_s : "") + ending.to_s + sepspace.to_s + (pict ? pict.to_html : "")
       end
     }
   end
 
   rule bracketed_tags
-    ( "(" space* tags:(content)+ space* ")" space* ) {
+    ( prespace:space* "(" space* tags:(content)+ space* ")" afterspace:space* ) {
       def to_html
-        " (#{tags.matches.map(&:to_html).join("")})"
+        (prespace ? prespace.to_s : "") + "(#{tags.matches.map(&:to_html).join("")})" + (afterspace ? afterspace.to_s : "")
       end
     }
   end
@@ -170,14 +170,13 @@ grammar WadokuNewGrammar
   end
 
   rule tag
-    ("<" spanclass:word (".:" | ":") space* contents:(content)+ ">" space* sep:(";"|"；")? space*) {
+    ("<" spanclass:word (".:" | ":") space* contents:(content)+ ">" space* sep:(";"|"；")?) {
       def to_html
         "<span class='#{spanclass.to_s.downcase}'>#{contents.matches.map{|c| c.to_html}.join("")}</span>" + (sep ? sep.to_s : "")
       end
     }
   end
-
-
+  
   rule letter
     /[\/‑\-a-zA-ZäüöÄÜÖßōīēāūŪŌĪĒĀ,·’…„“\wÁóé]/
   end
