@@ -1,11 +1,22 @@
 <div class="block">
-  <div class="content">          
+  <div id="content" class="content">          
     <h2 class="title"><%= t("search.results", :default => "Suchergebnisse")  %> </h2>
-    <div id="results" class="inner">
+    <div id="results" class="inner results">
       <%= render :partial => "entries", :locals => {:entries => @entries} %>
     </div>
     <%= javascript_tag do %>
+
+
       $(".svg a").lightBox();
+
+      $("#results").infinitescroll({
+        debug: true,
+        navSelector: "div.pagination",
+        nextSelector: "div.pagination a.next",
+        itemSelector : "#results div.entries"
+      });
+
+
       
     <% end %>
   </div>
