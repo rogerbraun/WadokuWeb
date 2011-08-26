@@ -1,24 +1,25 @@
 grammar WadokuNewGrammar 
 
   rule entry
-    (pos? space* dom? space* ( "(" tags:(tag)+ ")" )? space* meanings:(meaning_group)+ space* ending:(ending_tags)? "."?) {
+    (pos? space* dom? space* ( "(" tags:(tag)+ ")" )? space* meanings:(meaning_group)+ space* ending:(ending_tags?) "."?) {
       def to_html
-        (dom ? dom.to_html.to_s : "") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ") " : "") + meanings.matches.map{|m| m.to_html}.join("") + ending.to_html 
+        (dom ? dom.to_html.to_s : "") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ") " : "") + meanings.matches.map{|m| m.to_html}.join("") + ending.matches.map(&:to_html).compact.join("")
       end
 
       def audio_file
-        ending.audio_file
+        ending.matches.first.audio_file
       end
     }
   end
 
   rule ending_tags
-    (tags:(audio_tag | bracketed_tags)+) {
+    ((audio_tag | bracketed_tags)+) {
       def audio_file
-        tags.matches.map(&:basename).compact.first
+        captures[:audio_tag].first.basename
       end
+
       def to_html
-       tags.matches.map(&:to_html).compact.join("")
+        captures[:bracketed_tags].map(&:to_html).join("")
       end
     }
   end

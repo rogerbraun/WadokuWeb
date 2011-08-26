@@ -25,7 +25,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "meta_search"
 #gem "will_paginate", "~> 3.0.pre2"
 gem "kaminari"
-gem "citrus", "2.3.4"
+gem "citrus"
 # :git =>"https://github.com/mjijackson/citrus.git"
 gem 'jquery-rails', '>= 0.2.6'
 
@@ -44,3 +44,4 @@ gem "watchr", :group => [:development, :test]
 gem "capybara", :group => [:development, :test]
 
 gem "picky-client"
+gem "pry"
