@@ -1,21 +1,27 @@
 grammar WadokuNewGrammar 
 
   rule entry
-    (pos? space* dom? space* ( "(" tags:(tag)+ ")" )? space* meanings:(meaning_group)+ space* audio_tag? "."?) {
+    (pos? space* dom? space* ( "(" tags:(tag)+ ")" )? space* meanings:(meaning_group)+ space* ending:(ending_tags)? "."?) {
       def to_html
-        (dom ? dom.to_html.to_s : "") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ") " : "") + meanings.matches.map{|m| m.to_html}.join("")  
+        (dom ? dom.to_html.to_s : "") + (tags ? "(" + tags.matches.map{|t| t.to_html}.join("") + ") " : "") + meanings.matches.map{|m| m.to_html}.join("") + ending.to_html 
       end
 
       def audio_file
-        if audio_tag then
-          audio_tag.basename
-        else
-          nil
-        end
+        ending.audio_file
       end
     }
   end
 
+  rule ending_tags
+    (tags:(audio_tag | bracketed_tags)+) {
+      def audio_file
+        tags.matches.map(&:basename).compact.first
+      end
+      def to_html
+       tags.matches.map(&:to_html).compact.join("")
+      end
+    }
+  end
 
   rule pos
     ("(<POS: " (content)+  "."? ">)") {
@@ -53,15 +59,15 @@ grammar WadokuNewGrammar
     ( verwendung? space* number:("[" /\d+/ "]")? space* "<MGr:" space* dom? space* (ra:bracketed_tags)? space* tres:(tre)+ space* (pre:bracketed_tags)? space* ">" (prespace1:space*) (after:bracketed_tags)? (prespace2:space*) ending:("." | "//")? (sepspace:space)? ( "(" pict ")." )? ) {
 
       def to_html
-        (number ? "<span class='mg_nr'>#{number.to_s}<span> " : "") + (dom ? dom.to_html + " " : "") + (ra ? ra.to_html.to_s + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (pre ? pre.to_html.to_s : "") + (prespace1 ? prespace1.to_s : "") + (after ? after.to_html.to_s : "") + (prespace2 ? prespace2.to_s : "") + ending.to_s + sepspace.to_s + (pict ? pict.to_html : "")
+        (number ? "<span class='mg_nr'>#{number.to_s}</span> " : "") + (dom ? dom.to_html + " " : "") + (ra ? ra.to_html.to_s + " " : "") + tres.matches.map{|t| t.to_html}.join("") + (pre ? pre.to_html.to_s : "") + (prespace1 ? prespace1.to_s : "") + (after ? after.to_html.to_s : "") + (prespace2 ? prespace2.to_s : "") + ending.to_s + (sepspace ? sepspace.to_s : "") + (pict ? pict.to_html : "")
       end
     }
   end
 
   rule bracketed_tags
-    ( prespace:space* "(" space* tags:(content)+ space* ")" afterspace:space* ) {
+    ( prespace:space* "(" space* tags:(content)+ space* ")" afterspace:space* ending:"."?) {
       def to_html
-        (prespace ? prespace.to_s : "") + "(#{tags.matches.map(&:to_html).join("")})" + (afterspace ? afterspace.to_s : "")
+        (prespace ? prespace.to_s : "") + "(#{tags.matches.map(&:to_html).join("")})" + (afterspace ? afterspace.to_s : "") + (ending ? ending.to_s : "")
       end
     }
   end

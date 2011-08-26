@@ -5,8 +5,17 @@ require "spec_helper"
 
 describe WadokuNewGrammar do
   it "should parse <MGr> tags" do
-    WadokuNewGrammar.parse("[1]<MGr: <TrE: <HW m: Vogel> des Glücks>> //", :root => :meaning_group).to_html.should == "<span class='mg_nr'>[1]<span> <span class='tre'><span class='genus m'>Vogel</span> des Glücks</span> //"
+    WadokuNewGrammar.parse("[1]<MGr: <TrE: <HW m: Vogel> des Glücks>> //", :root => :meaning_group).to_html.should == "<span class='mg_nr'>[1]</span> <span class='tre'><span class='genus m'>Vogel</span> des Glücks</span> //"
+    WadokuNewGrammar.parse("[1]<MGr: {<Dom.: Elektrot.>} <TrE: <HW f: Erdung>>; <TrE: <HW f: Erde>>; <TrE: <HW m: Erdschluss>>; <TrE: <HW f: Erdleitung>>>.", :root => :meaning_group).to_html.should == "<span class='mg_nr'>[1]</span> {<span class='dom'>Elektrot.</span>} <span class='tre'><span class='genus f'>Erdung</span>; </span><span class='tre'><span class='genus f'>Erde</span>; </span><span class='tre'><span class='genus m'>Erdschluss</span>; </span><span class='tre'><span class='genus f'>Erdleitung</span></span>." 
+    WadokuNewGrammar.parse("[2]<MGr: <TrE: <HW f: Erde>>; <TrE: <HW m: Boden>>>.", :root => :meaning_group).to_html.should =="<span class='mg_nr'>[2]</span> <span class='tre'><span class='genus f'>Erde</span>; </span><span class='tre'><span class='genus m'>Boden</span></span>."
+  end
+
+  it "should parse bracketed_tags" do
+    WadokuNewGrammar.parse("(<Etym.: von engl. <For.: earth>>).", :root => :bracketed_tags).to_html.should == "(<span class='etym'>von engl. <span class='for'>earth</span></span>)."
+  end
   
+  it "should parse tags after <MGr> tags" do
+    WadokuNewGrammar.parse("[1]<MGr: {<Dom.: Elektrot.>} <TrE: <HW f: Erdung>>; <TrE: <HW f: Erde>>; <TrE: <HW m: Erdschluss>>; <TrE: <HW f: Erdleitung>>>. [2]<MGr: <TrE: <HW f: Erde>>; <TrE: <HW m: Boden>>>. (<Etym.: von engl. <For.: earth>>).").to_html.should == "<span class='mg_nr'>[1]</span> {<span class='dom'>Elektrot.</span>} <span class='tre'><span class='genus f'>Erdung</span>; </span><span class='tre'><span class='genus f'>Erde</span>; </span><span class='tre'><span class='genus m'>Erdschluss</span>; </span><span class='tre'><span class='genus f'>Erdleitung</span></span>. <span class='mg_nr'>[2]</span> <span class='tre'><span class='genus f'>Erde</span>; </span><span class='tre'><span class='genus m'>Boden</span></span>. (<span class='etym'>von engl. <span class='for'>earth</span></span>)."  
   end
 
   it "should parse <LangNiv.:...> tags" do
