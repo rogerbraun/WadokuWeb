@@ -1,4 +1,6 @@
+require "bundler/capistrano"
 set :application, "WadokuWeb"
+
 
 set :repository,  "git@github.com:rogerbraun/WadokuWeb.git"
 set :scm, :git
