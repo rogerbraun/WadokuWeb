@@ -29,6 +29,7 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     arel (2.0.8)
+    blankslate (2.1.2.4)
     builder (2.1.2)
     capybara (1.0.1)
       mime-types (>= 1.16)
@@ -39,7 +40,6 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.2.1)
       ffi (~> 1.0.6)
-    citrus (2.3.4)
     coderay (0.9.8)
     diff-lcs (1.1.2)
     erubis (2.6.6)
@@ -66,6 +66,8 @@ GEM
       ruby_parser (>= 2.0.5)
     mime-types (1.16)
     nokogiri (1.5.0)
+    parslet (1.2.3)
+      blankslate (~> 2.0)
     picky-client (2.7.0)
       activesupport (>= 3.0.0)
       yajl-ruby (>= 0.7.8)
@@ -137,10 +139,10 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-  citrus (= 2.3.4)
   jquery-rails (>= 0.2.6)
   kaminari
   meta_search
+  parslet
   picky-client
   progressbar
   pry

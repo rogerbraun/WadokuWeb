@@ -6,36 +6,43 @@ class Entry < ActiveRecord::Base
   end
 
   def parse
-    WadokuNewGrammar.parse(self.definition)
+    @parse ||= WadokuGrammar.new.parse(self.definition)
   end
 
   def to_html(root_url = "")
-    begin 
-      res = self.parse.to_html.gsub("<<<ROOT_URL>>>",root_url).gsub("；","; ").html_safe
-    rescue Citrus::ParseError => e
-      logger.error "Could not parse #{self.id}:\n #{e}" 
-      res = "Fehler in #{self.definition}"
-    end 
-    
-    self.hacks(res)
+    begin
+      HTMLTransform.new.apply(self.parse).html_safe
+    rescue => e
+      e.to_s + " " + self.definition
+    end
   end
 
   def full_html(root_url = "")
     if self.first_midashigo == self.cleaned_kana then 
       "<span class='writing'>".html_safe + self.first_midashigo + "</span>".html_safe 
     else "<span class='writing'><ruby><rb>".html_safe + self.first_midashigo + "</rb><rp> (</rp><rt>".html_safe + self.cleaned_kana + "</rt><rp>) </rp></ruby></span> ".html_safe
-    end + audio_tag + (rest_midashigo.empty? ? "" : rest_midashigo.join("; ")) + " " + self.to_html(root_url) 
+    end + audio_tag + (rest_midashigo.empty? ? "" : rest_midashigo.join("; ")) + " " + self.to_html(root_url) + picture_tag
+  end
+
+  def picture_tag
+    begin 
+      tree = self.parse
+      tree.subtree(:pict).map do |pict|
+        "<span class='svg_image'><span class='image_caption'>#{pict[:pict][:capt]}</span><span class='svg'><a href='/svg/#{pict[:pict][:filen]}.svg'><img src='/svg/#{pict[:pict][:filen]}.svg' type='image/svg+xml' /></a></span></span>"
+      end.join(" ").html_safe
+    rescue => e
+      ""
+    end
+
   end
 
   def audio_tag
-    begin
-      if parse.audio_file then
-        ("<span class='pron_audio'>" + link_to(t("pronounciation", :default => "Aussprache"), "/audio/#{parse.audio_file}.mp3") + "</span>").html_safe
-      else
-        ""
-      end
-    rescue Citrus::ParseError => e
-      logger.error "Could not parse #{self.id}:\n #{e}" 
+    begin 
+      tree = self.parse
+      tree.subtree(:audio).map do |audio|
+        "<span class='pron_audio'><a href='/audio/#{audio[:audio][:text]}.mp3'>Aussprache</a></span>"
+      end.join(" ").html_safe
+    rescue => e
       ""
     end
   end

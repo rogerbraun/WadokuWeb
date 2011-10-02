@@ -2,24 +2,20 @@ namespace :db do
   task :test_parser => :environment do
     @count = 0
     @success = 0
-    @entries = Entry
+    @entries = open(File.join(Rails.root, "db", "WaDokuNormal.tab")).readlines
     pbar = ProgressBar.new("Entries parsed:", @entries.count)
-    failed= []
+    failed = []
     ActiveRecord::Base.transaction do
-      Entry.find_each do |entry|
+      @entries.each do |entry|
         @count +=1
         @success += 1
+        defi = entry.split("\t")[4]
         pbar.inc
         begin
-          unless entry.parsed then
-            p = WadokuNewGrammar.parse(entry.definition)
-            entry.parsed = p.to_html
-            entry.save
-          end
-          
+          WadokuNewGrammar.parse(defi)
         rescue => e 
           @success -= 1
-          failed << entry.definition
+          failed << defi
         end
       end
     end

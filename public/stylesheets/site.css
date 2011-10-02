@@ -66,30 +66,30 @@ span.gen_f {
   font-weight: bold;
 }
 
-.famn {
-  font-variant: small-caps;
+span.genus {
+  font-weight: bold;
+  color:orange;
+  font-size:xx-small;
 }
 
-span.f:after {
+span.f {
   font-weight: bold;
-  content: "(f)";
   color:red;
   font-size:xx-small;
 }
 
-span.m:after {
+span.m{
   font-weight: bold;
-  content: "(m)";
   color:blue;
   font-size:xx-small;
 }
 
-span.n:after {
+span.n {
   font-weight: bold;
-  content: "(n)";
   color:purple;
   font-size:xx-small;
 }
+
 
 span.dom {
   font-weight: bold;
@@ -168,6 +168,10 @@ padding-left: 25px;
 
 .pron_audio a {
   margin-left: 15px;
+}
+
+.famn {
+  font-variant: small-caps;
 }
 
 #entries-left:first-child {
