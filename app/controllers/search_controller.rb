@@ -52,7 +52,7 @@ class SearchController < ApplicationController
 
       url = URL + "?key=#{KEY}" + "&q=#{CGI::escape(keyword)}"
 
-      data = JSON.parse(open(url).read)
+      data = ::Yajl::Parser.new.parse(open(url).read)
  
 
       Results.new(data, keyword)
