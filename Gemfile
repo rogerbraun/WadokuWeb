@@ -36,6 +36,7 @@ gem "romkan"
 # and rake tasks are available in development mode:
 group :development, :test do
   gem 'web-app-theme', '>= 0.6.2'
+  gem "pry"
 end
 
 gem "progressbar"
