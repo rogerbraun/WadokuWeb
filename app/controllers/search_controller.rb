@@ -26,6 +26,13 @@ class SearchController < ApplicationController
       respond_to do |format|
         format.html
         format.js
+        format.json { if params[:full] == "true" then 
+                        render :json  => {:total => results[:total], :from =>  ((@page - 1) * 30), :entries => @entries.map{|entry| {:daid => entry.wadoku_id, :midashigo => entry.writing, :kana => entry.kana, :german => entry.definition, :german_html => entry.full_html} }}
+                      else
+                        render :json => {:total => results[:total], :search_link => url_for(:action => :index, :search => params[:search])}
+                      end
+                    }
+
         format.xml  { render :xml => @entries }
       end 
     end
