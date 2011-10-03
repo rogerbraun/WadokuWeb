@@ -14,8 +14,7 @@ class SearchController < ApplicationController
       keizai = WadokuKeizai.search params[:search]
       flash[:notice] = t("search.nothing_found").html_safe
       unless keizai.empty? then
-        flash[:notice] += " WadokuKeizai hat aber #{keizai.size} Ergebnisse.".html_safe
-        flash[:notice] += " <br><h3><a href='#{keizai.search_link}'>Auf WadokuKeizai.de suchen</a></h3>".html_safe
+        flash[:notice] = t("wadokukeizai.result", :count => keizai.size, :link => keizai.search_link).html_safe
       end
       redirect_to search_path
     else

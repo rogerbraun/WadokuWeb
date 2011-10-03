@@ -1,5 +1,9 @@
 #encoding: utf-8
 de:
+  wadokukeizai:
+    result:
+      one: "In unserem Datensatz wurde nichts gefunden. WadokuKeizai hat aber 1 Ergebnis.<br> <a href='%{link}'>Auf WadokuKeizai.de suchen</a>"
+      other: "In unserem Datensatz wurde nichts gefunden. WadokuKeizai hat aber %{count} Ergebnisse.<br><a href='%{link}'>Auf WadokuKeizai.de suchen</a>"
   web-app-theme:
   search:
     results: "Suchergebnisse"   

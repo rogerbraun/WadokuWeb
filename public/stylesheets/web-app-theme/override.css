@@ -116,3 +116,7 @@ padding-left: 25px;
 .pron_audio a {
   margin-left: 15px;
 }
+
+.flash .message {
+  font-size: 16px;
+}
