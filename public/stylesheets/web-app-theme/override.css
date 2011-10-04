@@ -39,8 +39,7 @@ span.def {
   color: green;
 }
 
-
-.entries {
+.with_columns {
   -webkit-column-count: 2;
   -webkit-column-rule: 1px solid #bbb;
   -webkit-column-gap: 2em;
@@ -50,6 +49,9 @@ span.def {
   column-count: 2;
   column-rule: 1px solid #bbb;
   column-gap: 2em;
+}
+
+.entries {
   font-family: 'Crimson Text',arial, serif;
   font-size: 1.5em;
 /*  text-align:justify; */
@@ -120,3 +122,4 @@ padding-left: 25px;
 .flash .message {
   font-size: 16px;
 }
+

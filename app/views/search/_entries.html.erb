@@ -1,5 +1,5 @@
 
-<div id="entries" class="entries">
+<div id="entries" class="entries <%= entries.size > 4 ? "with_columns" : "" %>">
   <% entries.each do |entry| %>
     <div class="entry <%= cycle "even", "odd" %>">
       <p class="hanging-indent" ><%=entry.full_html(root_url) %> 

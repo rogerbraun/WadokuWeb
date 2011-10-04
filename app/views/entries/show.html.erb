@@ -7,7 +7,7 @@
   <div class="content">
     <div class="inner">
       <h2>Aktueller Eintrag und Untereinträge</h2>
-      <div id="entries" class="entries">
+      <div id="entries" class="entries <%= @entry.sub_entries.size > 3 ? "with_columns" : "" %>">
         <div class="entry main_entry">
           <p class="hanging-indent" ><%= @entry.full_html(root_url) %></p>
         </div>
