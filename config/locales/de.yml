@@ -6,6 +6,7 @@ de:
       other: "In unserem Datensatz wurde nichts gefunden. WadokuKeizai hat aber %{count} Ergebnisse.<br><a href='%{link}'>Auf WadokuKeizai.de suchen</a>"
   web-app-theme:
   search:
+    page: "Seite %{page}"
     title: "Suche"
     results: "Suchergebnisse"   
     search: "Suchen!"
@@ -13,6 +14,7 @@ de:
     nothing_found: "Zu dieser Anfrage wurde nichts gefunden."
     example: "z.B. 和独"
     hits: "%{count} Treffer."
+    detail: "Detailansicht"
     legend: "Übersetzungsäquivalente werden schwarz dargestellt und sind größer gesetzt als Definitionen, Kommentare, Etymologien etc.; Mehrere Übersetzungsäquivalente werden durch Semikolon von einander getrennt.
 
 Bedeutungen je nach Wortarten
@@ -29,7 +31,10 @@ pl = Plural, Mehrzahl
 Kombinationen sind möglich, wenn beispielsweise ein Wort mehrere Genera haben kann. Genera von Worten, die in der Regel ohne Artikel verwendet werden, stehen in Klammern. Genus kann nicht immer angegeben werden. (Details [link])
 "
   entry:
+    sub_entries: "Untereinträge"
     detail: "Untereinträge"
+    main_entry: "Haupteintrag"
+    
   views:
     pagination:
       first: "<<<"

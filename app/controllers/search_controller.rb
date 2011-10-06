@@ -5,6 +5,7 @@ class SearchController < ApplicationController
     if params[:search] and params[:search] != "" then 
       params[:page] ||= 1
       @page = params[:page].to_i
+
       #@search = Entry.search_by_any(params[:search], params[:page], 30) 
       #@entries = @search
 
@@ -22,10 +23,13 @@ class SearchController < ApplicationController
         @search_time = results[:duration]
 
         @total = results.total
+        @total_pages = (@total / 30.0).ceil
+
+        @next_page = @page == @total_pages ? "none" : @page + 1
         @entries = results.ids.map{|id| Entry.find_by_wadoku_id(id)}.compact.uniq
-        @entries_left = @entries[0..@entries.size / 2]
-        @entries_right = @entries[(@entries.size / 2) + 1..-1]
-      end 
+        #@entries_left = @entries[0..@entries.size / 2]
+        #@entries_right = @entries[(@entries.size / 2) + 1..-1]
+        @entries_left, @entries_right = split_entries(@entries)
         respond_to do |format|
           format.html
           format.js
@@ -36,8 +40,9 @@ class SearchController < ApplicationController
                         end
                       }
 
-          format.xml  { render :xml => @entries }
-        end
+            format.xml  { render :xml => @entries }
+          end
+        end 
     else
       respond_to do |format|
         format.html{ render :start}
@@ -56,6 +61,21 @@ class SearchController < ApplicationController
 
   private
 
+  def split_entries(entries)
+    if entries.size == 1
+      return [entries, []]
+    else
+      chars = entries.map{|e| e.full_html.size} 
+
+      split_possible = (1...chars.size).map{|i|
+        [i, (chars[0...i].inject(:+) - chars[i..-1].inject(:+)).abs]
+      }
+
+      index = split_possible.min_by{|e| e[1]}[0]
+      
+      [entries[0...index], entries[index..-1]]
+    end
+  end
   
   class WadokuKeizai
 

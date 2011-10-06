@@ -1,28 +1,17 @@
-<div class="block">
-  <div class="secondary-navigation">
-    <ul class="wat-cf">
-      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Details")}", entry_path %></li>
-    </ul>
-  </div>          
-  <div class="content">
-    <div class="inner">
-      <h2>Aktueller Eintrag und Untereinträge</h2>
-      <div id="entries" class="entries <%= @entry.sub_entries.size > 3 ? "with_columns" : "" %>">
-        <div class="entry main_entry">
-          <p class="hanging-indent" ><%= @entry.full_html(root_url) %></p>
-        </div>
-        <% @entry.sub_entries.each do |entry| %>
-          <div class="entry <%= cycle "even", "odd" %>">
-            <p class="hanging-indent" ><%=entry.full_html(root_url) %> 
-              <% unless  entry.sub_entries.empty? %>
-                <br /><%= link_to t("entry.detail"), entry_path(entry) %></p>
-              <% end %>
-          </div>
-        <% end %>
-      </div>
-
+<div class="content">
+  <div class="page-header">
+    <h1><%= t("search.detail") %> <small><%=@entry.midashigo %></small> </h1>
+  </div>
+  <div class="row">
+    <div class="span16 entries">
+      <h2><%= t("entry.main_entry")%></h2>
+      <p>
+        <%= render @entry %>
+      <p>
+      <h2><%= t("entry.sub_entries")%></h2>
+      <p>
+        <%= render @entry.sub_entries %>
+      </p>
     </div>
   </div>
 </div>
-
-<% content_for :sidebar, render(:partial => 'search/sidebar') -%>

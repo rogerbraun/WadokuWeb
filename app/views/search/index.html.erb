@@ -2,16 +2,5 @@
   <div class="page-header">
     <h1><%= t("search.results") %> <small><%=t("search.hits", :count => @total) %></small> </h1>
   </div>
-  <div class="row">
-    <div id="results_left" class="span8">
-      <div id="entries_left" class="entries">
-        <%= render @entries_left %>
-      </div>
-    </div>
-    <div id="results_right" class="span8">
-      <div class="entries">
-        <%= render @entries_right %>
-      </div>
-    </div>
-  </div>
+  <%= render "results" %>
 </div>
