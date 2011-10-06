@@ -34,6 +34,14 @@ body {
   margin-right: auto;
 }
 
+.loader {
+
+  display:block;
+  margin:0px auto;
+  padding-top: 10px;
+}
+  
+
 /* Everything entry-related */
 
 span.gen_m {

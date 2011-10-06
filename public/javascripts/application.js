@@ -9,12 +9,17 @@ $(window).scroll(function() {
 });
 
 function loadNewEntries() {
-  last_result = $(".results:last");
-  next_page = last_result.data("next-page");
-  
-  if (next_page.indexOf("none") == -1) { 
-    $("<div/>").load(next_page + " .results" , function() {
-    last_result.after($(this).children());
-    });
+  if($(".loader").size() == 0) {
+    last_result = $(".results:last");
+    next_page = last_result.data("next-page");
+    image = $("<img class='loader' src='/images/ajax-loader.gif' />")
+    
+    if (next_page.indexOf("none") == -1) { 
+      last_result.after(image);
+      $("<div/>").load(next_page + " .results" , function() {
+      last_result.after($(this).children());
+      $(".loader").remove();
+      });
+    }
   }
 }
