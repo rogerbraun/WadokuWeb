@@ -6,13 +6,28 @@ de:
       other: "In unserem Datensatz wurde nichts gefunden. WadokuKeizai hat aber %{count} Ergebnisse.<br><a href='%{link}'>Auf WadokuKeizai.de suchen</a>"
   web-app-theme:
   search:
-    results: "Suchergebnisse"   
-    by_beginning: "Wortanfang des japanischen Wortes..."
-    by_definition: "Deutsches Wort..."
-    search: "Suchen!"
     title: "Suche"
-    info: "Die Suche funktioniert mit Japanisch in Romaji, Kanji und Kana"
+    results: "Suchergebnisse"   
+    search: "Suchen!"
+    info: "Die Suche funktioniert mit deutschen und japanischen Worten, in beliebiger Schreibung!"
     nothing_found: "Zu dieser Anfrage wurde nichts gefunden."
+    example: "z.B. 和独"
+    hits: "%{count} Treffer."
+    legend: "Übersetzungsäquivalente werden schwarz dargestellt und sind größer gesetzt als Definitionen, Kommentare, Etymologien etc.; Mehrere Übersetzungsäquivalente werden durch Semikolon von einander getrennt.
+
+Bedeutungen je nach Wortarten
+Manchmal kann dasselbe Stichwort unterschiedlichen Wortarten angehören und hat entsprechend unterschiedliche Bedeutungen oder unterschiedliche Funktionen. Es wird mit Großbuchstaben A, B, C etc. unterschieden.  Es folgt meist eine Beschreibung der grammatischen Verwendung.
+
+Polysemie
+Wenn dasselbe Stichwort mehrere unterschiedliche Bedeutungen tragen kann, sind diese durchnummeriert: 1, 2, 3 etc. Von einander unterscheidbare größere Bedeutungsnuancen sind durch Doppelstrich (∥, U+2225) getrennt.
+
+Genusangaben (zum zentralen Wort innerhalb deutscher Übersetzungsäquivalente)
+f = feminin, weiblich
+m = maskulin, männlich
+n = neutral, sächlich
+pl = Plural, Mehrzahl
+Kombinationen sind möglich, wenn beispielsweise ein Wort mehrere Genera haben kann. Genera von Worten, die in der Regel ohne Artikel verwendet werden, stehen in Klammern. Genus kann nicht immer angegeben werden. (Details [link])
+"
   entry:
     detail: "Untereinträge"
   views:
@@ -22,3 +37,5 @@ de:
       truncate: "…"
       previous: "<<"
       next: ">>"
+  about:
+    title: "Über uns"

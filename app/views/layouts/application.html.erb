@@ -2,7 +2,8 @@
 <html lang="de">
 <head>
   <title>WaDokuJT</title>
-  <%= stylesheet_link_tag "web-app-theme/base", "web-app-theme/themes/default/style", "web-app-theme/override", "jquery.lightbox-0.5.css", :cache => true %>
+  <%= stylesheet_link_tag "http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" %>
+  <%= stylesheet_link_tag "site.css" %>
   <%= javascript_include_tag :defaults, :cache => true %>
   <%= javascript_include_tag "jquery-ui-1.8.9.custom.min.js" %>
   <%= javascript_include_tag "jquery.lightbox-0.5.pack.js" %>
@@ -28,42 +29,32 @@
 </script>
 </head>
 <body>
-  <div id="container">
-    <div id="header">
-      <h1><%= link_to "WaDokuJT", root_url %></h1>
-      <div id="user-navigation">
-        <ul class="wat-cf">
-        <!--  <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
-          <li><a href="#"><%= t("web-app-theme.settings", :default => "Settings") %></a></li>
-          <li><a href="/logout" class="logout"><%= t("web-app-theme.logout", :default => "Logout") %></a></li> -->
-        </ul>
-      </div>
-      <div id="main-navigation">
-        <ul class="wat-cf">
-        </ul>
-      </div>
-    </div>    
-    <div id="wrapper" class="wat-cf">
-      <div class="flash">
-        <% flash.each do |type, message| -%>
-          <div class="message <%= type %>">
-            <p><%= message %></p>
-          </div>
-        <% end -%>
-      </div>
-      <div id="main" class="hyphenate">
-        <%= yield %>
-        <div id="footer">
-          <div class="block">
-            <p>Daten: &copy; <%= Time.now.year %> <a href="http://wadoku-ev.de">Wadoku e.V.</a> | Programmierung: &copy; <%= Time.now.year %> <a href="http://rbraun.net">Roger Braun</a></p>
-            <p>Code und Daten dieser Seite stehen unter offenen Lizenzen (CC und GPL). Der Code für die Seite findet sich auf <%= link_to "GitHub", "http://github.com/rogerbraun/wadokuweb" %>.</p>
-          </div>      
-        </div>
-      </div>
-      <div id="sidebar">
-        <%= yield :sidebar %>
-      </div>
-    </div>    
-  </div>
+  <div class="topbar"> 
+      <div class="fill"> 
+        <div class="container"> 
+          <%= link_to "WaDokuJT", root_url, :class => "brand" %> 
+          <ul class="nav"> 
+            <li class="active"><a href="#"><%=t("search.title") %></a></li> 
+            <li><a href="#about"><%=t("about.title") %></a></li> 
+          </ul> 
+
+          <%= form_tag search_index_path, :method => :get, :class => "pull-right" do %>
+             <%= text_field_tag "search", params[:search], :placeholder => t("search.example") %>
+            <button class="btn" type="submit"><%= t("search.search")%></button> 
+          <% end %>
+        
+        </div> 
+      </div> 
+    </div> 
+
+    <div class="container">
+
+      <%= yield %>
+
+      <footer>
+        <p>Daten: &copy; <%= Time.now.year %> <a href="http://wadoku-ev.de">Wadoku e.V.</a> | Programmierung: &copy; <%= Time.now.year %> <a href="http://rbraun.net">Roger Braun</a></p>
+        <p>Code und Daten dieser Seite stehen unter offenen Lizenzen (CC und GPL). Der Code für die Seite findet sich auf <%= link_to "GitHub", "http://github.com/rogerbraun/wadokuweb" %>.</p>
+      </footer>
+    </div>
 </body>
 </html>

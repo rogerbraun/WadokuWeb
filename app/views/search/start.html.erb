@@ -1,30 +1,22 @@
-<div class="block">
-  <div class="content">          
-    <h2 class="title"><%= t("search.title", :default => "Search")  %> </h2>
-    <div class="inner">
-      <div class="actions-bar wat-cf">
-        <div class="actions">
+<div class="content">
+  <div class="page-header">
+    <h1>和独事典 <small>WadokuJT</small></h1>
+  </div>
+  <div class="row">
+    <div class="span16">
+      <h2>Suche</h2>
+      <p class="centered">
+        <%= t("search.info") %>
+      </p>
+      <p class="centered">
+        <%= form_tag search_index_path, :method => :get do %>
+          <%= text_field_tag "search", params[:search], :class => "span10", :placeholder => t("search.example") %>
+          <button class="btn" type="submit"><%= t("search.search")%></button> 
+        <% end %>
           
-        <p><%= t "search.info" %></p>
-    <p>
-      <%=form_tag search_index_path, :method => :get, :class => :form do %>
-          <div class="group">
-            <%= label_tag "search", t("search.any", :default => "Suchbegriff"),:class => "label" %>
-            <%= text_field_tag "search", params[:search], :class => "text_field" %>
-            <br />
-          </div>
-
-          <div class="group navform wat-cf">
-            <button class="button" type="submit">
-              <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("search", :default => "Save")}") %> <%= t("search.search", :default => "Save") %>
-            </button>  
-          </div>
-      <% end %>
-    </p>
-        </div>
-        
-      </div>
+      </p>
     </div>
   </div>
-</div>
 
+
+</div>

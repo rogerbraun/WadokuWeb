@@ -1,25 +1,17 @@
-<div class="block">
-  <div id="content" class="content">          
-    <h2 class="title"><%= t("search.results", :default => "Suchergebnisse")  %> </h2>
-    <div id="results" class="inner results">
-      <%= render :partial => "entries", :locals => {:entries => @entries} %>
+<div class="content">
+  <div class="page-header">
+    <h1><%= t("search.results") %> <small><%=t("search.hits", :count => @total) %></small> </h1>
+  </div>
+  <div class="row">
+    <div id="results_left" class="span8">
+      <div id="entries_left" class="entries">
+        <%= render @entries_left %>
+      </div>
     </div>
-    <%= javascript_tag do %>
-
-
-      $(".svg a").lightBox();
-
-      $("#results").infinitescroll({
-        debug: true,
-        navSelector: "div.pagination",
-        nextSelector: "div.pagination a.next",
-        itemSelector : "#results div.entries"
-      });
-
-
-      
-    <% end %>
+    <div id="results_right" class="span8">
+      <div class="entries">
+        <%= render @entries_right %>
+      </div>
+    </div>
   </div>
 </div>
-
-<% content_for :sidebar, render(:partial => 'sidebar', :locals => {:search => @search}) -%>
