@@ -47,6 +47,10 @@ html {
   margin:0px auto;
   padding-top: 10px;
 }
+
+.results {
+  padding-bottom: 10px;
+}
   
 
 /* Everything entry-related */
@@ -56,6 +60,14 @@ span.gen_m {
 span.gen_n {
 }
 span.gen_f {
+}
+
+.emph {
+  font-weight: bold;
+}
+
+.famn {
+  font-variant: small-caps;
 }
 
 span.f:after {
@@ -119,7 +131,7 @@ padding-left: 25px;
 }
 
 .entry.even {
-  background: #E5ECF9;
+  background: #EBEEF5;
 }
 
 .entry.main_entry {

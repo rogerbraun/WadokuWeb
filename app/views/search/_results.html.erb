@@ -1,6 +1,6 @@
 <div class="row results" data-next-page="<%= search_index_path :page => @next_page, :search => params[:search]%>">
   <div class="span16">
-    <h2><%= t("search.page", :page => @page) %></h2>
+    <h3><%= t("search.page", :page => @page, :total_pages => @total_pages) %></h3>
   </div>
   <div id="results_left" class="span8">
     <div id="entries_left" class="entries">

@@ -6,7 +6,7 @@ de:
       other: "In unserem Datensatz wurde nichts gefunden. WadokuKeizai hat aber %{count} Ergebnisse.<br><a href='%{link}'>Auf WadokuKeizai.de suchen</a>"
   web-app-theme:
   search:
-    page: "Seite %{page}"
+    page: "Seite %{page} von %{total_pages}"
     title: "Suche"
     results: "Suchergebnisse"   
     search: "Suchen!"
