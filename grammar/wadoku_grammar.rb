@@ -51,7 +51,7 @@ class WadokuGrammar < Parslet::Parser
 # <Expl>
 
   rule(:expl) { (str("<Expl.:") >> space? >> expl_content.repeat(1) >> space? >> str(">")).as(:expl) }
-  rule(:expl_content) { transcr | topic | transl | literal | text | ref | title}
+  rule(:expl_content) { transcr | topic | transl | literal | text | ref | title | fore | emph | jap }
 
 # <Etym>
 
@@ -76,7 +76,7 @@ class WadokuGrammar < Parslet::Parser
 # <Def>
 
   rule(:defi) { (str("<Def.:") >> space? >> defi_content.repeat(1) >> space? >> str(">")).as(:defi) }
-  rule(:defi_content) { topic | transl | literal | text | birthdeath | hw }
+  rule(:defi_content) { topic | transl | literal | text | birthdeath | hw | ref}
 
 # <Usage>
 
@@ -93,7 +93,7 @@ class WadokuGrammar < Parslet::Parser
 
 # <FamN>
 
-  rule(:famn) {str("<FamN.:") >> space? >> non_closing.as(:famn) >> space? >> str(">")}
+  rule(:famn) {str("<FamN.") >> space? >> str("L_JPN").maybe  >> space? >> str(":") >> space? >> non_closing.as(:famn) >> space? >> str(">")}
 
 # <Descr.:>
 
@@ -149,7 +149,7 @@ class WadokuGrammar < Parslet::Parser
 
   rule(:tre) { (str("<TrE:") >> space? >> tre_content.repeat(1) >> space? >> str(">")).as(:tre) }
 
-  rule(:tre_content) { tags_with_parens | transl | topic | hw | wrong_hw | defi | text | marker | jap | famn | specchar | title | scientif | unknown }
+  rule(:tre_content) { tags_with_parens | transl | topic | hw | wrong_hw | defi | text | marker | jap | famn | specchar | title | scientif | emph | literal | unknown }
 
 
 # <MGr>
@@ -162,8 +162,8 @@ class WadokuGrammar < Parslet::Parser
   rule(:numbered_mgr) {((number | wrong_number) >> space? >> mgr).as(:numbered_mgr)}
 
 # All kinds of MGr
-
-  rule(:any_mgr) {numbered_mgr | mgr | seperator | space}
+# Tags in parentheses should probably not be here.
+  rule(:any_mgr) {numbered_mgr | tags_with_parens | mgr | seperator | space}
 
 # Any unknown tag
 

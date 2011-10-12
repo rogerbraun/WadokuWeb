@@ -77,6 +77,14 @@ describe HTMLTransform do
     text = "(<POS: N.>) <MGr: {<Dom.: Anat., Med.>} <TrE: <HW f: Diastase>>> (<Def.: Lücke zwischen Knochen od. Muskeln>；<Etym.: <impli.: aus d. Dtsch.><expli.: von engl. <For.: Diastase>>>)."
     tree = WadokuNewGrammar.parse(text)
     res = transformer.apply(tree)
+    
+    text = "(<POS: N.>) <MGr: <TrE: <HW f: Identifikationsnummer>>> (<Etym.: von engl. <For.: <Emph.:id>entification> und japan. „<Transl.: Nummer>“；Abk.>)."
+    tree = WadokuNewGrammar.parse(text)
+    res = transformer.apply(tree)
+
+    text = "(<POS: N.>) {<Dom.: Persönlichk.>} [1]<MGr: <TrE: William George <FamN.: Armstrong>>> (<Def.: engl. Industrieller>；<BirthDeath: 1810–1900>). [2]<MGr: <TrE: Louis <FamN.: Armstrong>>> (<Def.: amerik. Trompeter und Sänger>；<BirthDeath: 1900–1971>)."
+    tree = WadokuNewGrammar.parse(text)
+    res = transformer.apply(tree)
   end
 
 

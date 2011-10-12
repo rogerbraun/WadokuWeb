@@ -113,6 +113,18 @@ describe WadokuNewGrammar do
     text = "(<Def.: Empfindlichkeitsbestimmung fotografischen Materials>；<Etym.: Abk. für engl. <For.: <Emph.:A>merican <Emph.:S>tandards <Emph.:A>ssociation> = „<Transl.: Normenstelle der USA>“>)"
     parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
     parse.should_not be_nil
+
+    text = "(<Expl.: engl. <For.: English Language Proficiency Test>>)"
+    parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
+    parse.should_not be_nil
+   
+    text = "(<Def.: amerik. Trompeter und Sänger>；<BirthDeath: 1900–1971>)"
+    parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
+    parse.should_not be_nil
+    
+    text = "(<Def.: engl. Industrieller>；<BirthDeath: 1810–1900>)"
+    parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
+    parse.should_not be_nil
   end
 
   it "should parse <TrE> tags" do
@@ -305,6 +317,14 @@ describe WadokuNewGrammar do
 
     
     text = "(<POS: Adj.>) [1_Gb]<MGr: <TrE: <Prior_1><JLPT2><GENKI_K9, GENKI_K9–s–>rot>>. [2]<MGr: <TrE: kommunistisch>>. (<Audio: akai_Ac3>)."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "<MGr: <TrE: <HW m: Englisch-Leistungstest>> (<Expl.: engl. <For.: English Language Proficiency Test>>)>."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) {<Dom.: Persönlichk.>} [1]<MGr: <TrE: William George <FamN.: Armstrong>>> (<Def.: engl. Industrieller>；<BirthDeath: 1810–1900>). [2]<MGr: <TrE: Louis <FamN.: Armstrong>>> (<Def.: amerik. Trompeter und Sänger>；<BirthDeath: 1900–1971>)."
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
   end

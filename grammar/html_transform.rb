@@ -7,7 +7,9 @@ class HTMLTransform < Parslet::Transform
   rule(:emph => simple(:emph)) {"<span class='emph'>#{emph}</span>"}
   rule(:topic => simple(:topic)) {"<span class='topic'>#{topic}</span>"}
   rule(:dom => simple(:dom)) {"<span class='dom'>#{dom}</span>"}
+  rule(:transl => simple(:transl)) {"<span class='transl'>#{transl}</span>"}
   rule(:descr => sequence(:contents)) {"<span class='descr'>#{contents.compact.join}</span>"}
+  rule(:fore => sequence(:contents)) {"<span class='fore'>#{contents.compact.join}</span>"}
   rule(:pos => sequence(:contents)) {"(<span class='pos'>#{contents.compact.join("")}</span>)" } 
   rule(:tre => sequence(:contents)) {"<span class='tre'>#{contents.compact.join("")}</span>"}
   rule(:mgr => sequence(:contents)) {"<span class='mgr'>#{contents.compact.join("; ")}</span>."} 
@@ -57,6 +59,9 @@ class HTMLTransform < Parslet::Transform
   rule(:transcr => sequence(:t_content), :jap => simple(:jap), :daid => simple(:d)) do
     "<span class='ref'><a href='/entries/by-daid/#{d}'><span class='jap'>#{jap}</span> - <span class='transcr'>#{t_content.compact.join}</span></a></span>"  
   end
+
+  rule(:jap => simple(:jap)) {"<span class='jap'>#{jap}</span>"}
+  rule(:literal => simple(:literal)) {"<span class='literal'>#{literal}</span>"}
 
   rule(:impli => simple(:impli)) {"<span class='impli'>#{impli}</span>"}
   rule(:expli => sequence(:content)){" <span class='expli'>#{content.compact.join}</span>"}
