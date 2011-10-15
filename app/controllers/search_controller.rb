@@ -1,5 +1,8 @@
 require "open-uri"
 class SearchController < ApplicationController
+  caches_action :index, :cache_path => Proc.new {
+    |controller| controller.params}
+ 
   def index
 
     if params[:search] and params[:search] != "" then 
