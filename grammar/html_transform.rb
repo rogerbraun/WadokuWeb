@@ -41,6 +41,14 @@ class HTMLTransform < Parslet::Transform
     "<span class='mgr_number'>#{n}</span> <span class='mgr'>#{contents.compact.join("; ")}</span>."
   end
 
+  rule(:number => simple(:n), :dom => simple(:dom), :mgr => sequence(:contents)) do
+    "<span class='mgr_number'>#{n}</span> <span class='mgr'><span class='dom'>#{dom}</span> #{contents.compact.join("; ")}</span>."
+  end
+  rule(:number => simple(:n), :tags_with_parens => sequence(:tags_content), :mgr => sequence(:contents)) do
+    tags_content.compact!
+    "<span class='mgr_number'>#{n}</span> <span class='mgr'>#{tags_content.empty? ? '' : "(#{tags_content.join("; ")})"} #{contents.compact.join("; ")}</span>."
+  end
+
   rule(:wrong_number => simple(:n), :mgr => sequence(:contents)) do
     "<span class='mgr_number'>#{n.to_s[/\d+/]}</span> <span class='mgr'>#{contents.compact.join("; ")}</span>."
   end

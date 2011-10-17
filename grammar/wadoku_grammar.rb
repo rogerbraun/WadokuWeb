@@ -159,7 +159,7 @@ class WadokuGrammar < Parslet::Parser
 
 # [x]<MGr>
 
-  rule(:numbered_mgr) {((number | wrong_number) >> space? >> mgr).as(:numbered_mgr)}
+  rule(:numbered_mgr) {((number | wrong_number) >> space? >> dom.maybe >> space? >> tags_with_parens.maybe >> space? >> mgr).as(:numbered_mgr)}
 
 # All kinds of MGr
 # Tags in parentheses should probably not be here.
