@@ -97,6 +97,9 @@ describe WadokuNewGrammar do
   end
     
   it "should parse tags in parentheses" do
+    text = "(<Def.: russ. Botaniker>；<BirthDeath.: 1880–1952>)"
+    parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
+    parse.should_not be_nil
   
     parse = WadokuNewGrammar.tags_with_parens.parse("(<Def.: Strickmuster mit auf die Ecke gestellter Raute auf einfarbigem Hintergrund>；<Expl.: nach dem schottischen Clan Campbell of Argyle>；<Expl.: Abk.>)")[:tags_with_parens]
     parse.first[:defi].first[:text].should == "Strickmuster mit auf die Ecke gestellter Raute auf einfarbigem Hintergrund"

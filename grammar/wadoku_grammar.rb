@@ -103,7 +103,7 @@ class WadokuGrammar < Parslet::Parser
 
 #<BirthDeath: 1883–1971>
 
-  rule(:birthdeath) { str("<BirthDeath:") >> space? >> non_closing.as(:birthdeath) >> space? >> str(">")}
+  rule(:birthdeath) { (str("<BirthDeath:") | str("<BirthDeath.:")) >> space? >> non_closing.as(:birthdeath) >> space? >> str(">")}
 
 #<For.: <Emph.:A>gentstwo <Emph.:S>owjet <Emph.:N>jus>
 
