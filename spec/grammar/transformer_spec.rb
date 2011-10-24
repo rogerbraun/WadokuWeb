@@ -89,6 +89,11 @@ describe HTMLTransform do
     text = "(<POS: N.>) [1]{<Dom.: Anat.>} <MGr: <TrE: <HW n: Knochengerüst>>; <TrE: <HW n: Gerippe>>; <TrE: <HW n: Skelett>>> // <MGr: <TrE: <HW m: Körperbau>>; <TrE: <HW m: Bau>>>. [2]<MGr: <TrE: <HW n: Gerüst>>; <TrE: <HW m: Aufbau>>; <TrE: <HW f: Struktur>>; <TrE: <HW m: Rahmen>>; <TrE: <HW mpl: Grundzüge>>>. (<Steinhaus: 27>)."
     tree = WadokuNewGrammar.parse(text)
     res = transformer.apply(tree)
+
+    text = "(<POS: N.>) <MGr: {<Dom.: Firmenn.>} <TrE: AT <SpecChar.: &> <HW NAr: T>>; <TrE: American Telephone and Telegraph <HW NAr: Company>>> (<Def.: amerik. Telefongesellschaft>；<Expl.: hervorgegangen aus der Bell Telephone Company>)."
+    tree = WadokuNewGrammar.parse(text)
+    res = transformer.apply(tree)
+    
   end
 
 

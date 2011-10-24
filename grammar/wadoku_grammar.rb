@@ -156,7 +156,7 @@ class WadokuGrammar < Parslet::Parser
 # <MGr>
 
   rule(:mgr) { (str("<MGr:") >> space? >> mgr_content.repeat(1) >> space? >> str(">")).as(:mgr) }
-  rule(:mgr_content) { dom | tre | tags_with_parens | seperator | space}
+  rule(:mgr_content) { dom | tre | tags_with_parens | seperator | defi | space}
 
 # [x]<MGr>
 

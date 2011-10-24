@@ -32,6 +32,7 @@ class HTMLTransform < Parslet::Transform
   rule(:preamble => sequence(:contents)) {contents.compact.join}
   rule(:fore => sequence(:contents)) {"<span class='for'>#{contents.compact.join}</span>"}
   rule(:etym=> sequence(:contents)) {"<span class='etym'>#{contents.compact.join}</span>"}
+  rule(:specchar=> simple(:specchar)) {specchar.to_s}
 
   rule(:audio => simple(:audio)) {nil}
   rule(:unknown => simple(:unknown)) {nil}
