@@ -34,6 +34,9 @@ class HTMLTransform < Parslet::Transform
   rule(:etym=> sequence(:contents)) {"<span class='etym'>#{contents.compact.join}</span>"}
   rule(:specchar=> simple(:specchar)) {specchar.to_s}
 
+  rule(:lang => simple(:lang), :keyword => simple(:keyword)) {"<a href='http://#{lang.to_s.downcase}.wikipedia.org/wiki/#{keyword}'>#{keyword}</a>" }
+  rule(:wiki => simple(:wiki)) {"<span class='wiki'>#{wiki}</span>"}
+
   rule(:audio => simple(:audio)) {nil}
   rule(:unknown => simple(:unknown)) {nil}
   rule(:steinhaus => subtree(:contents)) {nil}

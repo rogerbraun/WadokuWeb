@@ -93,6 +93,11 @@ describe HTMLTransform do
     text = "(<POS: N.>) <MGr: {<Dom.: Firmenn.>} <TrE: AT <SpecChar.: &> <HW NAr: T>>; <TrE: American Telephone and Telegraph <HW NAr: Company>>> (<Def.: amerik. Telefongesellschaft>；<Expl.: hervorgegangen aus der Bell Telephone Company>)."
     tree = WadokuNewGrammar.parse(text)
     res = transformer.apply(tree)
+
+    text = "<MGr: {<Dom.: Med.>} <TrE: <HW n: Dumping-Syndrom>>> (<Def.: Sturzentleerung von Nahrung vom Magen in den Dünndarm>；<WikiDE: Dumping-Syndrom>)."
+    tree = WadokuNewGrammar.parse(text)
+    res = transformer.apply(tree)
+    binding.pry
     
   end
 

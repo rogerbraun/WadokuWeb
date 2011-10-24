@@ -108,7 +108,7 @@ class WadokuGrammar < Parslet::Parser
 #<For.: <Emph.:A>gentstwo <Emph.:S>owjet <Emph.:N>jus>
 
   rule(:fore) {(str("<For.:") >> space? >> fore_content.repeat(1) >> space? >> str(">")).as(:fore)}
-  rule(:fore_content) { text | emph | transl}
+  rule(:fore_content) { text | emph | transl | fore}
 
 #<Emph>
 
@@ -141,10 +141,13 @@ class WadokuGrammar < Parslet::Parser
 
   rule(:tags_with_parens) {(str("(") >> space? >> parens_content.repeat(1) >> space? >> str(")")).as(:tags_with_parens)}
 
-  rule(:parens_content) {usage | defi | expl | pict | audio | ref | descr | seperator | space | etym | birthdeath | langniv | scientif | seasonw | date | steinhaus | url | jwd}
+  rule(:parens_content) {usage | defi | expl | pict | audio | ref | descr | seperator | space | etym | birthdeath | langniv | scientif | seasonw | date | steinhaus | url | jwd | wiki }
 
   rule(:tags_with_parens?) { tags_with_parens.maybe}
 
+# Wikilinks
+
+  rule(:wiki) {(str("<Wiki") >> match(".").repeat(2,2).as(:lang) >> space? >> str(":") >> space? >> non_closing.as(:keyword) >> space? >> str(">")).as(:wiki)}
 
 # <TrE>
 
