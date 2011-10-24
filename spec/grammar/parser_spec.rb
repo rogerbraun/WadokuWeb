@@ -85,19 +85,18 @@ describe WadokuNewGrammar do
     parse[:dom].should == "Gebietsn."
   end
 
+  it "should parse <FamN.> tags" do
+    text = "<FamN. Ausn.: Wassiljewitsch>"
+    parse = WadokuNewGrammar.famn.parse(text)
+    parse.should_not be_nil
+  end
+
   it "should parse <Etym.:> tags" do 
     parse = WadokuNewGrammar.etym.parse_with_debug("<Etym.: Abk. für engl. <For.: <Emph.:A>merican <Emph.:S>tandards <Emph.:A>ssociation> = „<Transl.: Normenstelle der USA>“>")
     parse.should_not be_nil
   end
     
   it "should parse tags in parentheses" do
-    text = "(<Def.: amerikanische Luftverkehrsgesellschaft>；<Expl.: gegründet 1937 als <For: All American Airways>>)."
-    parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
-    parse.should_not be_nil
-
-    text = "(<Def.: amerikanische Luftverkehrsgesellschaft>；<Expl.: gegründet 1937 als <For: All American Airways>>)."
-    parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
-    parse.should_not be_nil
   
     parse = WadokuNewGrammar.tags_with_parens.parse("(<Def.: Strickmuster mit auf die Ecke gestellter Raute auf einfarbigem Hintergrund>；<Expl.: nach dem schottischen Clan Campbell of Argyle>；<Expl.: Abk.>)")[:tags_with_parens]
     parse.first[:defi].first[:text].should == "Strickmuster mit auf die Ecke gestellter Raute auf einfarbigem Hintergrund"
@@ -174,6 +173,10 @@ describe WadokuNewGrammar do
     parse.fourth[:tre].should_not be_nil
 
     text = "<MGr: <TrE: <Prior_1><JLPT2><GENKI_K9, GENKI_K9 _s_>blau.>>"
+    parse = WadokuNewGrammar.mgr.parse_with_debug(text)
+    parse.should_not be_nil 
+
+    text = "<MGr: <TrE: Iwan III. <FamN. Ausn.: Wassiljewitsch> (<Expl.: gen.>) Iwan der Große (<Def.: Großfürst von Moskau>；<BirthDeath: 1440–1505>)>>"
     parse = WadokuNewGrammar.mgr.parse_with_debug(text)
     parse.should_not be_nil 
 

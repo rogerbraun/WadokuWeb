@@ -94,7 +94,7 @@ class WadokuGrammar < Parslet::Parser
 
 # <FamN>
 
-  rule(:famn) {str("<FamN.") >> space? >> str("L_JPN").maybe  >> space? >> str(":") >> space? >> non_closing.as(:famn) >> space? >> str(">")}
+  rule(:famn) {str("<FamN.") >> space? >> str("Ausn.").maybe >> space? >> str("L_JPN").maybe  >> space? >> str(":") >> space? >> non_closing.as(:famn) >> space? >> str(">")}
 
 # <Descr.:>
 
