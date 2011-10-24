@@ -331,6 +331,11 @@ describe WadokuNewGrammar do
     text = "(<POS: N.>) [1]{<Dom.: Anat.>} <MGr: <TrE: <HW n: Knochengerüst>>; <TrE: <HW n: Gerippe>>; <TrE: <HW n: Skelett>>> // <MGr: <TrE: <HW m: Körperbau>>; <TrE: <HW m: Bau>>>. [2]<MGr: <TrE: <HW n: Gerüst>>; <TrE: <HW m: Aufbau>>; <TrE: <HW f: Struktur>>; <TrE: <HW m: Rahmen>>; <TrE: <HW mpl: Grundzüge>>>. (<Steinhaus: 27>)."
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
+
+    text = "(<POS: N.>) <MGr: <TrE: „<literal: <HW n: Pling>>“>; <TrE: <Def.: scharfer <HW m: Klang>, wenn harte Dinge zusammenstoßen>>>."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
   end
 
 end

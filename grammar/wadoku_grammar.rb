@@ -63,7 +63,8 @@ class WadokuGrammar < Parslet::Parser
   rule(:jwd) { str('<JWD:') >> space? >> match('[\d]').repeat(1).as(:jwd) >> space? >> str('>')}
 # <literal>
 
-  rule(:literal) {str("<literal:") >> space? >> non_closing.as(:literal) >> space? >> str(">") }
+  rule(:literal) {(str("<literal:") >> space? >> literal_content.repeat(1) >> space? >> str(">")).as(:literal) }
+  rule(:literal_content) { hw | text}
 
 # <Topic>
 
