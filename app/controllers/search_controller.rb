@@ -29,7 +29,8 @@ class SearchController < ApplicationController
         @total_pages = (@total / 30.0).ceil
 
         @next_page = @page == @total_pages ? "none" : @page + 1
-        @entries = results.ids.map{|id| Entry.find_by_wadoku_id(id)}.compact.uniq
+        #@entries = results.ids.map{|id| Entry.find_by_wadoku_id(id)}.compact.uniq
+        @entries = Entry.find_all_by_wadoku_id(results.ids.uniq)
         #@entries_left = @entries[0..@entries.size / 2]
         #@entries_right = @entries[(@entries.size / 2) + 1..-1]
         @entries_left, @entries_right = split_entries(@entries)

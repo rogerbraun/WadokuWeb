@@ -1,6 +1,6 @@
 # Be sure to restart your server when you modify this file.
 
-Wadoku::Application.config.session_store :cookie_store, :key => '_wadoku_session'
+Wadoku::Application.config.session_store :cookie_store, :key => '_wadoku_r31_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
