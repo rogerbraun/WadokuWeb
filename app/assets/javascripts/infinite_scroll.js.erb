@@ -4,6 +4,12 @@ $(window).scroll(function() {
   }
 });
 
+$(function() {
+  if($(window).height == $(document).height) {
+    loadNewEntries();
+  }
+});
+
 function loadNewEntries() {
   if($(".loader").size() == 0) {
     last_result = $(".results:last");
