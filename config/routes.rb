@@ -1,6 +1,6 @@
 Wadoku::Application.routes.draw do
   get "search/index"
-  match "search" => "search#start"
+  match "search" => "search#index"
 
   resources :entries
   get "entries/by-daid/:wadoku_id" => "entries#by_id"
