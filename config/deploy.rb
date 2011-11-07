@@ -1,4 +1,6 @@
 require "bundler/capistrano"
+require "capistrano/ext/multistage"
+
 set :application, "WadokuWeb"
 
 
@@ -16,7 +18,6 @@ role :db,  "rokuhara.japanologie.kultur.uni-tuebingen.de", :primary => true # Th
 
 options[:pty] = true
 ssh_options[:forward_agent] = true
-set :deploy_to, "/Users/edv/Sites/wadoku"
 set :deploy_via, :remote_cache
 set :user, "edv"
 set :use_sudo, false
