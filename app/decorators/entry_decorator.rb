@@ -15,11 +15,29 @@ class EntryDecorator < ApplicationDecorator
 
     res_html += picture_tag
 
+    res_html += sub_entries_html
+
     res_html
 
   end
 
+  def text_size
+    entry_information.size
+  end
 
+  def sub_entries_html
+    entries = entry.sub_entries
+    entries.map!{|e| EntryDecorator.new(e)}
+    if entry.sub_entries.empty?
+      ""
+    else
+      h.content_tag(:a, h.content_tag("h4", h.t("entry.sub_entries.showhide")), :class => "sub_entry_toggle", :data => {he_id: entry.id}) +
+      h.content_tag(:div, :class => "sub_entries he-id#{entry.id}")  do
+        h.render(entries)
+      end
+    end
+  end
+  
   def midashigo_with_furigana
     h.content_tag(:span, :class => "writing") do 
       h.content_tag(:ruby) do

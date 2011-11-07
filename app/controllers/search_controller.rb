@@ -53,7 +53,7 @@ class SearchController < ApplicationController
     if entries.size == 1
       return [entries, []]
     else
-      chars = entries.map{|e| e.full_html.size} 
+      chars = entries.map{|e| e.text_size} 
 
       split_possible = (1...chars.size).map{|i|
         [i, (chars[0...i].inject(:+) - chars[i..-1].inject(:+)).abs]

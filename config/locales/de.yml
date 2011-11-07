@@ -31,7 +31,10 @@ pl = Plural, Mehrzahl
 Kombinationen sind möglich, wenn beispielsweise ein Wort mehrere Genera haben kann. Genera von Worten, die in der Regel ohne Artikel verwendet werden, stehen in Klammern. Genus kann nicht immer angegeben werden. (Details [link])
 "
   entry:
-    sub_entries: "Untereinträge"
+    sub_entries: 
+      show: "Untereinträge zeigen"
+      hide: "Untereinträge verbergen"
+      showhide: "Untereinträge zeigen / verbergen"
     detail: "Untereinträge"
     main_entry: "Haupteintrag"
     
