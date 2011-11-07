@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.xml
   def show
-    @entry = Entry.find(params[:id]) 
+    @entry = EntryDecorator.find(params[:id]) 
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class EntriesController < ApplicationController
   end
 
   def by_id
-    @entry = Entry.find_by_wadoku_id(params[:wadoku_id]) if params[:wadoku_id]
+    @entry = EntryDecorator.new(Entry.find_by_wadoku_id(params[:wadoku_id])) if params[:wadoku_id]
     @json = {"entry" => { "id" => @entry.id, :definition => @entry.full_html, :writing => @entry.writing, :kana => @entry.kana}}
     respond_to do |format|
       format.html { redirect_to @entry}

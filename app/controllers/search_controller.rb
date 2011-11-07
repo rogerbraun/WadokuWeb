@@ -9,41 +9,25 @@ class SearchController < ApplicationController
       params[:page] ||= 1
       @page = params[:page].to_i
 
-      #@search = Entry.search_by_any(params[:search], params[:page], 30) 
-      #@entries = @search
+      @total, @entries = EntryDecorator.search_with_picky params[:search], :ids => 30, :offset => (@page - 1) * 30
+      @total_pages = (@total / 30.0).ceil
 
-      results = EntrySearch.search params[:search], :ids => 30, :offset => (@page - 1) * 30
-
-      if results[:total] == 0 then
-        keizai = WadokuKeizai.search params[:search]
-        flash[:notice] = t("search.nothing_found").html_safe
-        unless keizai.empty? then
-          flash[:notice] = t("wadokukeizai.result", :count => keizai.size, :link => keizai.search_link).html_safe
-        end
-        redirect_to search_path
+      if @total == 0 then
+        search_at_keizai
       else
-        results.extend Picky::Convenience
-        @search_time = results[:duration]
-
-        @total = results.total
-        @total_pages = (@total / 30.0).ceil
-
         @next_page = @page == @total_pages ? "none" : @page +1
-        @entries = results.ids.map{|id| EntryDecorator.new(Entry.find_by_wadoku_id(id))}.compact.uniq
-        #@entries = Entry.find_all_by_wadoku_id(results.ids.uniq)
-        #@entries_left = @entries[0..@entries.size / 2]
-        #@entries_right = @entries[(@entries.size / 2) + 1..-1]
         @entries_left, @entries_right = split_entries(@entries)
+
         respond_to do |format|
           format.html
           format.js
-          format.json { if params[:full] == "true" then 
-                          render :json  => {:total => results[:total], :from =>  ((@page - 1) * 30), :entries => @entries.map{|entry| {:daid => entry.wadoku_id, :midashigo => entry.writing, :kana => entry.kana, :german => entry.definition, :german_html => entry.full_html} }}
-                        else
-                          render :json => {:total => results[:total], :search_link => url_for(:action => :index, :search => params[:search])}
-                        end
-                      }
-
+          format.json {
+            if params[:full] == "true" then 
+              render :json  => {:total => @total, :from =>  ((@page - 1) * 30), :entries => @entries.map{|entry| {:daid => entry.wadoku_id, :midashigo => entry.writing, :kana => entry.kana, :german => entry.definition, :german_html => entry.full_html} }}
+            else
+              render :json => {:total => @total , :search_link => url_for(:action => :index, :search => params[:search])}
+            end 
+          }
             format.xml  { render :xml => @entries }
           end
         end 
@@ -54,8 +38,16 @@ class SearchController < ApplicationController
     end
   end
   
-
   private
+
+  def search_at_keizai
+    keizai = WadokuKeizai.search params[:search]
+    flash[:notice] = t("search.nothing_found").html_safe
+    unless keizai.empty? then
+      flash[:notice] = t("wadokukeizai.result", :count => keizai.size, :link => keizai.search_link).html_safe
+    end
+    redirect_to search_path
+  end
 
   def split_entries(entries)
     if entries.size == 1

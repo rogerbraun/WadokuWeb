@@ -1,10 +1,8 @@
 class EntryDecorator < ApplicationDecorator
   decorates :entry
-  allows :full_html
 
   def full_html(root_url = "/")
     
-
     res_html = midashigo_with_furigana
 
     res_html += audio_tag
@@ -42,14 +40,6 @@ class EntryDecorator < ApplicationDecorator
   end
 
   def picture_tag
-    begin 
-      tree = entry.parse
-      tree.subtree(:pict).map do |pict|
-        "<span class='svg_image'><span class='image_caption'>#{pict[:pict][:capt]}</span><span class='svg'><a href='/svg/#{pict[:pict][:filen]}.svg'><img src='/svg/#{pict[:pict][:filen]}.svg' type='image/svg+xml' /></a></span></span>"
-      end.join(" ").html_safe
-    rescue => e
-      ""
-    end
 
     begin 
       tree = entry.parse
@@ -60,7 +50,7 @@ class EntryDecorator < ApplicationDecorator
       pict = tree.subtree(:pict).first
       if pict then
         h.content_tag :span, :class => "svg_image" do
-          h.content_tag(:span, pict[:pict][:capt], :class => "svg_caption") +
+          h.content_tag(:span, pict[:pict][:capt], :class => "image_caption") +
           h.content_tag(:span, :class => "svg") do
             svg_url = "/svg/#{pict[:pict][:filen]}.svg"
             h.link_to h.image_tag(svg_url, :type => "image/svg+xml"), svg_url
@@ -135,4 +125,10 @@ class EntryDecorator < ApplicationDecorator
   #                   :class => 'timestamp'
   #   end
 
+  def self.search_with_picky(q, options)
+    res = EntrySearch.search q, options
+    res.extend Picky::Convenience
+    entries = res.ids.map{|id| EntryDecorator.new(Entry.find_by_wadoku_id(id))}.compact.uniq
+    [res.total, entries]
+  end
 end
