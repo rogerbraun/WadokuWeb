@@ -30,9 +30,9 @@
             <li><a href="#about"><%=t("about.title") %></a></li> 
           </ul> 
 
-          <%= form_tag search_index_path, :method => :get, :class => "pull-right" do %>
-             <%= text_field_tag "search", params[:search], :placeholder => t("search.example") %>
-            <button class="btn" type="submit"><%= t("search.search")%></button> 
+          <%= form_tag search_index_path, :method => :get, :class => "pull-right", :id => "topbar_search" do %>
+             <%= text_field_tag "search", params[:search], :placeholder => t("search.example"), :id => "topbar_query" %>
+            <button class="btn" id="topbar_submit" type="submit"><%= t("search.search")%></button> 
           <% end %>
         
         </div> 

@@ -97,7 +97,6 @@ describe HTMLTransform do
     text = "<MGr: {<Dom.: Med.>} <TrE: <HW n: Dumping-Syndrom>>> (<Def.: Sturzentleerung von Nahrung vom Magen in den Dünndarm>；<WikiDE: Dumping-Syndrom>)."
     tree = WadokuNewGrammar.parse(text)
     res = transformer.apply(tree)
-    binding.pry
     
   end
 

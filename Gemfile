@@ -11,6 +11,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem "draper"
 
 group :development, :test do
   gem "pry"
