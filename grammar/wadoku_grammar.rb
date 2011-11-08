@@ -12,8 +12,9 @@ class WadokuGrammar < Parslet::Parser
   rule(:pos?) { pos.maybe }
 
 # <Ref>
-  rule(:ref) { str("<Ref.:") >> space? >> relation_symbol? >> space? >> transcr >> space? >> jap >> space? >> daid >> space? >> str(">")}
+  rule(:ref) { str("<Ref.:") >> space? >> relation_symbol? >> space? >> (transcr | empty_transcr) >> space? >> jap >> space? >> daid >> space? >> str(">")}
 
+  rule(:empty_transcr) {str("<Transcr.:") >> space? >> str(">")}
   rule(:transcr) { (str("<Transcr.:") >> space? >> transcr_content.repeat(1) >> space? >> str(">")).as(:transcr)}
   rule(:transcr_content) {text | emph}
 

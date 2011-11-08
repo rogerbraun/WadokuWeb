@@ -82,6 +82,9 @@ class HTMLTransform < Parslet::Transform
     "<span class='ref'><span class='relation'>#{relation}</span><a href='/entries/by-daid/#{d}'><span class='jap'>#{jap}</span> - <span class='transcr'>#{t_content.compact.join}</span></a></span>"  
   end
 
+  rule(:relation => simple(:relation), :jap => simple(:jap), :daid => simple(:d)) do
+    "<span class='ref'><span class='relation'>#{relation}</span><a href='/entries/by-daid/#{d}'><span class='jap'>#{jap}</span></a></span>"  
+  end
 
   rule(:numbered_mgr => simple(:numbered_mgr)) {"<span class='numbered_mgr'>#{numbered_mgr}</span>" }
 

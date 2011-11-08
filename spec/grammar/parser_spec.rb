@@ -34,6 +34,10 @@ describe WadokuNewGrammar do
   end
 
   it "should parse <Ref> tags " do
+    text = "<Ref.: ⇔ <Transcr.:> <Jap.: 白色申告><DaID: 0159532>>"
+    parse = WadokuNewGrammar.ref.parse_with_debug(text)
+    parse.should_not be_nil
+
     parse = WadokuNewGrammar.ref.parse("<Ref.: ⇔ <Transcr.: kudari> <Jap.: 下だり><DaID: 9431695>>")
     parse[:transcr].should_not be_nil
     parse[:jap].should == "下だり"
@@ -97,6 +101,12 @@ describe WadokuNewGrammar do
   end
     
   it "should parse tags in parentheses" do
+
+    text = "(<Expl.: auf blauem Formblatt>；<Ref.: ⇔ <Transcr.:> <Jap.: 白色申告><DaID: 0159532>>)"
+    parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
+    parse.should_not be_nil
+
+
     text = "(<Def.: russ. Botaniker>；<BirthDeath.: 1880–1952>)"
     parse = WadokuNewGrammar.tags_with_parens.parse_with_debug(text)
     parse.should_not be_nil
@@ -347,6 +357,10 @@ describe WadokuNewGrammar do
     parse.should_not be_nil
 
     text = "(<POS: N.>) <MGr: <TrE: „<literal: <HW n: Pling>>“>; <TrE: <Def.: scharfer <HW m: Klang>, wenn harte Dinge zusammenstoßen>>>."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) <MGr: <TrE: <HW f: Steuererklärung> für Einkommens‑ und Körperschaftssteuer>> (<Expl.: auf blauem Formblatt>；<Ref.: ⇔ <Transcr.:> <Jap.: 白色申告><DaID: 0159532>>)."
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
 
