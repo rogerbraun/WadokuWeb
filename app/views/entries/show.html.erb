@@ -8,12 +8,6 @@
       <p>
         <%= render @entry %>
       <p>
-      <% if not @entry.sub_entries.empty? %>
-        <h2><%= t("entry.sub_entries")%></h2>
-        <p>
-          <%= render @entry.sub_entries %>
-        </p>
-      <% end %>
     </div>
   </div>
 </div>
