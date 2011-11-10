@@ -31,7 +31,7 @@ class EntryDecorator < ApplicationDecorator
     if entry.sub_entries.empty?
       ""
     else
-      h.content_tag(:a, h.content_tag("h4", h.t("entry.sub_entries.showhide")), :class => "sub_entry_toggle", :data => {he_id: entry.id}) +
+      h.content_tag(:a, h.content_tag("span", h.t("entry.sub_entries.showhide")), :class => "sub_entry_toggle", :data => {he_id: entry.id}) +
       h.content_tag(:div, :class => "sub_entries he-id#{entry.id}")  do
         h.render(entries)
       end
