@@ -21,6 +21,11 @@ group :development, :test do
   gem "capybara"
 end
 
+group :deployment do
+  gem "capistrano"
+  gem "capistrano-ext"
+end
+
 gem "romkan"
 gem "parslet"
 gem "picky-client"

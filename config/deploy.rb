@@ -8,7 +8,7 @@ set :rvm_type, :user  # Copy the exact line. I really mean :user here
 set :application, "WadokuWeb"
 
 
-set :repository,  "git@github.com:rogerbraun/WadokuWeb.git"
+set :repository,  "git://github.com/rogerbraun/WadokuWeb.git"
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
