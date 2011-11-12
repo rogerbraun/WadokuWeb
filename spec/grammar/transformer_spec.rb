@@ -4,7 +4,11 @@ require "spec_helper"
 describe HTMLTransform do
  
   let(:transformer) {HTMLTransform.new}
-
+  it "should transform steinhaus links" do
+    steinhaus = WadokuNewGrammar.steinhaus.parse("<Steinhaus: 28>")
+    res = transformer.apply(steinhaus)
+    res.should == "<span class='steinhaus'>Steinhaus: <a href='http://books.google.com/books?id=bkNWKdYgxVoC&pg=PA28'>S.28</a></span>"    
+  end
   it "should transform text elements" do
     tree = {:text => "Ein einfacher Text"}
     res = transformer.apply(tree)
