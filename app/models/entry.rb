@@ -45,8 +45,7 @@ class Entry < ActiveRecord::Base
         nil
       end
       }.compact.flatten
-    only_text = only_tres.map{|hw| hw.subtree(:text)}.flatten
-    array = only_text.map(&:values).flatten.map(&:to_s).uniq
+    array = only_tres.map{|x| x.subtree(:text).map(&:values).join("")}
     array[0..max]
   end
 end
