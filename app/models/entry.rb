@@ -15,4 +15,38 @@ class Entry < ActiveRecord::Base
     Entry.where(:entry_relation => self.writing)
   end
 
+  def self.search_with_picky(q, options)
+    res = EntrySearch.search q, options
+    res.extend Picky::Convenience
+    entries = res.ids.map{|id| Entry.find_by_wadoku_id(id)}.compact.uniq
+    entries
+  end
+
+  def self.search_for_headwords(q, max)
+    entries = search_with_picky q, ids: 30, offset: 0
+    only_headwords = entries.map{|entry| 
+      begin 
+        entry.parse.subtree(:hw)
+      rescue
+        nil
+      end
+      }.compact.flatten
+    only_text = only_headwords.map{|hw| hw.subtree(:text)}.flatten
+    array = only_text.map(&:values).flatten.map(&:to_s).uniq
+    array[0..max]
+  end
+
+  def self.search_for_tres(q, max)
+    entries = search_with_picky q, ids: 30, offset: 0
+    only_tres = entries.map{|entry| 
+      begin
+        entry.parse.subtree(:tre)
+      rescue
+        nil
+      end
+      }.compact.flatten
+    only_text = only_tres.map{|hw| hw.subtree(:text)}.flatten
+    array = only_text.map(&:values).flatten.map(&:to_s).uniq
+    array[0..max]
+  end
 end

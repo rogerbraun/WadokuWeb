@@ -37,6 +37,26 @@ class SearchController < ApplicationController
       end
     end
   end
+
+
+  def headwords
+    max = params.delete(:max) || 10
+    q = params.delete(:search) || ""
+    @headwords = Entry.search_for_headwords(q, max)
+    respond_to do |f|
+      f.json { render :json => @headwords}
+    end
+  end
+
+  def tres
+    max = params.delete(:max) || 10
+    q = params.delete(:search) || ""
+    @tres = Entry.search_for_tres(q, max)
+    respond_to do |f|
+      f.json { render :json => @tres}
+    end
+  end
+
   
   private
 

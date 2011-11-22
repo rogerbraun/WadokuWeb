@@ -2,6 +2,8 @@ Wadoku::Application.routes.draw do
   get "search/index"
   match "search" => "search#index"
 
+  get "entries/headwords" => "search#headwords", :defaults => {format: :json}
+  get "entries/tres" => "search#tres", :defaults => {format: :json}
   resources :entries
   get "entries/by-daid/:wadoku_id" => "entries#by_id"
   get "entries/by-dom/:dom" => "entries#by_domain"
