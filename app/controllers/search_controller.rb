@@ -44,7 +44,7 @@ class SearchController < ApplicationController
     q = params.delete(:search) || ""
     @headwords = Entry.search_for_headwords(q, max)
     respond_to do |f|
-      f.json { render :json => @headwords}
+      f.json { render :json => @headwords, :callback => params[:callback]}
     end
   end
 
@@ -53,7 +53,7 @@ class SearchController < ApplicationController
     q = params.delete(:search) || ""
     @tres = Entry.search_for_tres(q, max)
     respond_to do |f|
-      f.json { render :json => @tres}
+      f.json { render :json => @tres, :callback => params[:callback]}
     end
   end
 
