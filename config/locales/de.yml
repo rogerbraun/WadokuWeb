@@ -34,7 +34,7 @@ Kombinationen sind möglich, wenn beispielsweise ein Wort mehrere Genera haben k
     sub_entries: 
       show: "Untereinträge zeigen"
       hide: "Untereinträge verbergen"
-      showhide: "Untereinträge zeigen / verbergen"
+      showhide: ""
     detail: "Untereinträge"
     main_entry: "Haupteintrag"
     

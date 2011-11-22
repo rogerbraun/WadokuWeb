@@ -139,6 +139,7 @@ padding-left: 25px;
 }
 
 .sub_entries {
+  margin-top: 10px;
   margin-left: 20px;
 
   border-style: dashed;
@@ -201,6 +202,18 @@ padding-left: 25px;
   
 }
 
+// Uses Bitcons images from http://somerandomdude.com/work/bitcons/
+
 .sub_entry_toggle {
+  position: relative;
+  left: -25px;
+  width: 16px;
+  height: 16px;
   display:block;
+  background: image-url("arrow1_e.png") no-repeat;
+  
 }
+.sub_entry_toggle.expanded {
+  background: image-url("arrow1_s.png") no-repeat;
+}
+
