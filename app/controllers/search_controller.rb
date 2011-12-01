@@ -24,6 +24,8 @@ class SearchController < ApplicationController
           format.json {
             if params[:full] == "true" then 
               render :json  => {:total => @total, :from =>  ((@page - 1) * 30), :entries => @entries.map{|entry| {:daid => entry.wadoku_id, :midashigo => entry.writing, :kana => entry.kana, :german => entry.definition, :german_html => entry.full_html} }}
+            elsif params[:simple]
+              simple_json  
             else
               render :json => {:total => @total , :search_link => url_for(:action => :index, :search => params[:search])}
             end 
@@ -59,6 +61,16 @@ class SearchController < ApplicationController
 
   
   private
+
+  def simple_json 
+    #render :json  => {:total => @total, :from =>  ((@page - 1) * 30), :entries => @entries.map{|entry| {:daid => entry.wadoku_id, :midashigo => entry.writing, :kana => entry.kana, :german => entry.definition, :german_html => entry.full_html} }}, :callback => params[:callback]
+    data = {
+      total:  @total,
+      from:   ((@page - 1) * 30),
+      entries: @entries.map(&:simple)
+    }
+    render :json => data, :callback => params[:callback]
+  end
 
   def search_at_keizai
     keizai = WadokuKeizai.search params[:search]
