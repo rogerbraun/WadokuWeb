@@ -1,4 +1,6 @@
 Wadoku::Application.routes.draw do
+  devise_for :users
+
   get "search/index"
   match "search" => "search#index"
 
