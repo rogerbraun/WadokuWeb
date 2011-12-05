@@ -1,6 +1,8 @@
 #encoding: utf-8
 class Entry < ActiveRecord::Base
 
+  has_paper_trail
+
   def parse
     @parse ||= WadokuGrammar.new.parse(self.definition)
   end

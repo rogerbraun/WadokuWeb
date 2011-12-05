@@ -19,6 +19,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "watchr"
   gem "capybara"
+  gem "factory_girl_rails"
 end
 
 group :deployment do
@@ -30,3 +31,4 @@ gem "romkan"
 gem "parslet"
 gem "picky-client"
 gem "yajl-ruby", :require => "yajl"
+gem "paper_trail", "~> 2"

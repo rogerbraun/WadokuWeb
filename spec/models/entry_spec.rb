@@ -20,4 +20,14 @@ describe Entry do
 #    @aoidomoe.parse.should_not include "Fehler"
 #  end
 
+  it "should be versioned" do
+
+    entry = Factory(:entry)
+    entry.versions.size.should == 1
+    entry.romaji = "something else"
+    entry.save
+    entry.versions.size.should == 2
+
+  end
+
 end
