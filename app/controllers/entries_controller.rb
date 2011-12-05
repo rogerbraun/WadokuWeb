@@ -1,6 +1,7 @@
 #encoding: utf-8
 class EntriesController < ApplicationController
-  before_filter :authorize!, :except => [:show, :index, :by_id]
+  load_and_authorize_resource
+
   # GET /entries
   # GET /entries.xml
   def index
@@ -99,11 +100,4 @@ class EntriesController < ApplicationController
     end
   end
 
-  private
-
-  #placeholder for real authorization
-  def authorize!
-    flash[:notice] = t("users.not_authorized", :default => "Leider nicht möglich")
-    redirect_to :back
-  end
 end
