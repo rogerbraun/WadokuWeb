@@ -79,7 +79,7 @@ class WadokuGrammar < Parslet::Parser
 # <Def>
 
   rule(:defi) { (str("<Def.:") >> space? >> defi_content.repeat(1) >> space? >> str(">")).as(:defi) }
-  rule(:defi_content) { iron | topic | transl | literal | text | birthdeath | hw | ref | title}
+  rule(:defi_content) { iron | topic | transl | literal | text | birthdeath | hw | ref | title| transcr}
 
 # <Usage>
 
