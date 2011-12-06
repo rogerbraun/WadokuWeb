@@ -5,6 +5,12 @@ require "spec_helper"
 
 describe WadokuNewGrammar do
 
+  it "should parse <iron.> tags " do
+    text = "<iron.: Mädchenhafte>"
+    parse = WadokuNewGrammar.iron.parse text
+    parse.should_not be_nil
+  end
+
   it "should parse <POS> tags " do
     parse = WadokuNewGrammar.pos.parse("(<POS: N.>)")
       
@@ -198,6 +204,14 @@ describe WadokuNewGrammar do
     parse = WadokuNewGrammar.mgr.parse_with_debug(text)
     parse.should_not be_nil
 
+    text = "<MGr: <TrE: <HW n: Tête-à-tête>>; <TrE: <HW f: Direktheit>>; <TrE: <HW f: Unvermitteltheit>>>"
+    parse = WadokuNewGrammar.mgr.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "<MGr: <TrE: <Def.: nur zwischen zwei Personen>>; <TrE: ohne dritte Partei>>"
+    parse = WadokuNewGrammar.mgr.parse_with_debug(text)
+    parse.should_not be_nil
+
   end
 
   it "should parse wrong <HW> tags " do
@@ -379,6 +393,18 @@ describe WadokuNewGrammar do
     parse.should_not be_nil
 
     text = "(<POS: N.>) <MGr: {<Dom.: Werktitel>} <TrE: <Title: <HW NAr: Äneis>>>> (<Def.: eine Dichtung Vergils>)."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) <MGr: {<Dom.: Psych.>} <TrE: <HW m: IQ>>; <TrE: <Emph.:I>ntelligenz-<HW m: <Emph.:Q>uotient>>> (<Expl.: Abk.>)."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) <MGr: <TrE: <HW n: Tête-à-tête>>; <TrE: <HW f: Direktheit>>; <TrE: <HW f: Unvermitteltheit>>> // <MGr: <TrE: <Def.: nur zwischen zwei Personen>>; <TrE: ohne dritte Partei>>."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) <MGr: <TrE: <HW n: Girlie>>> (<Def.: junge Frau in einem das „<iron.: Mädchenhafte>“ betonenden Outfit>；<Etym.: von amerik. <For.: gal>>)."
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
 

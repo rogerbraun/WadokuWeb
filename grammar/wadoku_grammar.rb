@@ -40,7 +40,7 @@ class WadokuGrammar < Parslet::Parser
   rule(:wrong_hw) { (str("<") >> non_hw_non_closing.as(:wrong) >> str("HW") >> space? >> non_closing.as(:genus) >> space? >> str(":") >> space? >> non_closing.as(:text) >> space? >> str(">")).as(:hw) }
   rule(:non_hw_non_closing) { match("[^>:HW]").repeat(1) }
 
-  rule(:hw_content) {text}
+  rule(:hw_content) {emph | text}
 
 # <Title>
 
@@ -79,7 +79,7 @@ class WadokuGrammar < Parslet::Parser
 # <Def>
 
   rule(:defi) { (str("<Def.:") >> space? >> defi_content.repeat(1) >> space? >> str(">")).as(:defi) }
-  rule(:defi_content) { topic | transl | literal | text | birthdeath | hw | ref | title}
+  rule(:defi_content) { iron | topic | transl | literal | text | birthdeath | hw | ref | title}
 
 # <Usage>
 
@@ -151,11 +151,16 @@ class WadokuGrammar < Parslet::Parser
 
   rule(:wiki) {(str("<Wiki") >> match(".").repeat(2,2).as(:lang) >> space? >> str(":") >> space? >> non_closing.as(:keyword) >> space? >> str(">")).as(:wiki)}
 
+# <iron.>
+  rule(:iron) { (str("<iron.:") >> space? >> iron_content.repeat(1) >> space? >> str(">")).as(:iron) }
+
+  rule(:iron_content) { hw | text}
+
 # <TrE>
 
   rule(:tre) { (str("<TrE:") >> space? >> tre_content.repeat(1) >> space? >> str(">")).as(:tre) }
 
-  rule(:tre_content) { fore | dom | tags_with_parens | transl | topic | hw | wrong_hw | defi | text | marker | jap | famn | specchar | title | scientif | emph | literal | unknown }
+  rule(:tre_content) { fore | iron | dom | tags_with_parens | transl | topic | hw | wrong_hw | defi | text | marker | jap | famn | specchar | title | scientif | emph | literal | unknown }
 
 # <MGr>
 
