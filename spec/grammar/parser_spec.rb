@@ -161,7 +161,11 @@ describe WadokuNewGrammar do
     text = "<TrE: <Scientif.: <HW n: Subregnum>>>"
     parse = WadokuNewGrammar.tre.parse_with_debug(text)
     parse.should_not be_nil 
-    
+
+    text = "<TrE: <HW m: Sammelbegriff> für alle das Stück begleitende Musikinstrumente>"
+    parse = WadokuNewGrammar.tre.parse_with_debug(text)
+    parse.should_not be_nil 
+
   end
 
   it "should parse <MGr> tags" do
@@ -181,7 +185,11 @@ describe WadokuNewGrammar do
 
     text = "<MGr: <TrE: Iwan III. <FamN. Ausn.: Wassiljewitsch> (<Expl.: gen.>) Iwan der Große (<Def.: Großfürst von Moskau>；<BirthDeath: 1440–1505>)>>"
     parse = WadokuNewGrammar.mgr.parse_with_debug(text)
-    parse.should_not be_nil 
+    parse.should_not be_nil
+    
+    text = "<MGr: <TrE: <For.: inschallah>>; <TrE: wenn Allah will>>"
+    parse = WadokuNewGrammar.mgr.parse_with_debug(text)
+    parse.should_not be_nil
 
   end
 
@@ -210,9 +218,10 @@ describe WadokuNewGrammar do
     parse = WadokuNewGrammar.numbered_mgr.parse_with_debug(text)
     parse.should_not be_nil
 
-    text = "[2]<MGr: <TrE: <HW m: Arm>>; <TrE: <HW m: Ausleger> (<Expl.: einer Maschine>)>> // <MGr: (<Expl.: insbes.>) <TrE: Tonarm (<Expl.: Abk.>)>>." 
+    text = "[2]<MGr: {<Dom.: Nō>} <TrE: <HW m: Sammelbegriff> für alle das Stück begleitende Musikinstrumente>>"
     parse = WadokuNewGrammar.numbered_mgr.parse_with_debug(text)
     parse.should_not be_nil
+
   end
 
   it "should parse mgrs with a and b" do
@@ -354,7 +363,11 @@ describe WadokuNewGrammar do
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
 
-    text = "(<POS: N.>) [1]<MGr: {<Dom.: Anat.>} <TrE: <HW m: Arm>>>. [2]<MGr: <TrE: <HW m: Arm>>; <TrE: <HW m: Ausleger> (<Expl.: einer Maschine>)>>> // <MGr: (<Expl.: insbes.>) <TrE: Tonarm (<Expl.: Abk.>)>. [3]<MGr: <TrE: <HW m: Signalarm> (<Expl.: eines Eisenbahnsignals>)>>. [4]<MGr: {<Dom.: Kleidung>} <TrE: <HW m: Arm>>; <TrE: <HW m: Ärmel>>>. (<Etym.: von engl. <For.: arm>>)."
+    text = "(<POS: N.>) [1]<MGr: {<Dom.: Theat.>} <TrE: <HW f: Begleitung>>> (<Expl.: eines Kabuki‑ od. Nō-Gesanges auf der Shamisen>). [2]<MGr: {<Dom.: Nō>} <TrE: <HW m: Sammelbegriff> für alle das Stück begleitende Musikinstrumente>>."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) <MGr: <TrE: <For.: inschallah>>; <TrE: wenn Allah will>>."
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
 

@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(:version => 20111205221914) do
   add_index "entries", ["romaji", "writing", "kana"], :name => "index_entries_on_romaji_and_writing_and_kana"
   add_index "entries", ["wadoku_id"], :name => "index_entries_on_wadoku_id"
 
+  create_table "ex_sentences", :force => true do |t|
+    t.integer  "tatoeba_id"
+    t.string   "lang"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "translation_equivalents", :id => false, :force => true do |t|
+    t.integer "ex_sentence_id"
+    t.integer "translation_id"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
