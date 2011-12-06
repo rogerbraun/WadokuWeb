@@ -45,7 +45,7 @@ class WadokuGrammar < Parslet::Parser
 # <Title>
 
   rule(:title) { (str("<Title") >> space? >> non_closing.maybe.as(:title_type) >> space? >> str(":") >> space? >> title_content.repeat(1) >> space? >> str(">")).as(:title) }
-  rule(:title_content) { text | hw}
+  rule(:title_content) { text | hw | emph}
 #<SpecChar><SpecChar.: &>
 
   rule(:specchar) { str("<SpecChar.:") >> space? >> non_closing.as(:specchar) >> space? >> str(">")}
