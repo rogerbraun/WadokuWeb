@@ -53,7 +53,7 @@ class WadokuGrammar < Parslet::Parser
 # <Expl>
 # TODO: Was ist bezEintr?
 
-  rule(:expl) { ((str("<Expl.:") | str("<Expl. BezEintr.:"))>> space? >> expl_content.repeat(1) >> space? >> str(">")).as(:expl) }
+  rule(:expl) { (str("<Expl.") >> space? >> non_closing.maybe.as(:todo) >> space? >> str(":") >>space? >> expl_content.repeat(1) >> space? >> str(">")).as(:expl) }
   rule(:expl_content) { transcr | topic | transl | literal | text | ref | title | fore | emph | jap | iron}
 
 # <Etym>
