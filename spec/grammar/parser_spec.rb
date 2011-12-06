@@ -58,6 +58,10 @@ describe WadokuNewGrammar do
     parse = WadokuNewGrammar.hw.parse("<HW nNAr: Argyle>")[:hw]
     parse[:genus].should == "nNAr"
     parse[:text].should == "Argyle"
+
+    text = "<HW NAr: Äneis>"
+    parse = WadokuNewGrammar.hw.parse text
+    parse.should_not be_nil
   end 
 
   it "should parse <SeasonW.:> tags " do 
@@ -166,6 +170,10 @@ describe WadokuNewGrammar do
     parse = WadokuNewGrammar.tre.parse_with_debug(text)
     parse.should_not be_nil 
 
+    text = "<TrE: <Title: <HW NAr: Äneis>>>"
+    parse = WadokuNewGrammar.tre.parse_with_debug(text)
+    parse.should_not be_nil 
+
   end
 
   it "should parse <MGr> tags" do
@@ -188,6 +196,10 @@ describe WadokuNewGrammar do
     parse.should_not be_nil
     
     text = "<MGr: <TrE: <For.: inschallah>>; <TrE: wenn Allah will>>"
+    parse = WadokuNewGrammar.mgr.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "<MGr: {<Dom.: Werktitel>} <TrE: <Title: <HW NAr: Äneis>>>>"
     parse = WadokuNewGrammar.mgr.parse_with_debug(text)
     parse.should_not be_nil
 
@@ -368,6 +380,10 @@ describe WadokuNewGrammar do
     parse.should_not be_nil
 
     text = "(<POS: N.>) <MGr: <TrE: <For.: inschallah>>; <TrE: wenn Allah will>>."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) <MGr: {<Dom.: Werktitel>} <TrE: <Title: <HW NAr: Äneis>>>> (<Def.: eine Dichtung Vergils>)."
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
 

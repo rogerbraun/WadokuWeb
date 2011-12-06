@@ -42,7 +42,7 @@ class WadokuGrammar < Parslet::Parser
 
 # <Title>
 
-  rule(:title) { (str("<Title ") >> space? >> non_closing.as(:title_type) >> space? >> str(":") >> space? >> title_content.repeat(1) >> space? >> str(">")).as(:title) }
+  rule(:title) { (str("<Title") >> space? >> non_closing.maybe.as(:title_type) >> space? >> str(":") >> space? >> title_content.repeat(1) >> space? >> str(">")).as(:title) }
   rule(:title_content) { text | hw}
 #<SpecChar><SpecChar.: &>
 
@@ -77,7 +77,7 @@ class WadokuGrammar < Parslet::Parser
 # <Def>
 
   rule(:defi) { (str("<Def.:") >> space? >> defi_content.repeat(1) >> space? >> str(">")).as(:defi) }
-  rule(:defi_content) { topic | transl | literal | text | birthdeath | hw | ref}
+  rule(:defi_content) { topic | transl | literal | text | birthdeath | hw | ref | title}
 
 # <Usage>
 
