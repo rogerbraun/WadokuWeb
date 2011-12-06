@@ -209,6 +209,10 @@ describe WadokuNewGrammar do
     text = "[5]<MGr: {<Dom.: Literaturw.>} <TrE: <Ao·HW n: hon> (<Def.: Genre illustrierter Geschichtenbücher mit Kabuki, Jōruri und Kriegsgeschichten>；<Ref.: ⇒ <Transcr.: ao·hon> <Jap.: 青本><DaID: 0116162>>)>>"
     parse = WadokuNewGrammar.numbered_mgr.parse_with_debug(text)
     parse.should_not be_nil
+
+    text = "[2]<MGr: <TrE: <HW m: Arm>>; <TrE: <HW m: Ausleger> (<Expl.: einer Maschine>)>> // <MGr: (<Expl.: insbes.>) <TrE: Tonarm (<Expl.: Abk.>)>>." 
+    parse = WadokuNewGrammar.numbered_mgr.parse_with_debug(text)
+    parse.should_not be_nil
   end
 
   it "should parse mgrs with a and b" do
@@ -347,6 +351,10 @@ describe WadokuNewGrammar do
     parse.should_not be_nil
 
     text = "(<POS: N.>) <MGr: <TrE: „<literal: <HW n: Pling>>“>; <TrE: <Def.: scharfer <HW m: Klang>, wenn harte Dinge zusammenstoßen>>>."
+    parse = WadokuNewGrammar.parse_with_debug(text)
+    parse.should_not be_nil
+
+    text = "(<POS: N.>) [1]<MGr: {<Dom.: Anat.>} <TrE: <HW m: Arm>>>. [2]<MGr: <TrE: <HW m: Arm>>; <TrE: <HW m: Ausleger> (<Expl.: einer Maschine>)>>> // <MGr: (<Expl.: insbes.>) <TrE: Tonarm (<Expl.: Abk.>)>. [3]<MGr: <TrE: <HW m: Signalarm> (<Expl.: eines Eisenbahnsignals>)>>. [4]<MGr: {<Dom.: Kleidung>} <TrE: <HW m: Arm>>; <TrE: <HW m: Ärmel>>>. (<Etym.: von engl. <For.: arm>>)."
     parse = WadokuNewGrammar.parse_with_debug(text)
     parse.should_not be_nil
 
