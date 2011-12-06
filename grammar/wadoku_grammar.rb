@@ -51,8 +51,9 @@ class WadokuGrammar < Parslet::Parser
   rule(:specchar) { str("<SpecChar.:") >> space? >> non_closing.as(:specchar) >> space? >> str(">")}
 
 # <Expl>
+# TODO: Was ist bezEintr?
 
-  rule(:expl) { (str("<Expl.:") >> space? >> expl_content.repeat(1) >> space? >> str(">")).as(:expl) }
+  rule(:expl) { ((str("<Expl.:") | str("<Expl. BezEintr.:"))>> space? >> expl_content.repeat(1) >> space? >> str(">")).as(:expl) }
   rule(:expl_content) { transcr | topic | transl | literal | text | ref | title | fore | emph | jap | iron}
 
 # <Etym>
