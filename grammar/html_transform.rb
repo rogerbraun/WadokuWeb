@@ -1,9 +1,10 @@
 class HTMLTransform < Parslet::Transform
 
   rule(:text => simple(:x)) {String.new(x)} 
-  rule(:genus => simple(:g), :text => simple(:t)) {"<span class='genus #{g}'>#{g}</span> #{t}"}
+  #rule(:genus => simple(:g), :text => simple(:t)) {"<span class='genus #{g}'>#{g}</span> #{t}"}
+  rule(:genus => simple(:g)){"<span class='genus #{g}'>#{g}</span> "}
   rule(:wrong => simple(:wrong), :genus => simple(:g), :text => simple(:t)) {"<span class='genus #{g}'>#{g}</span> #{wrong + t}"}
-  rule(:hw => simple(:hw)) {"<span class='hw'>#{hw}</span>"}
+  rule(:hw => sequence(:contents)) {"<span class='hw'>#{contents.compact.join}</span>"}
   rule(:emph => simple(:emph)) {"<span class='emph'>#{emph}</span>"}
   rule(:topic => simple(:topic)) {"<span class='topic'>#{topic}</span>"}
   rule(:dom => simple(:dom)) {"<span class='dom'>#{dom}</span>"}

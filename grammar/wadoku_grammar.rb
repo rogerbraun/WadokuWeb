@@ -36,9 +36,11 @@ class WadokuGrammar < Parslet::Parser
 
 # <HW>
 
-  rule(:hw) { (str("<HW") >> space? >> non_closing.as(:genus) >> space? >> str(":") >> space? >> non_closing.as(:text) >> space? >> str(">")).as(:hw) }
+  rule(:hw) { (str("<HW") >> space? >> non_closing.as(:genus) >> space? >> str(":") >> space? >> hw_content.repeat(1) >> space? >> str(">")).as(:hw) }
   rule(:wrong_hw) { (str("<") >> non_hw_non_closing.as(:wrong) >> str("HW") >> space? >> non_closing.as(:genus) >> space? >> str(":") >> space? >> non_closing.as(:text) >> space? >> str(">")).as(:hw) }
   rule(:non_hw_non_closing) { match("[^>:HW]").repeat(1) }
+
+  rule(:hw_content) {text}
 
 # <Title>
 
