@@ -48,7 +48,7 @@ class WadokuGrammar < Parslet::Parser
   rule(:title_content) { text | hw | emph}
 #<SpecChar><SpecChar.: &>
 
-  rule(:specchar) { str("<SpecChar.:") >> space? >> non_closing.as(:specchar) >> space? >> str(">")}
+  rule(:specchar) { str("<SpecChar.:") >> space? >> match("[^>]").repeat(1).as(:specchar) >> space? >> str(">")}
 
 # <Expl>
 # TODO: Was ist bezEintr?
