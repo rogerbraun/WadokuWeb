@@ -14,7 +14,7 @@ class WadokuGrammar < Parslet::Parser
 # <Ref>
   rule(:ref) { str("<Ref.:") >> space? >> relation_symbol? >> space? >> transcr >> space? >> jap >> space? >> daid >> space? >> str(">")}
 
-  rule(:transcr) { (str("<Transcr.:") >> space? >> transcr_content.repeat(1) >> space? >> str(">")).as(:transcr)}
+  rule(:transcr) { (str("<Transcr.:") >> space? >> transcr_content.repeat(0) >> space? >> str(">")).as(:transcr)}
   rule(:transcr_content) {text | emph}
 
   rule(:jap) { str("<Jap.:") >> space? >> non_closing.as(:jap) >> space? >> str(">")}
