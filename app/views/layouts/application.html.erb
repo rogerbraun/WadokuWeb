@@ -29,6 +29,12 @@
             <li class="active"><%=link_to t("search.title"), search_path %></li> 
             <li><a href="#about"><%=t("about.title") %></a></li> 
           </ul> 
+          <% if user_signed_in? %>
+            <ul>
+              <li class="avatar"><%= image_tag current_user.gravatar_link %></li>
+              <li><%= link_to "Abmelden", destroy_user_session_path, :method => "delete" %></li>
+            </ul>
+          <% end %>
 
           <%= form_tag search_index_path, :method => :get, :class => "pull-right", :id => "topbar_search" do %>
              <%= text_field_tag "search", params[:search], :placeholder => t("search.example"), :id => "topbar_query" %>

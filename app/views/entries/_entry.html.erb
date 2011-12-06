@@ -1,4 +1,9 @@
 <div class="entry <%= cycle("even", "odd") %>">
+  <% if user_signed_in? %>
+    <div class="entry_actions">
+      <%= link_to "", edit_entry_path(entry), :class => "edit" %>
+    </div>
+  <% end %>
   <p class="hanging-indent">
     <%= entry.full_html(root_url) %>
   </p>
