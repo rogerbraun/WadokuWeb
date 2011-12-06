@@ -160,7 +160,7 @@ class WadokuGrammar < Parslet::Parser
 
   rule(:tre) { (str("<TrE:") >> space? >> tre_content.repeat(1) >> space? >> str(">")).as(:tre) }
 
-  rule(:tre_content) { fore | iron | dom | tags_with_parens | transl | topic | hw | wrong_hw | defi | text | marker | jap | famn | specchar | title | scientif | emph | literal | unknown }
+  rule(:tre_content) { fore | iron | dom | tags_with_parens | transl | topic | hw | wrong_hw | defi | text | marker | jap | famn | specchar | title | scientif | emph | literal | transcr | unknown }
 
 # <MGr>
 
