@@ -6,7 +6,7 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 #
-source = open("db/WaDokuNormal.tab").read
+source = open("wadokujt-data/WaDokuNormal.tab").read
 
 puts "Reading source file... This may take a while..."
 

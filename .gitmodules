@@ -1,0 +1,3 @@
+[submodule "wadokujt-data"]
+	path = wadokujt-data
+	url = git://github.com/Wadoku/WaDokuJT-Data.git
